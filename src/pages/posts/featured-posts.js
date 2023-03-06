@@ -3,6 +3,8 @@ import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import { Divider } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 export default function FeaturedPosts({ posts }) {
   return (
@@ -14,7 +16,8 @@ export default function FeaturedPosts({ posts }) {
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
-                <span>{post.title.rendered}</span>
+              <Text as="u">{post.title.rendered}</Text>
+                <Divider mt={5} mb={5} />
               </Link>
             </div>
           ))}

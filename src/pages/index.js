@@ -4,25 +4,32 @@ import axios from "axios";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+
+import { Button } from "@chakra-ui/react";
+
+
 
 export default function Home({ posts }) {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <div className={styles.main}>
       <Container maxW="xl">
+      <Button onClick={toggleColorMode} mt={0} size={10} mb={7}>
+          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        </Button>
         <Nav />
         <Heading as="h1">
           Unlock Your Sound is an artist self-development platform
         </Heading>
         <Divider mt={5} mb={5} />
-
-        <Divider mt={5} mb={5} />
-
         <Text>
           Unlock a bundle of free resources to help you create and release your
           music
         </Text>
         <Divider mt={5} mb={5} />
-
         <Center>
           <iframe
             src="https://unlockyoursound.substack.com/embed"
@@ -42,8 +49,9 @@ export default function Home({ posts }) {
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
-                <span>{post.title.rendered}</span>
+                <Text as="u">{post.title.rendered}</Text>
               </Link>
+              <Divider mt={5} mb={5} />
             </div>
           ))}
         </div>
