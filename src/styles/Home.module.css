@@ -1,10 +1,38 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
+
 .main {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  /* justify-content: space-between; */
+  text-align: center;
+  /* padding: 10rem; */
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #141414;
+  /* background: #181818; */
+  /* max-width: 350px; */
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.main h1, .main h2 {
+  margin-bottom: 25px;
+  margin-top: 25px;
+} 
+
+/* .main img {
+  max-width: 300px;
+} */
+
+
+
+.main code {
+  font-size: 15px;
+  font-family: 'Fira Code', monospace;
+  background: #f1f1f1;
+  /* padding: 0.2rem 0.4rem; */
+  border-radius: 4px;
 }
 
 .description {

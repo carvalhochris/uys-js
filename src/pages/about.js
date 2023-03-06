@@ -1,21 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Container, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+// import { Container } from "@chakra-ui/react";
+import styles from "@/styles/Home.module.css";
+import { Container, Heading } from "@chakra-ui/react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-// 16975
-
-export default function Home() {
+export default function About() {
   const [pageContent, setPageContent] = useState("");
 
   useEffect(() => {
     axios
-      .get("https://unlockyoursound.com/wp-json/wp/v2/pages/16975")
+      .get("https://unlockyoursound.com/wp-json/wp/v2/pages/14091")
       .then((response) => {
         setPageContent(response.data.content.rendered);
       })
@@ -28,13 +22,14 @@ export default function Home() {
     // <Container maxW="sm" bg="blue.600" color="white">
     <div className={styles.main}>
       <Container maxW="xl">
-        <Heading>Unlock Your Sound is an artist self-development platform</Heading>
+        <Heading>Christopher Carvalho</Heading>
         {/* <h1>Page Content:</h1> */}
         <div
-          style={{ padding: "10px" }}
+          style={{padding: '10px'}}
           dangerouslySetInnerHTML={{ __html: pageContent }}
         ></div>
       </Container>
     </div>
+    // </Container>
   );
 }
