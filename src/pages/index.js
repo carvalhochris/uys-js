@@ -10,31 +10,23 @@ const inter = Inter({ subsets: ["latin"] });
 
 // 16975
 
-export default function Home() {
-  const [pageContent, setPageContent] = useState("");
-
-  useEffect(() => {
-    axios
-      .get("https://unlockyoursound.com/wp-json/wp/v2/pages/16975")
-      .then((response) => {
-        setPageContent(response.data.content.rendered);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
+export default function Home({ pageContent }) {
   return (
-    // <Container maxW="sm" bg="blue.600" color="white">
     <div className={styles.main}>
       <Container maxW="xl">
-        <Heading>Unlock Your Sound is an artist self-development platform</Heading>
-        {/* <h1>Page Content:</h1> */}
-        <div
-          style={{ padding: "10px" }}
-          dangerouslySetInnerHTML={{ __html: pageContent }}
-        ></div>
+        <Heading>Unlock Your Sound</Heading>
+        <div style={{ padding: "10px" }} dangerouslySetInnerHTML={{ __html: pageContent }}></div>
       </Container>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const response = await axios.get("https://unlockyoursound.com/wp-json/wp/v2/pages/16975");
+  const pageContent = response.data.content.rendered;
+  return {
+    props: {
+      pageContent,
+    },
+  };
 }
