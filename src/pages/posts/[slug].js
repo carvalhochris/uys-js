@@ -8,8 +8,8 @@ import Nav from "@/components/Nav";
 export default function Post({ post }) {
   return (
     <div className={styles.main}>
-      <Nav />
       <Container maxW="xl">
+      <Nav />
         <Heading>{post.title.rendered}</Heading>
         <div dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
         {/* <Link href="/" as="/"><a>Home</a></Link>
@@ -21,16 +21,23 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const response = await axios.get(`https://unlockyoursound.com/wp-json/wp/v2/posts?slug=${slug}`);
-  const post = response.data[0];
-
-  return {
-    props: {
-      post,
-    },
-  };
-}
+    const { slug } = params;
+    const response = await axios.get(`https://unlockyoursound.com/wp-json/wp/v2/posts?slug=${slug}`);
+    const post = response.data[0];
+  
+    if (!post) {
+      return {
+        notFound: true,
+      };
+    }
+  
+    return {
+      props: {
+        post,
+      },
+    };
+  }
+  
 
 export async function getStaticPaths() {
   const response = await axios.get("https://unlockyoursound.com/wp-json/wp/v2/posts");

@@ -1,19 +1,20 @@
-// components/Nav.js
 import Link from "next/link";
 
 export default function Nav() {
   return (
     <nav>
-      {/* <ul>
-        <li> */}
-          <Link href="/" legacyBehavior>
-            <a>Home</a>
-          </Link>
-          <Link href="/about" legacyBehavior>
-            <a>About</a>
-          </Link>
-        {/* <li>
-      </ul> */}
+      <Link href="/" legacyBehavior>
+        <a style={{ marginRight: "10px" }}>Home</a>
+      </Link>
+      <Link href="/about" legacyBehavior>
+        <a style={{ marginRight: "10px" }}>About</a>
+      </Link>
+      <Link href="/posts" legacyBehavior>
+        <a style={{ marginRight: "10px" }}>Posts</a>
+      </Link>
+      <Link href="/posts/featured-posts" legacyBehavior>
+        <a style={{ marginRight: "10px" }}>Featured</a>
+      </Link>
     </nav>
   );
 }

@@ -8,8 +8,8 @@ export default function About({ pageContent }) {
   return (
     <div className={styles.main}>
       <Container maxW="xl">
-        <Heading>Christopher Carvalho</Heading>
         <Nav />
+        <Heading>Christopher Carvalho</Heading>
         {/* <Link href="/">Home</Link>
         <Link href="/about">About Us</Link> */}
         <div
