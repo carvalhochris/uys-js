@@ -9,7 +9,7 @@ import {
   MenuDivider,
   IconButton,
   Button,
-  Link,
+//   Link,
   Text,
 } from "@chakra-ui/react";
 import {
@@ -20,6 +20,7 @@ import {
   AddIcon,
   HamburgerIcon,
 } from "@chakra-ui/icons";
+import Link from 'next/link'
 
 export default function NavNavNav() {
   return (
