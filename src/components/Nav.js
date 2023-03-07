@@ -50,7 +50,7 @@ export default function Nav() {
         <Link href="/posts/featured-posts" legacyBehavior>
           <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
         </Link>
-        <Button onClick={toggleColorMode} size={10} mb={0} ml={5}>
+        <Button onClick={toggleColorMode} size={10} mb={0} ml={5} mr={2}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </nav>

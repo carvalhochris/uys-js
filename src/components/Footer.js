@@ -7,7 +7,10 @@ import { Divider } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { Text, Link } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
+import { AiFillYoutube } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { BsMastodon } from "react-icons/bs";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -50,7 +53,10 @@ export default function Nav() {
         {/* <Link href="/" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
-
+        <EmailIcon />
+        <AiFillYoutube />
+        <AiFillGithub />
+        <BsMastodon />
         <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
