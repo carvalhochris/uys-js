@@ -1,3 +1,11 @@
+# Creating a new frontend for Unlock Your Sound leveraging Next.js and Static Site Generation
+
+Things to do:
+
+1. Fix the REST API
+2. Fix Substack embeds
+3. Add hydration to the page
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
