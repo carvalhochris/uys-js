@@ -12,31 +12,16 @@ export default function Post({ post }) {
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        {/* <Heading>{post.title.rendered}</Heading>
-        <div dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div> */}
-        <Card>
-          <CardHeader>
-            <Heading size="md">{post.title.rendered}</Heading>
-          </CardHeader>
-
-          <CardBody>
-            <Stack divider={<StackDivider />} spacing="4">
-              <Box>
-                {/* <Heading size="xs" textTransform="uppercase">
-                  Summary
-                </Heading> */}
-                <Text pt="2" fontSize="md">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-                  ></div>
-                </Text>
-              </Box>
-            </Stack>
-          </CardBody>
-        </Card>
-        {/* <Link href="/" as="/"><a>Home</a></Link>
-
-        <Link href="/about" as="/about"><a>About</a></Link> */}
+        <Heading size="md">{post.title.rendered}</Heading>
+        <Stack divider={<StackDivider />} spacing="4">
+          <Box>
+            <Text pt="2" fontSize="md">
+              <div
+                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+              ></div>
+            </Text>
+          </Box>
+        </Stack>
       </Container>
     </div>
   );

@@ -9,7 +9,7 @@ const theme = extendTheme({
   },
   colors: {
     dark: {
-      900: "#101010", // set the background color for dark mode
+      900: "#010101", // set the background color for dark mode
     },
   },
   styles: {

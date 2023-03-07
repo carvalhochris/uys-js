@@ -4,6 +4,8 @@ import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Container } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -11,10 +13,33 @@ export default function Nav() {
 
   return (
     <>
-      <nav style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link href="/" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Link href="/" legacyBehavior style={{ position: "relative" }}>
+        <Box boxSize="80px" mr={10} display="flex" alignItems="center" cursor="pointer">
+          {colorMode === "light" ? (
+            <Image
+              src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
+              alt="Unlock Your Sound light logo"
+              // maxWidth={70}
+            />
+          ) : (
+            <Image
+              src="https://unlockyoursound.com/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
+              alt="Unlock Your Sound dark logo"
+              // maxWidth={70}
+            />
+          )}
+        </Box>
         </Link>
+        {/* <Link href="/" legacyBehavior>
+          <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
+        </Link> */}
         <Link href="/about" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>About</a>
         </Link>
