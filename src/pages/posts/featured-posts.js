@@ -13,6 +13,7 @@ export default function FeaturedPosts({ posts }) {
       <Container maxW="xl">
         <Nav />
         <Heading>Featured Posts</Heading>
+        <Divider mt={5} mb={5} />
         <ul>
           {posts.map((post) => (
             <div key={post.slug}>
