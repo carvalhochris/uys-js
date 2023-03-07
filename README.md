@@ -6,6 +6,8 @@ Things to do:
 2. Fix Substack embeds
 3. Add hydration to the page
 
+[Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
