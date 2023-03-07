@@ -33,7 +33,7 @@ export default function Home({ posts }) {
         <Center>
           <iframe
             src="https://unlockyoursound.substack.com/embed"
-            width="480"
+            width="100%"
             height="320"
             style={{
               border: "1px solid #EEE",
