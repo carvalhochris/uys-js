@@ -29,6 +29,7 @@ export default function Nav() {
             display="flex"
             alignItems="center"
             cursor="pointer"
+            ml={0}
           >
             {colorMode === "light" ? (
               <Image

@@ -10,11 +10,11 @@ export default function About({ pageContent }) {
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        <Heading>Christopher Carvalho</Heading>
+        <Heading ml={0}>Christopher Carvalho</Heading>
         {/* <Link href="/">Home</Link>
         <Link href="/about">About Us</Link> */}
         <div
-          style={{ padding: "10px" }}
+          style={{ paddingTop: "10px", paddingBottom: "10px" }}
           dangerouslySetInnerHTML={{ __html: pageContent }}
         ></div>
         <Footer />

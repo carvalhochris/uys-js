@@ -29,7 +29,7 @@ export default function Home({ posts }) {
           Unlock a bundle of free resources to help you create and release your
           music
         </Text>
-        <Divider mt={5} mb={5} />
+        {/* <Divider mt={5} mb={5} /> */}
         <Center>
           <iframe
             src="https://unlockyoursound.substack.com/embed"
