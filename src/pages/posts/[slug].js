@@ -1,4 +1,3 @@
-// pages/posts/[slug].js
 import axios from "axios";
 import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
@@ -8,28 +7,25 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 
+const GET_POST_BY_SLUG = `
+  query GetPostBySlug($slug: String!) {
+    postBy(slug: $slug) {
+      id
+      title
+      content
+    }
+  }
+`;
+
 export default function Post({ post }) {
   return (
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        <Heading size="md">{post.title.rendered}</Heading>
-        {/* <Stack divider={<StackDivider />} spacing="4"> */}
+        <Heading size="md">{post.title}</Heading>
         <Box css={{ all: "unset" }}>
-          {/* <Text pt="2" fontSize="md"> */}
-          <div
-            // sx={{
-            //   "& h2": {
-            //     fontSize: "2rem",
-            //     fontWeight: "bold",
-            //     // add any other custom styles as needed
-            //   },
-            // }}
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-          ></div>
-          {/* </Text> */}
+          <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
         </Box>
-        {/* </Stack> */}
         <Footer />
       </Container>
     </div>
@@ -38,10 +34,16 @@ export default function Post({ post }) {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const response = await axios.get(
-    `https://unlockyoursound.com/wp-json/wp/v2/posts?slug=${slug}`
+
+  const response = await axios.post(
+    "https://unlockyoursound.com/graphql",
+    {
+      query: GET_POST_BY_SLUG,
+      variables: { slug },
+    }
   );
-  const post = response.data[0];
+
+  const post = response.data.data.postBy;
 
   if (!post) {
     return {
@@ -57,10 +59,18 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const response = await axios.get(
-    "https://unlockyoursound.com/wp-json/wp/v2/posts"
-  );
-  const posts = response.data;
+  const response = await axios.post("https://unlockyoursound.com/graphql", {
+    query: `
+      query GetAllPosts {
+        posts(first: 100) {
+          nodes {
+            slug
+          }
+        }
+      }
+    `,
+  });
+  const posts = response.data.data.posts.nodes;
 
   const paths = posts.map((post) => ({
     params: { slug: post.slug },
