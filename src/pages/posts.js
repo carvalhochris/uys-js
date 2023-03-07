@@ -11,7 +11,7 @@ export default function Posts({ posts }) {
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        <Divider mt={5} mb={5} />
+        {/* <Divider mt={5} mb={5} /> */}
         <div>
           {posts.map((post) => (
             <div key={post.slug}>

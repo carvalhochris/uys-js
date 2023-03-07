@@ -12,14 +12,14 @@ import { Button } from "@chakra-ui/react";
 
 
 export default function Home({ posts }) {
-  const { colorMode, toggleColorMode } = useColorMode();
+  // const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <div className={styles.main}>
       <Container maxW="xl">
-      <Button onClick={toggleColorMode} mt={0} size={10} mb={7}>
+      {/* <Button onClick={toggleColorMode} mt={0} size={10} mb={7}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-        </Button>
+        </Button> */}
         <Nav />
         <Heading as="h1">
           Unlock Your Sound is an artist self-development platform
