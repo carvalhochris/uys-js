@@ -6,7 +6,7 @@ import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-
+import Footer from "@/components/Footer";
 import { Button } from "@chakra-ui/react";
 
 
@@ -55,6 +55,7 @@ export default function Home({ posts }) {
             </div>
           ))}
         </div>
+        <Footer />
       </Container>
     </div>
   );
