@@ -16,10 +16,52 @@
   margin-top: 50px;
 }
 
-.main h1, .main h2 {
+.main h1 {
   margin-bottom: 25px;
   margin-top: 25px;
+  font-size: 50px;
 } 
+
+.main h2 {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-size: 40px;
+}
+
+.main p {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.main b {
+  font-weight: 700;
+}
+
+.main a {
+  /* color: #000000; */
+  text-decoration: underline;
+}
+
+.main img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.main nav {
+  text-decoration: none !important;
+
+}
+
+.main iframe {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
 
 /* .main img {
   max-width: 300px;

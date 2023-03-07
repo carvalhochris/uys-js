@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import Footer from "@/components/Footer";
 
 export default function Posts({ posts }) {
   return (
@@ -22,6 +23,8 @@ export default function Posts({ posts }) {
             </div>
           ))}
         </div>
+        <Footer />
+
       </Container>
     </div>
   );

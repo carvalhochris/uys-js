@@ -18,6 +18,7 @@ export default function Nav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          // textDecoration: "none",
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
@@ -41,13 +42,13 @@ export default function Nav() {
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
         <Link href="/about" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>About</a>
+          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>About</a>
         </Link>
         <Link href="/posts" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>Posts</a>
+          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>Posts</a>
         </Link>
         <Link href="/posts/featured-posts" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>Featured</a>
+          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
         </Link>
         <Button onClick={toggleColorMode} size={10} mb={0} ml={5}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}

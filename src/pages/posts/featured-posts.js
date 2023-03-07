@@ -5,6 +5,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import Footer from "@/components/Footer";
 
 export default function FeaturedPosts({ posts }) {
   return (
@@ -22,6 +23,7 @@ export default function FeaturedPosts({ posts }) {
             </div>
           ))}
         </ul>
+        <Footer />
       </Container>
     </div>
   );

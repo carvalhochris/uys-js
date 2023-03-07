@@ -6,6 +6,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
+import Footer from "@/components/Footer";
 
 export default function Post({ post }) {
   return (
@@ -13,15 +14,23 @@ export default function Post({ post }) {
       <Container maxW="xl">
         <Nav />
         <Heading size="md">{post.title.rendered}</Heading>
-        <Stack divider={<StackDivider />} spacing="4">
-          <Box>
-            <Text pt="2" fontSize="md">
-              <div
-                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-              ></div>
-            </Text>
-          </Box>
-        </Stack>
+        {/* <Stack divider={<StackDivider />} spacing="4"> */}
+        <Box css={{ all: "unset" }}>
+          {/* <Text pt="2" fontSize="md"> */}
+          <div
+            // sx={{
+            //   "& h2": {
+            //     fontSize: "2rem",
+            //     fontWeight: "bold",
+            //     // add any other custom styles as needed
+            //   },
+            // }}
+            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          ></div>
+          {/* </Text> */}
+        </Box>
+        {/* </Stack> */}
+        <Footer />
       </Container>
     </div>
   );

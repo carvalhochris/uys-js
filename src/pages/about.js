@@ -3,6 +3,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default function About({ pageContent }) {
   return (
@@ -16,6 +17,7 @@ export default function About({ pageContent }) {
           style={{ padding: "10px" }}
           dangerouslySetInnerHTML={{ __html: pageContent }}
         ></div>
+        <Footer />
       </Container>
     </div>
   );
