@@ -22,7 +22,7 @@ export default function Nav() {
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
-        <Box boxSize="80px" mr={10} display="flex" alignItems="center" cursor="pointer">
+        <Box boxSize="80px" mr={5} display="flex" alignItems="center" cursor="pointer">
           {colorMode === "light" ? (
             <Image
               src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
@@ -42,13 +42,13 @@ export default function Nav() {
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
         <Link href="/about" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>About</a>
+          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>About</a>
         </Link>
         <Link href="/posts" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>Posts</a>
+          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Posts</a>
         </Link>
         <Link href="/posts/featured-posts" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
+          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
         </Link>
         <Button onClick={toggleColorMode} size={10} mb={0} ml={5}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}

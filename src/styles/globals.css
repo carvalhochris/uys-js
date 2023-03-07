@@ -105,6 +105,10 @@ figure .wp-element-caption {
   font-size: 14px;
 }
 
+.wp-block-quote p {
+  font-size: 24px;
+}
+
 h2 {
   font-size: 100px;
   /* font-weight: 600;
@@ -121,3 +125,7 @@ li {
     color-scheme: dark;
   }
 }
+
+/* q {
+  display: block;
+} */

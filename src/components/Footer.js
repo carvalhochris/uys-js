@@ -20,6 +20,7 @@ export default function Nav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          marginTop: "30px",
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>

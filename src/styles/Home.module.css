@@ -23,9 +23,17 @@
 } 
 
 figure .wp-element-caption {
-  font-size: 1px;
+  font-size: 15px;
 }
 
+/* blockquote .wp-block-quote {
+  display: block;
+  font-size: 100px;
+} */
+
+/* .wp-block-quote p {
+  font-size: 24px;
+} */
 
 .main h2 {
   margin-bottom: 25px;
