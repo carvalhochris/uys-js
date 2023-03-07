@@ -1,4 +1,4 @@
-# Creating a new frontend for Unlock Your Sound leveraging Next.js and Static Site Generation
+# Creating a new frontend for Unlock Your Sound leveraging Next.js and Static Generation
 
 Things to do:
 
