@@ -7,6 +7,18 @@ import { Divider } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 
+const GET_FEATURED_POSTS = `
+  query GetFeaturedPosts {
+    posts(first: 100, where: { categoryId: 322 }) {
+      nodes {
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
+
 export default function FeaturedPosts({ posts }) {
   return (
     <div className={styles.main}>
@@ -18,7 +30,7 @@ export default function FeaturedPosts({ posts }) {
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
-              <Text as="u">{post.title.rendered}</Text>
+                <Text as="u">{post.title}</Text>
                 <Divider mt={5} mb={5} />
               </Link>
             </div>
@@ -31,10 +43,13 @@ export default function FeaturedPosts({ posts }) {
 }
 
 export async function getStaticProps() {
-  const response = await axios.get(
-    "https://unlockyoursound.com/wp-json/wp/v2/posts?categories=322&per_page=100"
+  const response = await axios.post(
+    "https://unlockyoursound.com/graphql",
+    {
+      query: GET_FEATURED_POSTS,
+    }
   );
-  const posts = response.data;
+  const posts = response.data.data.posts.nodes;
 
   return {
     props: {
