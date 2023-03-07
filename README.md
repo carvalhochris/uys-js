@@ -1,8 +1,8 @@
-# Creating a new frontend for Unlock Your Sound leveraging Next.js and Static Generation
+# Creating a new frontend for Unlock Your Sound leveraging Next.js, GraphQL, Headless Wordpress, and Static Generation
 
 Things to do:
 
-1. Fix the REST API
+1. Implement search
 2. Fix Substack embeds
 3. Add hydration to the page
 
