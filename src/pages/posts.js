@@ -7,34 +7,44 @@ import { Divider } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 
+const GET_ALL_POSTS = `
+  query GetAllPosts {
+    posts(first: 100) {
+      nodes {
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
+
 export default function Posts({ posts }) {
   return (
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        {/* <Divider mt={5} mb={5} /> */}
         <div>
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
-                <Text as="u">{post.title.rendered}</Text>
+                <Text as="u">{post.title}</Text>
                 <Divider mt={5} mb={5} />
               </Link>
             </div>
           ))}
         </div>
         <Footer />
-
       </Container>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const response = await axios.get(
-    "https://unlockyoursound.com/wp-json/wp/v2/posts"
-  );
-  const posts = response.data;
+  const response = await axios.post("https://unlockyoursound.com/graphql", {
+    query: GET_ALL_POSTS,
+  });
+  const posts = response.data.data.posts.nodes;
 
   return {
     props: {
