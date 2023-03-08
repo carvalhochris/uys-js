@@ -5,10 +5,9 @@ import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Home({ posts }) {
-
   return (
     <div className={styles.main}>
       <Container maxW="xl">
@@ -43,9 +42,11 @@ export default function Home({ posts }) {
           <Divider mt={10} mb={5} />
           <ul>
             {posts.map((post) => (
-              <div key={post.slug} >
-                <Link href={`/${post.slug}`} style={{ textDecoration: 'none' }}>
-                  <Heading as="h3" mb={5}>{post.title}</Heading>
+              <div key={post.slug}>
+                <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
+                  <Heading as="h3" mb={5}>
+                    {post.title}
+                  </Heading>
                   <Image
                     src={post.featuredImage.node.sourceUrl}
                     alt={post.title}

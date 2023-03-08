@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { Container } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
-import { AiFillYoutube } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-import { BsMastodon } from "react-icons/bs";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { AiFillInfoCircle } from "react-icons/ai";
-import { SiSubstack } from "react-icons/si";
+import MyMenu from "./MyMenu";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -57,23 +54,18 @@ export default function Nav() {
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
         <Link href="/about" legacyBehavior style={{ position: "relative" }}>
-        <Box
-        // boxSize="80px"
-        // mr={10}
-        display="flex"
-        alignItems="center"
-        cursor="pointer"
-        ml={0}
-        >
-          <AiFillInfoCircle />
-        </Box>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <AiFillInfoCircle />
+          </Box>
         </Link>
-        <EmailIcon />
-        <AiFillGithub />
-        <Divider orientation='vertical' colorScheme="purple" variant="solid" />
-        <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
-          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-        </Button>
+        <MyMenu />
       </footer>
       <Divider mt={5} mb={5} />
       <Text fontSize="md">
@@ -85,9 +77,6 @@ export default function Nav() {
       </Text>
       <Text fontSize="md">© 2023 Unlock Your Sound Ltd</Text>
       <Divider mt={5} mb={5} />
-      {/* <Text fontSize='md'>UNLOCK YOUR SOUND LTD is a limited company registered in the UK
-
-Company #11443507</Text> */}
     </>
   );
 }
