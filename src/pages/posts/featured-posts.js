@@ -36,7 +36,7 @@ export default function FeaturedPosts({ posts }) {
             </div>
           ))}
         </ul>
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </div>
   );

@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { Container } from "@chakra-ui/react";
+// import { Container } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
+import { AiFillYoutube } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { BsMastodon } from "react-icons/bs";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -41,15 +46,19 @@ export default function Nav() {
         {/* <Link href="/" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
-        <Link href="/about" legacyBehavior>
+        {/* <Link href="/about" legacyBehavior>
           <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>About</a>
-        </Link>
-        <Link href="/posts" legacyBehavior>
+        </Link> */}
+        {/* <Link href="/posts" legacyBehavior>
           <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Posts</a>
-        </Link>
-        <Link href="/posts/featured-posts" legacyBehavior>
+        </Link> */}
+        {/* <Link href="/posts/featured-posts" legacyBehavior>
           <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
-        </Link>
+        </Link> */}
+        <EmailIcon />
+        <AiFillYoutube />
+        <AiFillGithub />
+        <BsMastodon />
         <Button onClick={toggleColorMode} size={10} mb={0} ml={5} mr={2}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>

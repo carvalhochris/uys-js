@@ -7,10 +7,23 @@ import { Divider } from "@chakra-ui/react";
 // import { useColorMode } from "@chakra-ui/react";
 // import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import Footer from "@/components/Footer";
+// import FeaturedPosts from "./posts/featured-posts";
 // import { Button } from "@chakra-ui/react";
 
 export default function Home({ posts }) {
   // const { colorMode, toggleColorMode } = useColorMode();
+
+  const GET_FEATURED_POSTS = `
+  query GetFeaturedPosts {
+    posts(first: 100, where: { categoryId: 322 }) {
+      nodes {
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
 
   return (
     <div className={styles.main}>
@@ -37,7 +50,7 @@ export default function Home({ posts }) {
           ></iframe>
         </Center>
         <Divider mt={5} mb={5} />
-        <div>
+        {/* <div>
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
@@ -46,18 +59,88 @@ export default function Home({ posts }) {
               <Divider mt={5} mb={5} />
             </div>
           ))}
-        </div>
+        </div> */}
+        {/* <FeaturedPosts /> */}
+        {/* <Footer /> */}
+      </Container>
+      <div className={styles.main}>
+      <Container maxW="xl">
+        {/* <Nav /> */}
+        <Heading>Featured Content</Heading>
+        <Divider mt={5} mb={5} />
+        <ul>
+          {posts.map((post) => (
+            <div key={post.slug}>
+              <Link href={`/posts/${post.slug}`}>
+                <Text as="u">{post.title}</Text>
+                <Divider mt={5} mb={5} />
+              </Link>
+            </div>
+          ))}
+        </ul>
         <Footer />
       </Container>
+    </div>
     </div>
   );
 }
 
+// export async function getStaticProps() {
+//   const response = await axios.get(
+//     "https://unlockyoursound.com/wp-json/wp/v2/posts"
+//   );
+//   const posts = response.data;
+
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
+
+const GET_FEATURED_POSTS = `
+  query GetFeaturedPosts {
+    posts(first: 100, where: { categoryId: 322 }) {
+      nodes {
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
+
+// function FeaturedPosts({ posts }) {
+//   return (
+//     <div className={styles.main}>
+//       <Container maxW="xl">
+//         <Nav />
+//         <Heading>Featured Posts</Heading>
+//         <Divider mt={5} mb={5} />
+//         <ul>
+//           {posts.map((post) => (
+//             <div key={post.slug}>
+//               <Link href={`/posts/${post.slug}`}>
+//                 <Text as="u">{post.title}</Text>
+//                 <Divider mt={5} mb={5} />
+//               </Link>
+//             </div>
+//           ))}
+//         </ul>
+//         <Footer />
+//       </Container>
+//     </div>
+//   );
+// }
+
 export async function getStaticProps() {
-  const response = await axios.get(
-    "https://unlockyoursound.com/wp-json/wp/v2/posts"
+  const response = await axios.post(
+    "https://unlockyoursound.com/graphql",
+    {
+      query: GET_FEATURED_POSTS,
+    }
   );
-  const posts = response.data;
+  const posts = response.data.data.posts.nodes;
 
   return {
     props: {
