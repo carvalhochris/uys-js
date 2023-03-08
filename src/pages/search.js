@@ -20,7 +20,7 @@ export default function SearchPage() {
       const response = await axios.post("https://unlockyoursound.com/graphql", {
         query: `
             query SearchPosts($search: String!) {
-              posts(where: { search: $search }) {
+              posts(first: 100, where: { search: $search }) {
                 nodes {
                   id
                   title
@@ -75,6 +75,7 @@ export default function SearchPage() {
               <Link href={`/${result.slug}`}>
                 <h2 style={{ cursor: "pointer" }}>{result.title}</h2>
               </Link>
+              <Divider />
             </div>
           ))
         ) : (
