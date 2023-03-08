@@ -59,10 +59,7 @@ export default function Nav() {
         </Box>
         </Link>
         <EmailIcon />
-        <AiFillYoutube />
         <AiFillGithub />
-        <BsMastodon />
-        <SiSubstack />
         <Divider orientation='vertical' colorScheme="purple" variant="solid" />
         <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
