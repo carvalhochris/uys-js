@@ -13,6 +13,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsMastodon } from "react-icons/bs";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { AiFillInfoCircle } from "react-icons/ai";
+import { SiSubstack } from "react-icons/si";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -71,6 +72,8 @@ export default function Nav() {
         <AiFillYoutube />
         <AiFillGithub />
         <BsMastodon />
+        <SiSubstack />
+        <Divider orientation='vertical' colorScheme="purple" variant="solid" />
         <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>

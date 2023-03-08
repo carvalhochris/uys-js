@@ -12,22 +12,21 @@ import { AiFillYoutube } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsMastodon } from "react-icons/bs";
 import { AiFillInfoCircle } from "react-icons/ai";
-import MyMenu from "./Menu";
 import { SiSubstack } from "react-icons/si";
 
-export default function Nav() {
+export default function Menu() {
   const { colorMode, toggleColorMode } = useColorMode();
   const textSize = 17;
 
   return (
     <>
       <nav
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          // textDecoration: "none",
-        }}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        // textDecoration: "none",
+      }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
         <Box boxSize="80px" mr={5} display="flex" alignItems="center" cursor="pointer">
@@ -63,13 +62,11 @@ export default function Nav() {
         <AiFillGithub />
         <BsMastodon />
         <SiSubstack />
-        <Divider orientation='vertical' colorScheme="purple" variant="solid" />
-        <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
+        <Button onClick={toggleColorMode} size={10} mb={0} ml={5} mr={2}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
-        {/* <MyMenu /> */}
-      </nav>
       <Divider mt={5} mb={5} />
+      </nav>
     </>
   );
 }
