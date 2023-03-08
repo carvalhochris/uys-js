@@ -68,6 +68,7 @@ export default function Home({ posts }) {
         <Container maxW="xl">
           {/* <Nav /> */}
           <Heading>Featured Content</Heading>
+          <Text>The hall of fame</Text>
           <Divider mt={5} mb={5} />
           <ul>
             {posts.map((post) => (
