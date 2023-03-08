@@ -43,18 +43,6 @@ export default function Nav() {
           )}
         </Box>
         </Link>
-        {/* <Link href="/" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
-        </Link> */}
-        {/* <Link href="/about" legacyBehavior>
-          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>About</a>
-        </Link> */}
-        {/* <Link href="/posts" legacyBehavior>
-          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Posts</a>
-        </Link> */}
-        {/* <Link href="/posts/featured-posts" legacyBehavior>
-          <a style={{ marginRight: "20px", fontSize: textSize, textDecoration: "none" }}>Featured</a>
-        </Link> */}
         <EmailIcon />
         <AiFillYoutube />
         <AiFillGithub />
