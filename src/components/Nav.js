@@ -11,6 +11,7 @@ import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
 import { AiFillYoutube } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsMastodon } from "react-icons/bs";
+import { AiFillInfoCircle } from "react-icons/ai";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -41,6 +42,18 @@ export default function Nav() {
               // maxWidth={70}
             />
           )}
+        </Box>
+        </Link>
+        <Link href="/about" legacyBehavior style={{ position: "relative" }}>
+        <Box
+        // boxSize="80px"
+        // mr={10}
+        display="flex"
+        alignItems="center"
+        cursor="pointer"
+        ml={0}
+        >
+          <AiFillInfoCircle />
         </Box>
         </Link>
         <EmailIcon />

@@ -12,6 +12,7 @@ import { AiFillYoutube } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsMastodon } from "react-icons/bs";
 import { Link as ChakraLink } from "@chakra-ui/react";
+import { AiFillInfoCircle } from "react-icons/ai";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -54,6 +55,18 @@ export default function Nav() {
         {/* <Link href="/" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
+        <Link href="/about" legacyBehavior style={{ position: "relative" }}>
+        <Box
+        // boxSize="80px"
+        // mr={10}
+        display="flex"
+        alignItems="center"
+        cursor="pointer"
+        ml={0}
+        >
+          <AiFillInfoCircle />
+        </Box>
+        </Link>
         <EmailIcon />
         <AiFillYoutube />
         <AiFillGithub />
