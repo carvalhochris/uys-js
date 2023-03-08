@@ -6,18 +6,19 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import { Button } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
+import { FaDice } from "react-icons/fa";
 
 export default function RandomPage() {
   const [randomPost, setRandomPost] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [postContent, setPostContent] = useState("");
 
   const handleLoadRandomPost = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(
-        "https://unlockyoursound.com/graphql",
-        {
-          query: `
+      const response = await axios.post("https://unlockyoursound.com/graphql", {
+        query: `
             query RandomPosts {
               posts(first: 1000) {
                 nodes {
@@ -27,19 +28,35 @@ export default function RandomPage() {
                 }
               }
             }
-          `
+          `,
+      });
+      const randomIndex = Math.floor(Math.random() * 100);
+      const randomPost = response.data.data.posts.nodes[randomIndex];
+      setRandomPost(randomPost);
+
+      // Fetch the content of the post
+      const contentResponse = await axios.post(
+        "https://unlockyoursound.com/graphql",
+        {
+          query: `
+            query PostContent($slug: ID!) {
+              post(id: $slug, idType: SLUG) {
+                content
+              }
+            }
+          `,
+          variables: {
+            slug: randomPost.slug,
+          },
         }
       );
-      const randomIndex = Math.floor(Math.random() * 100);
-      setRandomPost(response.data.data.posts.nodes[randomIndex]);
+      setPostContent(contentResponse.data.data.post.content);
     } catch (error) {
       console.error(error);
     } finally {
       setLoading(false);
     }
   };
-  
-  
 
   return (
     <div className={styles.main}>
@@ -51,10 +68,11 @@ export default function RandomPage() {
             </Button>
           </Link>
         </Nav>
-        <h1>Random Page</h1>
+        <Heading>Roll the dice!</Heading>
         <Button onClick={handleLoadRandomPost} mt={5}>
-          Load Random Post
+          <FaDice />
         </Button>
+        <br></br>
         {loading ? (
           <Spinner size="xl" mt={10} />
         ) : randomPost ? (
@@ -62,6 +80,12 @@ export default function RandomPage() {
             <Link href={`/${randomPost.slug}`}>
               <h2 style={{ cursor: "pointer" }}>{randomPost.title}</h2>
             </Link>
+            {postContent && (
+              <div
+                className={styles.postContent}
+                dangerouslySetInnerHTML={{ __html: postContent }}
+              />
+            )}
           </div>
         ) : null}
       </Container>
