@@ -8,6 +8,8 @@ Things to do:
 
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
 
+Life saver: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

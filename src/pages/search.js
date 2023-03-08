@@ -20,7 +20,7 @@ export default function SearchPage() {
       const response = await axios.post("https://unlockyoursound.com/graphql", {
         query: `
             query SearchPosts($search: String!) {
-              posts(first: 100, where: { search: $search }) {
+              posts(first: 1000, where: { search: $search }) {
                 nodes {
                   id
                   title

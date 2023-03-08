@@ -68,7 +68,7 @@ export default function Home({ posts }) {
 
 const GET_FEATURED_POSTS = `
   query GetFeaturedPosts {
-    posts(first: 100, where: { categoryId: 322 }) {
+    posts(first: 1000, where: { categoryId: 322 }) {
       nodes {
         id
         slug

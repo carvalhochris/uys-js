@@ -19,7 +19,7 @@ export default function RandomPage() {
         {
           query: `
             query RandomPosts {
-              posts(first: 100) {
+              posts(first: 1000) {
                 nodes {
                   id
                   title

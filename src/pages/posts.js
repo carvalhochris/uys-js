@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const GET_ALL_POSTS = `
   query GetAllPosts {
-    posts(first: 100) {
+    posts(first: 1000) {
       nodes {
         id
         slug
