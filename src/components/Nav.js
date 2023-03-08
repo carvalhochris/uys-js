@@ -10,6 +10,7 @@ import { AiFillInfoCircle } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import MyMenu from "./MyMenu";
 import { AiOutlineSearch } from "react-icons/ai";
+import { FaDice } from "react-icons/fa";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -61,7 +62,7 @@ export default function Nav() {
           </Box>
         </Link>
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
-        <Box
+          <Box
             // boxSize="80px"
             // mr={10}
             display="flex"
@@ -69,9 +70,21 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-      <AiOutlineSearch />
-      </Box>
-      </Link>
+            <AiOutlineSearch />
+          </Box>
+        </Link>
+        <Link href="/random" legacyBehavior style={{ position: "relative" }}>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <FaDice />
+          </Box>
+        </Link>
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
