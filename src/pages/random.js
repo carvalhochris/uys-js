@@ -68,7 +68,7 @@ export default function RandomPage() {
             </Button>
           </Link>
         </Nav>
-        <Heading>Roll the dice!</Heading>
+        {/* <Heading>Roll the dice!</Heading> */}
         <Button onClick={handleLoadRandomPost} mt={5}>
           <FaDice />
         </Button>

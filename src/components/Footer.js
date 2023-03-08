@@ -11,6 +11,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { AiFillInfoCircle } from "react-icons/ai";
 import MyMenu from "./MyMenu";
+import { FaDice } from "react-icons/fa";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -63,6 +64,18 @@ export default function Nav() {
             ml={0}
           >
             <AiFillInfoCircle />
+          </Box>
+        </Link>
+        <Link href="/random" legacyBehavior style={{ position: "relative" }}>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <FaDice />
           </Box>
         </Link>
         <MyMenu />

@@ -73,18 +73,6 @@ export default function Nav() {
             <AiOutlineSearch />
           </Box>
         </Link>
-        <Link href="/random" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            <FaDice />
-          </Box>
-        </Link>
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />

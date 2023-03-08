@@ -13,8 +13,8 @@ export default function MyMenu() {
 
   return (
     <>
-      <EmailIcon />
-      <AiFillGithub />
+      {/* <EmailIcon />
+      <AiFillGithub /> */}
       <Divider orientation="vertical" colorScheme="purple" variant="solid" />
       <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
