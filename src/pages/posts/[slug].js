@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
+import Image from 'next/image';
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
@@ -13,9 +14,15 @@ const GET_POST_BY_SLUG = `
       id
       title
       content
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
     }
   }
 `;
+
 
 export default function Post({ post }) {
   return (
@@ -24,6 +31,14 @@ export default function Post({ post }) {
         <Nav />
         <Heading size="md">{post.title}</Heading>
         <Box css={{ all: "unset" }}>
+          {post.featuredImage && (
+            <Image
+              src={post.featuredImage.node.sourceUrl}
+              alt={post.title}
+              width={500}
+              height={500}
+            />
+          )}
           <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
         </Box>
         <Footer />
@@ -31,6 +46,7 @@ export default function Post({ post }) {
     </div>
   );
 }
+
 
 export async function getStaticProps({ params }) {
   const { slug } = params;

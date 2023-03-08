@@ -14,17 +14,17 @@ import Image from 'next/image';
 export default function Home({ posts }) {
   // const { colorMode, toggleColorMode } = useColorMode();
 
-  const GET_FEATURED_POSTS = `
-  query GetFeaturedPosts {
-    posts(first: 100, where: { categoryId: 322 }) {
-      nodes {
-        id
-        slug
-        title
-      }
-    }
-  }
-`;
+//   const GET_FEATURED_POSTS = `
+//   query GetFeaturedPosts {
+//     posts(first: 100, where: { categoryId: 322 }) {
+//       nodes {
+//         id
+//         slug
+//         title
+//       }
+//     }
+//   }
+// `;
 
   return (
     <div className={styles.main}>
@@ -71,9 +71,9 @@ export default function Home({ posts }) {
           <Divider mt={5} mb={5} />
           <ul>
             {posts.map((post) => (
-              <div key={post.slug}>
-                <Link href={`/posts/${post.slug}`}>
-                  <Text as="u">{post.title}</Text>
+              <div key={post.slug} >
+                <Link href={`/posts/${post.slug}`} style={{ textDecoration: 'none' }}>
+                  <Heading as="h3" mb={5}>{post.title}</Heading>
                   <Image
                     src={post.featuredImage.node.sourceUrl}
                     alt={post.title}
