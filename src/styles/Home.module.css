@@ -23,7 +23,7 @@
   margin-top: 25px;
   font-size: 50px;
   font-family: var(--font-primary);
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   font-weight: 1000;
 } 
 
@@ -45,7 +45,9 @@ figure .wp-element-caption {
   margin-top: 25px;
   font-size: 40px;
   font-family: var(--font-primary);
-  letter-spacing: 2px;
+  font-weight: 1000;
+
+  /* letter-spacing: 2px; */
 }
 
 .main h3 {
@@ -53,7 +55,9 @@ figure .wp-element-caption {
   margin-top: 25px;
   font-size: 30px;
   font-family: var(--font-primary);
-  letter-spacing: 2px;
+  font-weight: 1000;
+
+  /* letter-spacing: 2px; */
 }
 
 .main p {
