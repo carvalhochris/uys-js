@@ -9,6 +9,7 @@ import { Divider } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 // import FeaturedPosts from "./posts/featured-posts";
 // import { Button } from "@chakra-ui/react";
+import Image from 'next/image';
 
 export default function Home({ posts }) {
   // const { colorMode, toggleColorMode } = useColorMode();
@@ -64,23 +65,30 @@ export default function Home({ posts }) {
         {/* <Footer /> */}
       </Container>
       <div className={styles.main}>
-      <Container maxW="xl">
-        {/* <Nav /> */}
-        <Heading>Featured Content</Heading>
-        <Divider mt={5} mb={5} />
-        <ul>
-          {posts.map((post) => (
-            <div key={post.slug}>
-              <Link href={`/posts/${post.slug}`}>
-                <Text as="u">{post.title}</Text>
-                <Divider mt={5} mb={5} />
-              </Link>
-            </div>
-          ))}
-        </ul>
-        <Footer />
-      </Container>
-    </div>
+        <Container maxW="xl">
+          {/* <Nav /> */}
+          <Heading>Featured Content</Heading>
+          <Divider mt={5} mb={5} />
+          <ul>
+            {posts.map((post) => (
+              <div key={post.slug}>
+                <Link href={`/posts/${post.slug}`}>
+                  <Text as="u">{post.title}</Text>
+                  <Image
+                    src={post.featuredImage.node.sourceUrl}
+                    alt={post.title}
+                    width={500}
+                    height={500}
+                  />
+                  <Divider mt={5} mb={5} />
+                </Link>
+              </div>
+            ))}
+          </ul>
+
+          <Footer />
+        </Container>
+      </div>
     </div>
   );
 }
@@ -105,6 +113,11 @@ const GET_FEATURED_POSTS = `
         id
         slug
         title
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
       }
     }
   }
@@ -134,12 +147,9 @@ const GET_FEATURED_POSTS = `
 // }
 
 export async function getStaticProps() {
-  const response = await axios.post(
-    "https://unlockyoursound.com/graphql",
-    {
-      query: GET_FEATURED_POSTS,
-    }
-  );
+  const response = await axios.post("https://unlockyoursound.com/graphql", {
+    query: GET_FEATURED_POSTS,
+  });
   const posts = response.data.data.posts.nodes;
 
   return {
