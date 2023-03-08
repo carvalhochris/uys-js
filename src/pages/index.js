@@ -44,7 +44,7 @@ export default function Home({ posts }) {
           <ul>
             {posts.map((post) => (
               <div key={post.slug} >
-                <Link href={`/posts/${post.slug}`} style={{ textDecoration: 'none' }}>
+                <Link href={`/${post.slug}`} style={{ textDecoration: 'none' }}>
                   <Heading as="h3" mb={5}>{post.title}</Heading>
                   <Image
                     src={post.featuredImage.node.sourceUrl}
