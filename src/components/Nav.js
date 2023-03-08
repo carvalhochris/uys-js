@@ -9,6 +9,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import MyMenu from "./MyMenu";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -59,6 +60,9 @@ export default function Nav() {
             <AiFillInfoCircle />
           </Box>
         </Link>
+        <Link href="/search" legacyBehavior style={{ position: "relative" }}>
+      <AiOutlineSearch />
+      </Link>
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
