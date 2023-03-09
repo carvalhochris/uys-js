@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import { Divider } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Search from "../components/SearchBox";
 
 export default function Home({ posts }) {
   return (
@@ -36,6 +37,7 @@ export default function Home({ posts }) {
       </Container>
       <div className={styles.main}>
         <Container maxW="xl">
+          <Search />
           {/* <Nav /> */}
           <Heading>Featured Content</Heading>
           <Text>The hall of fame</Text>
