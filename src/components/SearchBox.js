@@ -66,6 +66,7 @@ export default function SearchPage() {
             // size={100}
             size="lg"
             borderColor="#202020"
+            // mt={10}
           />
         ) : (
           <Input
@@ -73,19 +74,20 @@ export default function SearchPage() {
             name="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            _placeholder={{ color: 'white' }}
+            _placeholder={{ color: 'grey' }}
 
             placeholder="lose yourself in our ever-growing archives"
             // size={100}
             size="lg"
             borderColor="#ffffff"
+           
           />
         )}
 
         {/* </label> */}
         <br></br>
-        <br></br>
-        <Button type="submit" mt={5} size="lg">
+        {/* <br></br> */}
+        <Button type="submit" mt={10} size="lg" borderColor='grey' variant='outline'>
           Search
         </Button>
         <Divider />
