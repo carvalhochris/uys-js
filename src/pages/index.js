@@ -7,8 +7,13 @@ import { Divider } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Search from "../components/SearchBox";
+import { useColorMode } from "@chakra-ui/react";
+import Head from "next/head";
+import CustomSubstackWidget from "@/components/CustomSubstackWidget";
 
 export default function Home({ posts }) {
+  const { colorMode } = useColorMode();
+
   return (
     <div className={styles.main}>
       <Container maxW="xl">
@@ -18,30 +23,35 @@ export default function Home({ posts }) {
         </Heading>
         <Divider mt={5} mb={5} />
         <Text>
-          Unlock a bundle of free resources to help you create and release your
+          Access a bundle of free resources to help you create and release your
           music
         </Text>
+        <Head>
+          <script src="https://substackapi.com/widget.js" async></script>
+        </Head>
+        {/* <CustomSubstackWidget /> */}
         <Center>
+          {/* {colorMode === "light" ? (
+            <iframe src="https://unlockyoursound.substack.com/embed"></iframe>
+          ) : (
+            <iframe src="https://unlockyoursound.substack.com/embed" height={350} width={600} style={{backgroundColor: 'black'}} ></iframe>
+          )} */}
           <iframe
             src="https://unlockyoursound.substack.com/embed"
-            width="100%"
-            height="320"
-            style={{
-              border: "1px solid #EEE",
-            }}
-            frameborder="0"
-            scrolling="no"
+            height={350}
+            width={600}
+            // style={{ backgroundColor: "black" }}
           ></iframe>
         </Center>
-        <Divider mt={5} mb={5} />
+        {/* <Divider mt={5} mb={5} /> */}
       </Container>
       <div className={styles.main}>
         <Container maxW="xl">
           <Search />
           {/* <Nav /> */}
+          <Divider mt={10} mb={5} />
           <Heading>Featured Content</Heading>
           <Text>The hall of fame</Text>
-          <Divider mt={10} mb={5} />
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>

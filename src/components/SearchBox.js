@@ -87,10 +87,13 @@ export default function SearchPage() {
         {/* </label> */}
         <br></br>
         {/* <br></br> */}
-        <Button type="submit" mt={10} size="lg" borderColor='grey' variant='outline'>
+        <Button type="submit" mt={10} size="lg" borderColor='grey' variant='outline' backgroundColor='#7756E3' color='white'>
           Search
         </Button>
-        <Divider />
+        <br></br>
+        <br></br>
+
+        {/* <Divider /> */}
       </form>
       {loading ? (
         <Center>
