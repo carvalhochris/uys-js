@@ -40,7 +40,7 @@ export default function Home({ posts }) {
             src="https://unlockyoursound.substack.com/embed"
             height={350}
             width={600}
-            // style={{ backgroundColor: "black" }}
+            style={{ border: "solid" }}
           ></iframe>
         </Center>
         {/* <Divider mt={5} mb={5} /> */}
