@@ -50,6 +50,18 @@ export default function Nav() {
             )}
           </Box>
         </Link>
+        <Link href="/free" legacyBehavior style={{ position: "relative" }}>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <AiFillHeart color="7756E3"/>
+          </Box>
+        </Link>
         <Link href="/about" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
@@ -62,7 +74,6 @@ export default function Nav() {
             <AiFillInfoCircle />
           </Box>
         </Link>
-          <AiFillHeart />
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"

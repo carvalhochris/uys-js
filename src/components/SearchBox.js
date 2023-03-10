@@ -74,20 +74,26 @@ export default function SearchPage() {
             name="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            _placeholder={{ color: 'grey' }}
-
+            _placeholder={{ color: "grey" }}
             placeholder="lose yourself in our ever-growing archives"
             // size={100}
             size="lg"
-            borderColor="#ffffff"
-           
+            borderColor="#white"
           />
         )}
 
         {/* </label> */}
         <br></br>
         {/* <br></br> */}
-        <Button type="submit" mt={10} size="lg" borderColor='grey' variant='outline' backgroundColor='#7756E3' color='white'>
+        <Button
+          type="submit"
+          mt={10}
+          size="lg"
+          borderColor="grey"
+          variant="outline"
+          // backgroundColor="#7756E3"
+          color="#white"
+        >
           Search
         </Button>
         <br></br>
@@ -97,7 +103,7 @@ export default function SearchPage() {
       </form>
       {loading ? (
         <Center>
-          <Spinner size="xl" mt={10} />
+          <Spinner size="xl" mt={10} color="#7756E3" />
         </Center>
       ) : searchResults.length > 0 ? (
         searchResults.map((result) => (

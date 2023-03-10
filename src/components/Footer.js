@@ -56,6 +56,7 @@ export default function Nav() {
         {/* <Link href="/" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
+        <AiFillHeart color="7756E3" />
         <Link href="/about" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
@@ -68,7 +69,6 @@ export default function Nav() {
             <AiFillInfoCircle />
           </Box>
         </Link>
-        <AiFillHeart />
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
