@@ -2,13 +2,15 @@
 
 Things to do:
 
-1. Implement search
+1. Fetch and render meta tags and page title from posts
 2. Fix Substack embeds
 3. Add hydration to the page
 
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
 
 Life saver: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
+
+Hey Meta: https://www.heymeta.com/ 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
