@@ -12,6 +12,8 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { AiFillInfoCircle } from "react-icons/ai";
 import MyMenu from "./MyMenu";
 import { FaDice } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -66,7 +68,8 @@ export default function Nav() {
             <AiFillInfoCircle />
           </Box>
         </Link>
-        <Link href="/random" legacyBehavior style={{ position: "relative" }}>
+        <AiFillHeart />
+        <Link href="/search" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
             // mr={10}
@@ -75,7 +78,7 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-            <FaDice />
+            <AiOutlineSearch />
           </Box>
         </Link>
         <MyMenu />
@@ -103,7 +106,9 @@ export default function Nav() {
           <ExternalLinkIcon mx="2px" />
         </ChakraLink>
       </Text>
-      <Text fontSize="md" mb={10}>© 2023 Unlock Your Sound Ltd</Text>
+      <Text fontSize="md" mb={10}>
+        © 2023 Unlock Your Sound Ltd
+      </Text>
       {/* <Divider mt={5} mb={5} /> */}
     </>
   );

@@ -11,6 +11,7 @@ import { AiFillGithub } from "react-icons/ai";
 import MyMenu from "./MyMenu";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaDice } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -61,6 +62,7 @@ export default function Nav() {
             <AiFillInfoCircle />
           </Box>
         </Link>
+          <AiFillHeart />
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
