@@ -55,6 +55,7 @@ export default function Home({ posts }) {
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>
+                
                 <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
                   <Heading as="h3" mb={5}>
                     {post.title}
@@ -65,8 +66,10 @@ export default function Home({ posts }) {
                     width={500}
                     height={500}
                   />
-                  <Divider mt={10} mb={5} />
+                  {/* <Divider mt={10} mb={5} /> */}
                 </Link>
+                <Divider mt={10} mb={5} />
+
               </div>
             ))}
           </ul>
