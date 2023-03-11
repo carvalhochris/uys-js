@@ -17,33 +17,47 @@ export default function MusicMarketing({ posts }) {
   return (
     <>
       <Head>
-        <title>Music Business</title>
+      <title>Music Marketing</title>
         <meta
           name="description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to build your music brand"
         />
-        <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="Unlock Your Sound" />
+
+        <meta itemprop="name" content="Music Marketing" />
+        <meta
+          itemprop="description"
+          content="Learn how to build your music brand"
+        />
+        <meta
+          itemprop="image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://uys-js.vercel.app/music-marketing"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Music Marketing" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to build your music brand"
         />
         <meta
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Music Marketing" />
         <meta
           name="twitter:description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to build your music brand"
         />
         <meta
           name="twitter:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">

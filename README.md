@@ -4,7 +4,7 @@ Things to do:
 
 1. Fetch and render meta tags and page title from posts
 2. ALL THE SEO - including fetching meta data from Wordpress posts
-3. Add hydration to the page
+3. Switch meta urls to production domain
 
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
 

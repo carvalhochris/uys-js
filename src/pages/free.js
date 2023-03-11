@@ -29,7 +29,7 @@ export default function FreeResources() {
 
         <meta
           property="og:url"
-          content="https://uys-js.vercel.app/free-mix-feedback"
+          content="https://uys-js.vercel.app/free"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Free Resources" />

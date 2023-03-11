@@ -17,33 +17,47 @@ export default function MusicBusiness({ posts }) {
   return (
     <>
       <Head>
-        <title>Music Business</title>
+      <title>Music Business</title>
         <meta
           name="description"
-          content="The Artist Self-Development Platform"
+          content="Read about the ever-evolving business of music"
         />
-        <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="Unlock Your Sound" />
+
+        <meta itemprop="name" content="Music Business" />
+        <meta
+          itemprop="description"
+          content="Read about the ever-evolving business of music"
+        />
+        <meta
+          itemprop="image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://uys-js.vercel.app/music-business"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Music Business" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content="Read about the ever-evolving business of music"
         />
         <meta
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Music Business" />
         <meta
           name="twitter:description"
-          content="The Artist Self-Development Platform"
+          content="Read about the ever-evolving business of music"
         />
         <meta
           name="twitter:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
     
   

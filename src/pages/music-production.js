@@ -17,33 +17,47 @@ import {
     return (
       <>
        <Head>
-        <title>Music Production</title>
+       <title>Music Production</title>
         <meta
           name="description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to unlock your sound"
         />
-        <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="Unlock Your Sound" />
+
+        <meta itemprop="name" content="Music Production" />
+        <meta
+          itemprop="description"
+          content="Learn how to unlock your sound"
+        />
+        <meta
+          itemprop="image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://uys-js.vercel.app/music-production"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Music Production" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to unlock your sound"
         />
         <meta
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Music Production" />
         <meta
           name="twitter:description"
-          content="The Artist Self-Development Platform"
+          content="Learn how to unlock your sound"
         />
         <meta
           name="twitter:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">
