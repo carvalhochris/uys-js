@@ -11,7 +11,47 @@ export default function FreeResources() {
   return (
     <>
       <Head>
-        <title>Free Resources</title>
+      <title>Free Resources</title>
+        <meta
+          name="description"
+          content="Unlock a bundle of free resources to help you create and release your music"
+        />
+
+        <meta itemprop="name" content="Free Resources" />
+        <meta
+          itemprop="description"
+          content="Unlock a bundle of free resources to help you create and release your music"
+        />
+        <meta
+          itemprop="image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://uys-js.vercel.app/free-mix-feedback"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Free Resources" />
+        <meta
+          property="og:description"
+          content="Unlock a bundle of free resources to help you create and release your music"
+        />
+        <meta
+          property="og:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free Resources" />
+        <meta
+          name="twitter:description"
+          content="Unlock a bundle of free resources to help you create and release your music"
+        />
+        <meta
+          name="twitter:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
       </Head>
 
       <div className={styles.main}>
