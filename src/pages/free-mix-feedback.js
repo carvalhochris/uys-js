@@ -24,7 +24,10 @@ export default function MixFeedback() {
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com/free-mix-feedback" />
+        <meta
+          property="og:url"
+          content="http://unlockyoursound.com/free-mix-feedback"
+        />
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta
@@ -43,17 +46,21 @@ export default function MixFeedback() {
           <Heading as="h1">Free Mix Feedback</Heading>
           <Text>
             Submit your mix to get constructive feedback from a working audio
-            engineer for a constructive review.{" "}
-            <Text>We’ll get back to you as soon as we can.</Text>{" "}
-            <Text>
-              We ask that you use a service such as Dropbox to upload files so
-              that we can stream the file but also have the option to download
-              if necessary.
-            </Text>{" "}
-            Supported formats: aiff, wav, flac. No Soundcloud or YouTube links.{" "}
-            <Text>Please only submit ONE song/track.</Text>
-            Also, keep an eye on your spam folder, just in case! We look forward
-            to hearing your music.
+            engineer.<br></br>
+            <br></br>
+            We’ll get back to you as soon as we can.<br></br>
+            <br></br>
+            We ask that you use a service such as Dropbox to upload files so
+            that we can stream the file but also have the option to download if
+            necessary.<br></br>
+            <br></br>
+            Supported formats: aiff, wav, flac. <br></br>
+            <br></br>We do not accept links from streaming services.<br></br>
+            <br></br>
+            Please only submit ONE song/track.<br></br>
+            <br></br>
+            {/* Also, keep an eye on your spam folder, just in case! <br></br><br></br> */}
+            We look forward to hearing your music.
           </Text>
           <Link
             isExternal
