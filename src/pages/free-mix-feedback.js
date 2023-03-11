@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 export default function MixFeedback() {
   return (
@@ -72,6 +73,7 @@ export default function MixFeedback() {
               <ExternalLinkIcon mx="2px" />
             </Button>
           </Link>
+          <Footer />
         </Container>
       </div>
     </>
