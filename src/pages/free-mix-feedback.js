@@ -12,19 +12,19 @@ export default function MixFeedback() {
         <title>Free Mix Feedback</title>
         <meta
           name="description"
-          content="The Artist Self-Development Platform"
+          content="Get a constructive mix review from a working audio engineer"
         />
         <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="Unlock Your Sound" />
+        <meta property="og:title" content="Free Mix Feedback" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content="Get a constructive mix review from a working audio engineer"
         />
         <meta
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com" />
+        <meta property="og:url" content="http://unlockyoursound.com/free-mix-feedback" />
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta

@@ -17,7 +17,7 @@ export default function MusicMarketing({ posts }) {
   return (
     <>
       <Head>
-        <title>Music Business</title>
+        <title>Featured Content</title>
         <meta
           name="description"
           content="The Artist Self-Development Platform"
@@ -48,7 +48,7 @@ export default function MusicMarketing({ posts }) {
       <div className={styles.main}>
         <Container maxW="xl">
           <Nav />
-          <Heading size="md">Music Marketing</Heading>
+          <Heading size="md">Featured Content</Heading>
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>
@@ -75,21 +75,21 @@ export default function MusicMarketing({ posts }) {
 }
 
 const GET_MARKETING_POSTS = `
-      query GetFeaturedPosts {
-        posts(first: 1000, where: { categoryId: 277 }) {
-          nodes {
-            id
-            slug
-            title
-            featuredImage {
-              node {
-                sourceUrl
-              }
+    query GetFeaturedPosts {
+      posts(first: 1000, where: { categoryId: 322 }) {
+        nodes {
+          id
+          slug
+          title
+          featuredImage {
+            node {
+              sourceUrl
             }
           }
         }
       }
-    `;
+    }
+  `;
 
 export async function getStaticProps() {
   const response = await axios.post("https://unlockyoursound.com/graphql", {

@@ -6,13 +6,15 @@ import Nav from "@/components/Nav";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
-import Image from 'next/image';
+import Image from "next/image";
+import ShareButton from "@/components/WhatsAppButton";
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
     postBy(slug: $slug) {
       id
       title
+      slug
       content
       featuredImage {
         node {
@@ -22,7 +24,6 @@ const GET_POST_BY_SLUG = `
     }
   }
 `;
-
 
 export default function Post({ post }) {
   return (
@@ -40,6 +41,7 @@ export default function Post({ post }) {
             />
           )}
           <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+          <ShareButton postSlug={post.slug} />
         </Box>
         <Footer />
       </Container>
@@ -47,17 +49,13 @@ export default function Post({ post }) {
   );
 }
 
-
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const response = await axios.post(
-    "https://unlockyoursound.com/graphql",
-    {
-      query: GET_POST_BY_SLUG,
-      variables: { slug },
-    }
-  );
+  const response = await axios.post("https://unlockyoursound.com/graphql", {
+    query: GET_POST_BY_SLUG,
+    variables: { slug },
+  });
 
   const post = response.data.data.postBy;
 
@@ -66,6 +64,9 @@ export async function getStaticProps({ params }) {
       notFound: true,
     };
   }
+
+  console.log("Post slug: ", post.slug); // Add this console log
+
 
   return {
     props: {
