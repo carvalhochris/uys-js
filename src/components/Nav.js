@@ -59,7 +59,7 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-            <AiFillHeart />
+            <AiFillHeart color="7756E3" />
           </Box>
         </Link>
         <Link href="/about" legacyBehavior style={{ position: "relative" }}>

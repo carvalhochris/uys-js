@@ -18,7 +18,7 @@ export default function FreeResources() {
         <iframe
           src="https://unlockyoursound.substack.com/embed"
           height={350}
-          width={500}
+          width='100%'
           style={{ border: "solid" }}
         ></iframe>
         {/* <Text>Coming soon...</Text> */}

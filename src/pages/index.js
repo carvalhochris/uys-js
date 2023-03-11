@@ -40,7 +40,7 @@ export default function Home({ posts }) {
           <Link href="/free" legacyBehavior style={{ position: "relative" }}>
           <Button
             // type="submit"
-            mt={10}
+            mt={6}
             mb={5}
             size="lg"
             borderColor="grey"
