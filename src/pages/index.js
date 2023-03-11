@@ -16,77 +16,111 @@ export default function Home({ posts }) {
   const { colorMode } = useColorMode();
 
   return (
-    <div className={styles.main}>
-      <Container maxW="xl">
-        <Nav />
-        <Heading as="h1">
-          Unlock Your Sound is an artist self-development platform
-        </Heading>
-        <Divider mt={5} mb={5} />
-        <Text>
-          Access a bundle of free resources to help you create and release your
-          music
-        </Text>
-        {/* <Head>
+    <>
+      <Head>
+        <title>Unlock Your Sound</title>
+        <meta
+          name="description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta name="keywords" content="Music production, business, marketing" />
+        <meta property="og:title" content="Unlock Your Sound" />
+        <meta
+          property="og:description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta
+          property="og:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+        <meta property="og:url" content="http://unlockyoursound.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta
+          name="twitter:description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta
+          name="twitter:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <div className={styles.main}>
+        <Container maxW="xl">
+          <Nav />
+          <Heading as="h1">
+            Unlock Your Sound is an artist self-development platform
+          </Heading>
+          <Divider mt={5} mb={5} />
+          <Text>
+            Access a bundle of free resources to help you create and release
+            your music
+          </Text>
+          {/* <Head>
           <script src="https://substackapi.com/widget.js" async></script>
         </Head> */}
-        {/* <CustomSubstackWidget /> */}
-        {/* <Center> */}
+          {/* <CustomSubstackWidget /> */}
+          {/* <Center> */}
           {/* {colorMode === "light" ? (
             <iframe src="https://unlockyoursound.substack.com/embed"></iframe>
           ) : (
             <iframe src="https://unlockyoursound.substack.com/embed" height={350} width={600} style={{backgroundColor: 'black'}} ></iframe>
           )} */}
           <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-          <Button
-            // type="submit"
-            mt={6}
-            mb={5}
-            size="lg"
-            borderColor="grey"
-            variant="outline"
-            backgroundColor="#7756E3"
-            color="white"
-          >
-            Unlock Resources{" "}
-          </Button>
+            <Button
+              // type="submit"
+              mt={6}
+              mb={5}
+              size="lg"
+              borderColor="grey"
+              variant="outline"
+              backgroundColor="#7756E3"
+              color="white"
+            >
+              Unlock Resources{" "}
+            </Button>
           </Link>
           <Divider mt={100} mb={10} />
 
-        {/* </Center> */}
-        {/* <Divider mt={5} mb={5} /> */}
-      </Container>
-      <div className={styles.main}>
-        <Container maxW="xl">
-          <Search />
-          {/* <Nav /> */}
-          <Divider mt={10} mb={5} />
-          <Heading>Featured Content</Heading>
-          <Text>The hall of fame</Text>
-          <ul>
-            {posts.map((post) => (
-              <div key={post.slug}>
-                <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
-                  <Heading as="h3" mb={5}>
-                    {post.title}
-                  </Heading>
-                  <Image
-                    src={post.featuredImage.node.sourceUrl}
-                    alt={post.title}
-                    width={500}
-                    height={500}
-                  />
-                  {/* <Divider mt={10} mb={5} /> */}
-                </Link>
-                <Divider mt={10} mb={5} />
-              </div>
-            ))}
-          </ul>
-
-          <Footer />
+          {/* </Center> */}
+          {/* <Divider mt={5} mb={5} /> */}
         </Container>
+        <div className={styles.main}>
+          <Container maxW="xl">
+            <Search />
+            {/* <Nav /> */}
+            <Divider mt={10} mb={5} />
+            <Heading>Featured Content</Heading>
+            <Text>The hall of fame</Text>
+            <ul>
+              {posts.map((post) => (
+                <div key={post.slug}>
+                  <Link
+                    href={`/${post.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Heading as="h3" mb={5}>
+                      {post.title}
+                    </Heading>
+                    <Image
+                      src={post.featuredImage.node.sourceUrl}
+                      alt={post.title}
+                      width={500}
+                      height={500}
+                    />
+                    {/* <Divider mt={10} mb={5} /> */}
+                  </Link>
+                  <Divider mt={10} mb={5} />
+                </div>
+              ))}
+            </ul>
+
+            <Footer />
+          </Container>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

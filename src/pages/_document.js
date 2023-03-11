@@ -6,11 +6,11 @@ export default function Document() {
     <Html lang="en">
       <Head />
       {/* <!-- HTML Meta Tags --> */}
-      <title>Unlock Your Sound</title>
-      <meta name="description" content="The Artist Self-Development Platform" />
+      {/* <title>Unlock Your Sound</title>
+      <meta name="description" content="The Artist Self-Development Platform" /> */}
 
       {/* <!-- Google / Search Engine Tags --> */}
-      <meta itemprop="name" content="Unlock Your Sound" />
+      {/* <meta itemprop="name" content="Unlock Your Sound" />
       <meta
         itemprop="description"
         content="The Artist Self-Development Platform"
@@ -18,10 +18,10 @@ export default function Document() {
       <meta
         itemprop="image"
         content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
-      />
+      /> */}
 
       {/* <!-- Facebook Meta Tags --> */}
-      <meta property="og:url" content="https://uys-js.vercel.app" />
+      {/* <meta property="og:url" content="https://uys-js.vercel.app" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Unlock Your Sound" />
       <meta
@@ -31,10 +31,10 @@ export default function Document() {
       <meta
         property="og:image"
         content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
-      />
+      /> */}
 
       {/* <!-- Twitter Meta Tags --> */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Unlock Your Sound" />
       <meta
         name="twitter:description"
@@ -43,7 +43,7 @@ export default function Document() {
       <meta
         name="twitter:image"
         content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
-      />
+      /> */}
 
       {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
       <body>
