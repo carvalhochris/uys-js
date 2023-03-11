@@ -3,7 +3,7 @@
 Things to do:
 
 1. Fetch and render meta tags and page title from posts
-2. Fix Substack embeds
+2. ALL THE SEO - including fetching meta data from Wordpress posts
 3. Add hydration to the page
 
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
