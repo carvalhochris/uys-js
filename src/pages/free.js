@@ -38,7 +38,7 @@ export default function FreeResources() {
         <Heading as="h2">Free Mix Review</Heading> We also offer a Free Mix
         Feedback Service where you can have your mix reviewed by working audio
         engineers.
-        <Link href="/free" legacyBehavior style={{ position: "relative" }}>
+        <Link href="/free-mix-feedback" legacyBehavior style={{ position: "relative" }}>
           <Button
             // type="submit"
             mt={10}
