@@ -90,10 +90,10 @@ export default function Home({ posts }) {
           </Link>
           <Divider mt={100} mb={10} />
           <Link href="/" legacyBehavior style={{ position: "relative" }}>
-          <GrHomeOption
+          {/* <GrHomeOption
             style={{ position: "fixed", bottom: "20px", right: "20px" }}
             size={30}
-          />
+          /> */}
           </Link>
         </Container>
         <div className={styles.main}>
