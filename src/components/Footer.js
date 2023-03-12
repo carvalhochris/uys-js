@@ -56,18 +56,7 @@ export default function Nav() {
         {/* <Link href="/" legacyBehavior>
           <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
         </Link> */}
-        <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            <AiFillHeart color="#7756E3" />
-          </Box>
-        </Link>
+        <AiFillHeart color="7756E3" />
         <Link href="/about" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
