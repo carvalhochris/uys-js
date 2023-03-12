@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { HStack, useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Button } from "@chakra-ui/react";
@@ -18,6 +19,13 @@ import { AiOutlineSearch } from "react-icons/ai";
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   //   const textSize = 17;
+
+  const router = useRouter();
+  const activeColor = "#7756E3";
+
+  const isCurrentPage = (pathname) => {
+    return router.pathname === pathname;
+  };
 
   return (
     <>
@@ -65,7 +73,9 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-            <AiFillHeart color="#7756E3" />
+            <AiFillHeart
+              color={isCurrentPage("/free") ? activeColor : ""}
+            />
           </Box>
         </Link>
         <Link href="/christopher-carvalho" legacyBehavior style={{ position: "relative" }}>
@@ -77,7 +87,9 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-            <AiFillInfoCircle />
+            <AiFillInfoCircle 
+            color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
+            />
           </Box>
         </Link>
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
@@ -89,7 +101,9 @@ export default function Nav() {
             cursor="pointer"
             ml={0}
           >
-            <AiOutlineSearch />
+            <AiOutlineSearch 
+            color={isCurrentPage("/search") ? activeColor : ""}
+            />
           </Box>
         </Link>
         <MyMenu />
