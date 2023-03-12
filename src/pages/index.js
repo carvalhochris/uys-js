@@ -10,6 +10,7 @@ import Search from "../components/SearchBox";
 import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { Button } from "@chakra-ui/react";
+import { GrHomeOption } from "react-icons/gr"
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
@@ -88,6 +89,12 @@ export default function Home({ posts }) {
             </Button>
           </Link>
           <Divider mt={100} mb={10} />
+          <Link href="/" legacyBehavior style={{ position: "relative" }}>
+          <GrHomeOption
+            style={{ position: "fixed", bottom: "20px", right: "20px" }}
+            size={30}
+          />
+          </Link>
         </Container>
         <div className={styles.main}>
           <Container maxW="xl">
