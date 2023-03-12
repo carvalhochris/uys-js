@@ -89,12 +89,12 @@ export default function Home({ posts }) {
             </Button>
           </Link>
           <Divider mt={100} mb={10} />
-          <Link href="/" legacyBehavior style={{ position: "relative" }}>
-          {/* <GrHomeOption
+          {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
+          <GrHomeOption
             style={{ position: "fixed", bottom: "20px", right: "20px" }}
             size={30}
-          /> */}
-          </Link>
+          />
+          </Link> */}
         </Container>
         <div className={styles.main}>
           <Container maxW="xl">
