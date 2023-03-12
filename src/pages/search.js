@@ -8,7 +8,7 @@ export default function SearchPage() {
     return (
         <>
         <Head>
-        <title>Music Production</title>
+        <title>The Vault</title>
         <meta
           name="description"
           content="The Artist Self-Development Platform"
