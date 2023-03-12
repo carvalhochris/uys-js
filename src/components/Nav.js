@@ -62,7 +62,7 @@ export default function Nav() {
             <AiFillHeart color="#7756E3" />
           </Box>
         </Link>
-        <Link href="/about" legacyBehavior style={{ position: "relative" }}>
+        <Link href="/christopher-carvalho" legacyBehavior style={{ position: "relative" }}>
           <Box
             // boxSize="80px"
             // mr={10}
