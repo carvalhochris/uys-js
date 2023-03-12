@@ -1,9 +1,7 @@
 import {
     Container,
     Heading,
-    Text,
     Divider,
-    // Image,
     Link,
   } from "@chakra-ui/react";
   import axios from "axios";

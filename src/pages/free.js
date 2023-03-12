@@ -67,8 +67,6 @@ export default function FreeResources() {
             width="100%"
             style={{ border: "solid" }}
           ></iframe>
-          {/* <Text>Coming soon...</Text> */}
-          {/* <Container> */}
           <Divider mt={5} mb={5} />
           <Heading as="h2">Free PDFs</Heading>
           Your free bundle includes the following PDF guides:
@@ -90,7 +88,6 @@ export default function FreeResources() {
             style={{ position: "relative" }}
           >
             <Button
-              // type="submit"
               mt={10}
               mb={50}
               size="lg"
@@ -104,7 +101,6 @@ export default function FreeResources() {
           </Link>
           <Divider mt={5} mb={5} />
           <Footer />
-          {/* </Container> */}
         </Container>
       </div>
     </>

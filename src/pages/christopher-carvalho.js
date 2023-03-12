@@ -1,7 +1,6 @@
 import axios from "axios";
 import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -11,8 +10,6 @@ export default function About({ pageContent }) {
       <Container maxW="xl">
         <Nav />
         <Heading ml={0}>Christopher Carvalho</Heading>
-        {/* <Link href="/">Home</Link>
-        <Link href="/about">About Us</Link> */}
         <div
           style={{ paddingTop: "10px", paddingBottom: "10px" }}
           dangerouslySetInnerHTML={{ __html: pageContent }}

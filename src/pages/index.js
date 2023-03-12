@@ -9,7 +9,6 @@ import Image from "next/image";
 import Search from "../components/SearchBox";
 import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-// import CustomSubstackWidget from "@/components/CustomSubstackWidget";
 import { Button } from "@chakra-ui/react";
 
 export default function Home({ posts }) {
@@ -74,16 +73,6 @@ export default function Home({ posts }) {
             Access a bundle of free resources to help you create and release
             your music
           </Text>
-          {/* <Head>
-          <script src="https://substackapi.com/widget.js" async></script>
-        </Head> */}
-          {/* <CustomSubstackWidget /> */}
-          {/* <Center> */}
-          {/* {colorMode === "light" ? (
-            <iframe src="https://unlockyoursound.substack.com/embed"></iframe>
-          ) : (
-            <iframe src="https://unlockyoursound.substack.com/embed" height={350} width={600} style={{backgroundColor: 'black'}} ></iframe>
-          )} */}
           <Link href="/free" legacyBehavior style={{ position: "relative" }}>
             <Button
               // type="submit"
@@ -99,9 +88,6 @@ export default function Home({ posts }) {
             </Button>
           </Link>
           <Divider mt={100} mb={10} />
-
-          {/* </Center> */}
-          {/* <Divider mt={5} mb={5} /> */}
         </Container>
         <div className={styles.main}>
           <Container maxW="xl">

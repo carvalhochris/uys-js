@@ -65,9 +65,6 @@ export async function getStaticProps({ params }) {
     };
   }
 
-  // console.log("Post slug: ", post.slug); // Add this console log
-
-
   return {
     props: {
       post,
