@@ -7,7 +7,7 @@ function ShareButton({ postSlug }) {
   const domainUrl = "https://unlockyoursound.com";
   const shareUrl = `${domainUrl}/${postSlug}`;
   const message = "Saw this and thought of you :-)";
-  console.log("share url is...", shareUrl)
+  // console.log("share url is...", shareUrl)
 
   return (
     // <Button colorScheme="green" mt={10}>
