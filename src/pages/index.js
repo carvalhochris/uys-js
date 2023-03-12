@@ -9,7 +9,7 @@ import Image from "next/image";
 import Search from "../components/SearchBox";
 import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-import CustomSubstackWidget from "@/components/CustomSubstackWidget";
+// import CustomSubstackWidget from "@/components/CustomSubstackWidget";
 import { Button } from "@chakra-ui/react";
 
 export default function Home({ posts }) {
