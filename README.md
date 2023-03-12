@@ -5,7 +5,7 @@ Things to do:
 1. Fetch and render meta tags and page title from posts
 2. ALL THE SEO - including fetching meta data from Wordpress posts
 3. Switch meta urls to production domain
-4. XML Sitemap: https://nextjs.org/learn/seo/crawling-and-indexing/xml-sitemaps
+4. Cross-reference sitemap to live site
 
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
 
