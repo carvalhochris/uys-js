@@ -102,7 +102,7 @@ export default function SearchPage() {
         </Select>
 
         {/* </label> */}
-        <br></br>
+        {/* <br></br> */}
         {/* <br></br> */}
         <Button
           type="submit"
