@@ -4,7 +4,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-    --font-primary: "Noto Sans", sans-serif; /* Update font-primary to Noto Sans */
+  --font-primary: "Noto Sans", sans-serif; /* Update font-primary to Noto Sans */
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -120,7 +120,34 @@ img {
 
 .wp-block-quote p {
   font-size: 24px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 800;
+  /* display: block; */
 }
+
+.wp-block-quote cite {
+  font-size: 24px;
+  padding: 20px;
+
+  font-style: italic;
+  font-weight: 800;
+}
+
+.wp-block-quote {
+  margin-bottom: 30px;
+}
+
+/* .wp-block-quote cite {
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  font-style: italic;
+  font-weight: 800;
+} */
 
 h2 {
   font-size: 100px;
