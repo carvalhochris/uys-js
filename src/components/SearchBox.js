@@ -98,7 +98,7 @@ export default function SearchPage() {
           <option value="publishing">publishing</option>
           <option value="distribution">distribution</option>
           {/* add more options here */}
-          <option value={searchTerm}>Enter your own keyword...</option>
+          {/* <option value={searchTerm}>Enter your own keyword...</option> */}
         </Select>
 
         {/* </label> */}
