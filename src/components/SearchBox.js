@@ -8,6 +8,7 @@ import { Input } from "@chakra-ui/react";
 import { Button, Select } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
+import Image from "next/image";
 // import Image from "next/image";
 
 export default function SearchPage() {
@@ -28,6 +29,11 @@ export default function SearchPage() {
                   id
                   title
                   slug
+                  featuredImage {
+                    node {
+                      sourceUrl
+                    }
+                  }
                 }
               }
             }
@@ -121,8 +127,16 @@ export default function SearchPage() {
       ) : searchResults.length > 0 ? (
         searchResults.map((result) => (
           <div key={result.id}>
-            <Link href={`/${result.slug}`}>
-              <h2 style={{ cursor: "pointer" }}>{result.title}</h2>
+            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+              <Heading as="h3" style={{ cursor: "pointer" }}>
+                {result.title}
+              </Heading>
+              <Image
+                src={result.featuredImage.node.sourceUrl}
+                alt={result.title}
+                width={500}
+                height={500}
+              />
             </Link>
             <Divider />
           </div>
