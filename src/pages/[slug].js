@@ -40,8 +40,8 @@ export default function Post({ post }) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={post.title} />
-        {post.metaDesc && (
-          <meta property="og:description" content={post.metaDesc} />
+        {post.seo.metaDesc && (
+          <meta property="og:description" content={post.seo.metaDesc} />
         )}
         {post.featuredImage?.node?.sourceUrl && (
           <meta
@@ -54,8 +54,8 @@ export default function Post({ post }) {
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
-        {post.metaDesc && (
-          <meta name="twitter:description" content={post.metaDesc} />
+        {post.seo.metaDesc && (
+          <meta name="twitter:description" content={post.seo.metaDesc} />
         )}
         {post.featuredImage?.node?.sourceUrl && (
           <meta
