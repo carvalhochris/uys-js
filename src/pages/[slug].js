@@ -39,7 +39,7 @@ export default function Post({ post }) {
           content={`https://uys-js.vercel.app/${post.slug}`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Unlock Your Sound" />
+        <meta property="og:title" content={post.title} />
         {post.metaDesc && (
           <meta property="og:description" content={post.metaDesc} />
         )}
@@ -53,7 +53,7 @@ export default function Post({ post }) {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta name="twitter:title" content={post.title} />
         {post.metaDesc && (
           <meta name="twitter:description" content={post.metaDesc} />
         )}
