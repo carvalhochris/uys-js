@@ -44,7 +44,7 @@ export default function Post({ post }) {
         <meta itemprop="name" content="Unlock Your Sound" />
         <meta
           itemprop="description"
-          content="The Artist Self-Development Platform"
+          content={post.metaDesc}
         />
         <meta
           itemprop="image"
@@ -57,7 +57,7 @@ export default function Post({ post }) {
         <meta property="og:title" content="Unlock Your Sound" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content={post.metaDesc}
         />
         <meta
           property="og:image"
@@ -69,7 +69,7 @@ export default function Post({ post }) {
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta
           name="twitter:description"
-          content="The Artist Self-Development Platform"
+          content={post.metaDesc}
         />
         <meta
           name="twitter:image"
