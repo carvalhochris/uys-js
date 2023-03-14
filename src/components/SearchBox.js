@@ -5,7 +5,7 @@ import { Center, Container, Divider, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import { Input } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
+import { Button, Select } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 // import Image from "next/image";
@@ -62,7 +62,7 @@ export default function SearchPage() {
             name="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="lose yourself in our ever-growing archives"
+            placeholder="Search..."
             // size={100}
             size="lg"
             borderColor="#202020"
@@ -75,12 +75,25 @@ export default function SearchPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             _placeholder={{ color: "grey" }}
-            placeholder="lose yourself in our ever-growing archives"
+            placeholder="Search..."
             // size={100}
             size="lg"
             borderColor="#white"
           />
         )}
+        <Select
+          placeholder="Select a keyword or enter your own..."
+          size="lg"
+          mt={3}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        >
+          <option value="music royalties">music royalties</option>
+          <option value="music production">music production</option>
+          <option value="publishing">publishing</option>
+          <option value="distribution">distribution</option>
+          {/* add more options here */}
+          <option value={searchTerm}>Enter your own keyword...</option>
+        </Select>
 
         {/* </label> */}
         <br></br>
