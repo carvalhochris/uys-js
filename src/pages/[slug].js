@@ -34,7 +34,7 @@ export default function Post({ post }) {
     <>
     <Head>
       {/* <!-- HTML Meta Tags --> */}
-      <title>Unlock Your Sound</title>
+      <title>{post.title}</title>
         <meta
           name="description"
           content={post.metaDesc}
