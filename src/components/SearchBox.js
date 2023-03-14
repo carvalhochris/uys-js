@@ -93,7 +93,7 @@ export default function SearchPage() {
           mt={3}
           onChange={(e) => setSearchTerm(e.target.value)}
         >
-          <option value="music royalties">music royalties</option>
+          <option value="royalties">royalties</option>
           {/* <option value="music production">music production</option> */}
           <option value="publishing">publishing</option>
           <option value="distribution">distribution</option>
