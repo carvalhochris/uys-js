@@ -32,63 +32,63 @@ const GET_POST_BY_SLUG = `
 export default function Post({ post }) {
   return (
     <>
-    <Head>
-  {/* HTML Meta Tags */}
-  <title>{post.title}</title>
-  {post.metaDesc && <meta name="description" content={post.metaDesc} />}
+      <Head>
+        {/* Facebook Meta Tags */}
+        <meta
+          property="og:url"
+          content={`https://uys-js.vercel.app/${post.slug}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Unlock Your Sound" />
+        {post.metaDesc && (
+          <meta property="og:description" content={post.metaDesc} />
+        )}
+        {post.featuredImage?.node?.sourceUrl && (
+          <meta
+            property="og:image"
+            content={post.featuredImage.node.sourceUrl}
+          />
+        )}
+        <meta property="og:image:alt" content={post.title} />
 
-  {/* Google / Search Engine Tags */}
-  <meta itemprop="name" content="Unlock Your Sound" />
-  {post.metaDesc && (
-    <meta itemprop="description" content={post.metaDesc} />
-  )}
-  {post.featuredImage?.node?.sourceUrl && (
-    <meta itemprop="image" content={post.featuredImage.node.sourceUrl} />
-  )}
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Unlock Your Sound" />
+        {post.metaDesc && (
+          <meta name="twitter:description" content={post.metaDesc} />
+        )}
+        {post.featuredImage?.node?.sourceUrl && (
+          <meta
+            name="twitter:image"
+            content={post.featuredImage.node.sourceUrl}
+          />
+        )}
+        <meta name="twitter:image:alt" content={post.title} />
+        <meta
+          name="twitter:url"
+          content={`https://uys-js.vercel.app/${post.slug}`}
+        />
+      </Head>
 
-  {/* Facebook Meta Tags */}
-  <meta property="og:url" content="https://uys-js.vercel.app" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Unlock Your Sound" />
-  {post.metaDesc && (
-    <meta property="og:description" content={post.metaDesc} />
-  )}
-  {post.featuredImage?.node?.sourceUrl && (
-    <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
-  )}
-
-  {/* Twitter Meta Tags */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Unlock Your Sound" />
-  {post.metaDesc && (
-    <meta name="twitter:description" content={post.metaDesc} />
-  )}
-  {post.featuredImage?.node?.sourceUrl && (
-    <meta name="twitter:image" content={post.featuredImage.node.sourceUrl} />
-  )}
-
-  {/* Meta Tags Generated via http://heymeta.com */}
-</Head>
-
-    <div className={styles.main}>
-      <Container maxW="xl">
-        <Nav />
-        <Heading size="md">{post.title}</Heading>
-        <Box css={{ all: "unset" }}>
-          {post.featuredImage && (
-            <Image
-              src={post.featuredImage.node.sourceUrl}
-              alt={post.title}
-              width={500}
-              height={500}
-            />
-          )}
-          <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-          <ShareButton postSlug={post.slug} />
-        </Box>
-        <Footer />
-      </Container>
-    </div>
+      <div className={styles.main}>
+        <Container maxW="xl">
+          <Nav />
+          <Heading size="md">{post.title}</Heading>
+          <Box css={{ all: "unset" }}>
+            {post.featuredImage && (
+              <Image
+                src={post.featuredImage.node.sourceUrl}
+                alt={post.title}
+                width={500}
+                height={500}
+              />
+            )}
+            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            <ShareButton postSlug={post.slug} />
+          </Box>
+          <Footer />
+        </Container>
+      </div>
     </>
   );
 }
