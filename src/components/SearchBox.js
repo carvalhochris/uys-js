@@ -94,7 +94,7 @@ export default function SearchPage() {
           onChange={(e) => setSearchTerm(e.target.value)}
         >
           <option value="music royalties">music royalties</option>
-          <option value="music production">music production</option>
+          {/* <option value="music production">music production</option> */}
           <option value="publishing">publishing</option>
           <option value="distribution">distribution</option>
           {/* add more options here */}
@@ -138,7 +138,7 @@ export default function SearchPage() {
                 height={500}
               />
             </Link>
-            <Divider />
+            {/* <Divider /> */}
           </div>
         ))
       ) : (
