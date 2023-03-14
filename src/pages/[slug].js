@@ -48,7 +48,7 @@ export default function Post({ post }) {
         />
         <meta
           itemprop="image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content={post.featuredImage.node.sourceUrl}
         />
 
         {/* <!-- Facebook Meta Tags --> */}
