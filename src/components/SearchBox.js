@@ -97,6 +97,7 @@ export default function SearchPage() {
           {/* <option value="music production">music production</option> */}
           <option value="publishing">publishing</option>
           <option value="distribution">distribution</option>
+          <option value="marketing">marketing</option>
           {/* add more options here */}
           {/* <option value={searchTerm}>Enter your own keyword...</option> */}
         </Select>
