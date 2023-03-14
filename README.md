@@ -7,6 +7,8 @@ Things to do:
 3. Switch meta urls to production domain
 4. Cross-reference sitemap to live site
 
+Trying this to add Yoast data to GraphQL: https://wordpress.org/plugins/add-wpgraphql-seo/
+
 [Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
 
 Life saver: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 

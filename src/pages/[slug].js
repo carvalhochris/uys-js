@@ -8,6 +8,7 @@ import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ShareButton from "@/components/WhatsAppButton";
+import Head from "next/head";
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
@@ -16,6 +17,9 @@ const GET_POST_BY_SLUG = `
       title
       slug
       content
+      seo {
+        metaDesc
+      }
       featuredImage {
         node {
           sourceUrl
@@ -27,6 +31,55 @@ const GET_POST_BY_SLUG = `
 
 export default function Post({ post }) {
   return (
+    <>
+    <Head>
+      {/* <!-- HTML Meta Tags --> */}
+      <title>Unlock Your Sound</title>
+        <meta
+          name="description"
+          content={post.metaDesc}
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Unlock Your Sound" />
+        <meta
+          itemprop="description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta
+          itemprop="image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://uys-js.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Unlock Your Sound" />
+        <meta
+          property="og:description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta
+          property="og:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta
+          name="twitter:description"
+          content="The Artist Self-Development Platform"
+        />
+        <meta
+          name="twitter:image"
+          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+        />
+
+        {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
+
+      
+    </Head>
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
@@ -46,6 +99,7 @@ export default function Post({ post }) {
         <Footer />
       </Container>
     </div>
+    </>
   );
 }
 
