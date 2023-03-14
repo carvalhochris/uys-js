@@ -3,6 +3,7 @@ import {
     Heading,
     Divider,
     Link,
+    Text
   } from "@chakra-ui/react";
   import axios from "axios";
   import Nav from "@/components/Nav";
@@ -63,6 +64,7 @@ export default function MusicBusiness({ posts }) {
       <Container maxW="xl">
         <Nav />
         <Heading size="md">Music Business</Heading>
+        <Text>Read about the ever-evolving business of music</Text>
         <ul>
           {posts.map((post) => (
             <div key={post.slug}>

@@ -63,6 +63,7 @@ import {
         <Container maxW="xl">
           <Nav />
           <Heading size="md">Music Production</Heading>
+          <Text>Learn how to unlock your sound</Text>
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>

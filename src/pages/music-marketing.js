@@ -63,6 +63,7 @@ export default function MusicMarketing({ posts }) {
         <Container maxW="xl">
           <Nav />
           <Heading size="md">Music Marketing</Heading>
+          <Text>Learn how to build your music brand</Text>
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>
