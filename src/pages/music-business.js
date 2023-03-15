@@ -63,7 +63,7 @@ export default function MusicBusiness({ posts }) {
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        <Heading size="md">Music Business</Heading>
+        <Heading size="lg" as="h1">Music Business</Heading>
         <Text>Read about the ever-evolving business of music</Text>
         <ul>
           {posts.map((post) => (

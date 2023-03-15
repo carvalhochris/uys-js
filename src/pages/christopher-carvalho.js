@@ -55,7 +55,7 @@ export default function About({ pageContent }) {
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
-        <Heading ml={0}>Christopher Carvalho</Heading>
+        <Heading ml={0} size="lg" as="h1">Christopher Carvalho</Heading>
         <div
           style={{ paddingTop: "10px", paddingBottom: "10px" }}
           dangerouslySetInnerHTML={{ __html: pageContent }}

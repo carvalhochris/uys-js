@@ -65,7 +65,7 @@ export default function SearchPage() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading>The Vault</Heading>
+        <Heading size="lg" as="h1">The Vault</Heading>
         {/* <br></br> */}
         {colorMode === "light" ? (
           <Input

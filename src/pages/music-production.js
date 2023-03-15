@@ -62,7 +62,7 @@ import {
       <div className={styles.main}>
         <Container maxW="xl">
           <Nav />
-          <Heading size="md">Music Production</Heading>
+          <Heading size="lg" as="h1">Music Production</Heading>
           <Text>Learn how to unlock your sound</Text>
           <ul>
             {posts.map((post) => (
