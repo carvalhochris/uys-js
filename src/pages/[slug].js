@@ -80,7 +80,6 @@ export default function Post({ post }) {
       <div className={styles.main}>
         <Container maxW="xl">
           <Nav />
-          <Heading size="lg" as="h1">{post.title}</Heading>
           <Box css={{ all: "unset" }}>
             {post.featuredImage && (
               <Image
@@ -90,6 +89,9 @@ export default function Post({ post }) {
                 height={2000}
               />
             )}
+            <Heading size="md" as="h1">
+              {post.title}
+            </Heading>
             <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
             <ShareButton postSlug={post.slug} />
           </Box>

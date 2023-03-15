@@ -119,7 +119,7 @@ export default function Home({ posts }) {
                       alt={post.title}
                       width={1000}
                       height={1000}
-                      objectFit="cover"
+                      // objectFit="cover"
                     />
                     {/* <Divider mt={10} mb={5} /> */}
                     {/* </Box> */}
