@@ -68,15 +68,15 @@ import {
             {posts.map((post) => (
               <div key={post.slug}>
                 <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
-                  <Heading as="h3" mb={5}>
-                    {post.title}
-                  </Heading>
                   <Image
                     src={post.featuredImage.node.sourceUrl}
                     alt={post.title}
                     width={500}
                     height={500}
                   />
+                  <Heading as="h3" mb={5}>
+                    {post.title}
+                  </Heading>
                   <Divider mt={10} mb={5} />
                 </Link>
               </div>

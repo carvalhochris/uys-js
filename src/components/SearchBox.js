@@ -65,7 +65,9 @@ export default function SearchPage() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading size="lg" as="h1">The Vault</Heading>
+        <Heading size="lg" as="h1">
+          The Vault
+        </Heading>
         {/* <br></br> */}
         {colorMode === "light" ? (
           <Input
@@ -134,9 +136,6 @@ export default function SearchPage() {
         searchResults.map((result) => (
           <div key={result.id}>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Heading as="h3" style={{ cursor: "pointer" }}>
-                {result.title}
-              </Heading>
               <Image
                 src={result.featuredImage.node.sourceUrl}
                 alt={result.title}
@@ -144,6 +143,9 @@ export default function SearchPage() {
                 height={1000}
               />
             </Link>
+            <Heading as="h3" style={{ cursor: "pointer" }}>
+              {result.title}
+            </Heading>
             <Text fontSize="lg">{result.seo.metaDesc}</Text>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               <Text fontSize="lg" as="u">
@@ -158,8 +160,8 @@ export default function SearchPage() {
         <p>{/* ... */}</p>
       )}
       {/* </Container> */}
-      
-            {/* <Text fontSize="md">
+
+      {/* <Text fontSize="md">
         The source code for the frontend of this website is available{" "}
         <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
           on GitHub.
