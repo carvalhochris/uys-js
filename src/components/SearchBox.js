@@ -5,7 +5,7 @@ import { Center, Container, Divider, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import { Input } from "@chakra-ui/react";
-import { Button, Select } from "@chakra-ui/react";
+import { Button, Select, Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
@@ -29,6 +29,9 @@ export default function SearchPage() {
                   id
                   title
                   slug
+                  seo {
+                    metaDesc
+                  }
                   featuredImage {
                     node {
                       sourceUrl
@@ -139,6 +142,13 @@ export default function SearchPage() {
                 height={500}
               />
             </Link>
+            <Text fontSize="lg">{result.seo.metaDesc}</Text>
+                  <Link
+                    href={`/${result.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                  <Text fontSize="lg" as='u'>Read on</Text>
+                  </Link>
             {/* <Divider /> */}
           </div>
         ))

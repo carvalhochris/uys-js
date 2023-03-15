@@ -9,8 +9,8 @@ import Image from "next/image";
 import Search from "../components/SearchBox";
 import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-import { Button } from "@chakra-ui/react";
-import { GrHomeOption } from "react-icons/gr"
+import { Button, Box } from "@chakra-ui/react";
+import { GrHomeOption } from "react-icons/gr";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
@@ -113,6 +113,7 @@ export default function Home({ posts }) {
                     <Heading as="h3" mb={5}>
                       {post.title}
                     </Heading>
+                    {/* <Box bg="#RRGGBB" w={500} p={0} h={350} color="white"> */}
                     <Image
                       src={post.featuredImage.node.sourceUrl}
                       alt={post.title}
@@ -121,12 +122,19 @@ export default function Home({ posts }) {
                       objectFit="cover"
                     />
                     {/* <Divider mt={10} mb={5} /> */}
+                    {/* </Box> */}
+                  </Link>
+                  <Text fontSize="lg">{post.seo.metaDesc}</Text>
+                  <Link
+                    href={`/${post.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                  <Text fontSize="lg" as='u'>Read on</Text>
                   </Link>
                   <Divider mt={10} mb={5} />
                 </div>
               ))}
             </ul>
-
             <Footer />
           </Container>
         </div>
@@ -142,6 +150,9 @@ const GET_FEATURED_POSTS = `
         id
         slug
         title
+        seo {
+          metaDesc
+        }
         featuredImage {
           node {
             sourceUrl
