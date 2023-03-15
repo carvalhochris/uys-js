@@ -3,9 +3,55 @@ import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function About({ pageContent }) {
   return (
+    <>
+      <Head>
+      <title>Christopher Carvalho — Founder of Unlock Your Sound</title>
+        <meta
+          name="description"
+          content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Unlock Your Sound" />
+        <meta
+          itemprop="description"
+          content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
+        />
+        <meta
+          itemprop="image"
+          content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://uys-js.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Unlock Your Sound" />
+        <meta
+          property="og:description"
+          content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
+        />
+        <meta
+          property="og:image"
+          content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta
+          name="twitter:description"
+          content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
+        />
+        <meta
+          name="twitter:image"
+          content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
+        />
+      </Head>
+   
     <div className={styles.main}>
       <Container maxW="xl">
         <Nav />
@@ -17,6 +63,7 @@ export default function About({ pageContent }) {
         <Footer />
       </Container>
     </div>
+    </>
   );
 }
 
