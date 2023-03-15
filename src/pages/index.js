@@ -116,8 +116,9 @@ export default function Home({ posts }) {
                     <Image
                       src={post.featuredImage.node.sourceUrl}
                       alt={post.title}
-                      width={500}
-                      height={500}
+                      width={1000}
+                      height={1000}
+                      objectFit="cover"
                     />
                     {/* <Divider mt={10} mb={5} /> */}
                   </Link>

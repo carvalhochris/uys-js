@@ -86,8 +86,8 @@ export default function Post({ post }) {
               <Image
                 src={post.featuredImage.node.sourceUrl}
                 alt={post.title}
-                width={500}
-                height={500}
+                width={2000}
+                height={2000}
               />
             )}
             <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
