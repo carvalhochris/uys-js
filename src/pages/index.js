@@ -65,7 +65,6 @@ export default function Home({ posts }) {
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">
-          <CookieConsentForm />
           <Nav />
           <Heading as="h1">
             Unlock Your Sound is an artist self-development platform
