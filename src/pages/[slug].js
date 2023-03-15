@@ -80,7 +80,7 @@ export default function Post({ post }) {
       <div className={styles.main}>
         <Container maxW="xl">
           <Nav />
-          <Heading size="md">{post.title}</Heading>
+          <Heading size="lg" as="h1">{post.title}</Heading>
           <Box css={{ all: "unset" }}>
             {post.featuredImage && (
               <Image
