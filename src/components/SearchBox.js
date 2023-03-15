@@ -3,12 +3,14 @@ import axios from "axios";
 import styles from "@/styles/Home.module.css";
 import { Center, Container, Divider, Heading } from "@chakra-ui/react";
 import Link from "next/link";
+import { Link as ChakraLink } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
 import { Input } from "@chakra-ui/react";
 import { Button, Select, Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
+import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
 // import Image from "next/image";
 
 export default function SearchPage() {
@@ -138,17 +140,17 @@ export default function SearchPage() {
               <Image
                 src={result.featuredImage.node.sourceUrl}
                 alt={result.title}
-                width={500}
-                height={500}
+                width={1000}
+                height={1000}
               />
             </Link>
             <Text fontSize="lg">{result.seo.metaDesc}</Text>
-                  <Link
-                    href={`/${result.slug}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                  <Text fontSize="lg" as='u'>Read on</Text>
-                  </Link>
+            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+              <Text fontSize="lg" as="u">
+                Read on
+              </Text>
+            </Link>
+            <Divider mt={10} mb={5} />
             {/* <Divider /> */}
           </div>
         ))
@@ -156,6 +158,16 @@ export default function SearchPage() {
         <p>{/* ... */}</p>
       )}
       {/* </Container> */}
+      <Text fontSize="md" mb={10}>
+        © 2023 Unlock Your Sound Ltd
+      </Text>
+            {/* <Text fontSize="md">
+        The source code for the frontend of this website is available{" "}
+        <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
+          on GitHub.
+          <ExternalLinkIcon mx="2px" />
+        </ChakraLink>
+      </Text> */}
     </div>
   );
 }
