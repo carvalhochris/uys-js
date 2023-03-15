@@ -11,7 +11,6 @@ import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { Button, Box } from "@chakra-ui/react";
 import { GrHomeOption } from "react-icons/gr";
-import CookieConsentForm from "@/components/CookieConsent";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
