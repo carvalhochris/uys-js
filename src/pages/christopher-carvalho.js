@@ -16,7 +16,7 @@ export default function About({ pageContent }) {
         />
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Unlock Your Sound" />
+        <meta itemprop="name" content="Christopher Carvalho" />
         <meta
           itemprop="description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -29,7 +29,7 @@ export default function About({ pageContent }) {
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://uys-js.vercel.app" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Unlock Your Sound" />
+        <meta property="og:title" content="Christopher Carvalho" />
         <meta
           property="og:description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -41,7 +41,7 @@ export default function About({ pageContent }) {
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta name="twitter:title" content="Christopher Carvalho" />
         <meta
           name="twitter:description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
