@@ -11,6 +11,7 @@ import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { Button, Box } from "@chakra-ui/react";
 import { GrHomeOption } from "react-icons/gr";
+import CookieConsentForm from "@/components/CookieConsent";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
@@ -65,6 +66,7 @@ export default function Home({ posts }) {
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">
+          <CookieConsentForm />
           <Nav />
           <Heading as="h1">
             Unlock Your Sound is an artist self-development platform
