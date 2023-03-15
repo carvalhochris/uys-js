@@ -110,9 +110,6 @@ export default function Home({ posts }) {
                     href={`/${post.slug}`}
                     style={{ textDecoration: "none" }}
                   >
-                    <Heading as="h3" mb={5}>
-                      {post.title}
-                    </Heading>
                     {/* <Box bg="#RRGGBB" w={500} p={0} h={350} color="white"> */}
                     <Image
                       src={post.featuredImage.node.sourceUrl}
@@ -121,6 +118,9 @@ export default function Home({ posts }) {
                       height={1000}
                       // objectFit="cover"
                     />
+                    <Heading as="h3" mb={5}>
+                      {post.title}
+                    </Heading>
                     {/* <Divider mt={10} mb={5} /> */}
                     {/* </Box> */}
                   </Link>
