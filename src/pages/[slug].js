@@ -35,6 +35,10 @@ export default function Post({ post }) {
       <Head>
         {/* Facebook Meta Tags */}
         <title>{post.title}</title>
+        <meta name="description" content={post.seo.metaDesc} />
+        <meta itemprop="name" content={post.title} />
+        <meta itemprop="description" content={post.seo.metaDesc} />
+        <meta itemprop="image" content={post.featuredImage.node.sourceUrl} />
         <meta
           property="og:url"
           content={`https://uys-js.vercel.app/${post.slug}`}
