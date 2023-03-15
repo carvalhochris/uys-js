@@ -158,9 +158,7 @@ export default function SearchPage() {
         <p>{/* ... */}</p>
       )}
       {/* </Container> */}
-      <Text fontSize="md" mb={10}>
-        © 2023 Unlock Your Sound Ltd
-      </Text>
+      
             {/* <Text fontSize="md">
         The source code for the frontend of this website is available{" "}
         <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
