@@ -117,7 +117,7 @@ export default function Nav() {
         </ChakraLink>
       </Text>
       <Text fontSize="md" mb={10}>
-        © 2023 Unlock Your Sound Ltd
+        © 2023 Unlock Your Sound Ltd | <Link href="/privacy" legacyBehavior style={{ position: "relative" }}>Privacy Policy</Link>
       </Text>
     </>
   );
