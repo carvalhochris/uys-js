@@ -75,7 +75,7 @@ export default function Home({ posts }) {
             your music
           </Text>
           <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-            <a className="no-js">
+            <a className="no-js" style={{ textDecoration: "none" }}>
               <Button
                 // type="submit"
                 mt={6}

@@ -84,7 +84,7 @@ export default function FreeResources() {
             legacyBehavior
             style={{ position: "relative" }}
           >
-            <a className="no-js">
+            <a className="no-js" style={{ textDecoration: "none" }}>
               <Button
                 mt={10}
                 mb={50}
