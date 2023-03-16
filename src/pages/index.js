@@ -75,18 +75,20 @@ export default function Home({ posts }) {
             your music
           </Text>
           <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-            <Button
-              // type="submit"
-              mt={6}
-              mb={5}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-              backgroundColor="#7756E3"
-              color="white"
-            >
-              Unlock Resources{" "}
-            </Button>
+            <a className="no-js">
+              <Button
+                // type="submit"
+                mt={6}
+                mb={5}
+                size="lg"
+                borderColor="grey"
+                variant="outline"
+                backgroundColor="#7756E3"
+                color="white"
+              >
+                Unlock Resources{" "}
+              </Button>
+            </a>
           </Link>
           <Divider mt={100} mb={10} />
           {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
@@ -129,7 +131,9 @@ export default function Home({ posts }) {
                     href={`/${post.slug}`}
                     style={{ textDecoration: "none" }}
                   >
-                  <Text fontSize="lg" as='u'>Read on</Text>
+                    <Text fontSize="lg" as="u">
+                      Read on
+                    </Text>
                   </Link>
                   <Divider mt={10} mb={5} />
                 </div>
@@ -176,4 +180,4 @@ export async function getStaticProps() {
   };
 }
 
-// redeploy 
+// redeploy

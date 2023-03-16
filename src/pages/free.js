@@ -11,7 +11,7 @@ export default function FreeResources() {
   return (
     <>
       <Head>
-      <title>Free Resources</title>
+        <title>Free Resources</title>
         <meta
           name="description"
           content="Unlock a bundle of free resources to help you create and release your music"
@@ -27,10 +27,7 @@ export default function FreeResources() {
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 
-        <meta
-          property="og:url"
-          content="https://uys-js.vercel.app/free"
-        />
+        <meta property="og:url" content="https://uys-js.vercel.app/free" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Free Resources" />
         <meta
@@ -87,17 +84,19 @@ export default function FreeResources() {
             legacyBehavior
             style={{ position: "relative" }}
           >
-            <Button
-              mt={10}
-              mb={50}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-              backgroundColor="#7756E3"
-              color="white"
-            >
-              Get Feedback
-            </Button>
+            <a className="no-js">
+              <Button
+                mt={10}
+                mb={50}
+                size="lg"
+                borderColor="grey"
+                variant="outline"
+                backgroundColor="#7756E3"
+                color="white"
+              >
+                Get Feedback
+              </Button>
+            </a>
           </Link>
           <Divider mt={5} mb={5} />
           <Footer />
