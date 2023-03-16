@@ -60,6 +60,7 @@ export default function Nav() {
           </a>
         </Link>
         <Link href="/free" legacyBehavior style={{ position: "relative" }}>
+        <a className="no-js">
           <Box
             // boxSize="80px"
             // mr={10}
@@ -72,12 +73,15 @@ export default function Nav() {
               color={isCurrentPage("/free") ? activeColor : ""}
             />
           </Box>
+          </a>
         </Link>
+
         <Link
           href="/christopher-carvalho"
           legacyBehavior
           style={{ position: "relative" }}
         >
+        <a className="no-js">
           <Box
             // boxSize="80px"
             // mr={10}
@@ -90,6 +94,8 @@ export default function Nav() {
             color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
             />
           </Box>
+          </a>
+
         </Link>
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
           <Box
