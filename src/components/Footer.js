@@ -121,14 +121,16 @@ export default function Nav() {
       <Text fontSize="md">
         The source code for the frontend of this website is available{" "}
         <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
-          on GitHub.
-          <ExternalLinkIcon mx="2px" />
+          <a className="no-js">
+            on GitHub.
+            <ExternalLinkIcon mx="2px" />
+          </a>
         </ChakraLink>
       </Text>
       <Text fontSize="md" mb={10}>
         © 2023 Unlock Your Sound Ltd |{" "}
         <Link href="/privacy" legacyBehavior style={{ position: "relative" }}>
-          Privacy Policy
+          <a className="no-js">Privacy Policy</a>
         </Link>
       </Text>
     </>
