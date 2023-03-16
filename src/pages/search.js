@@ -20,13 +20,13 @@ export default function SearchPage() {
         <title>The Vault</title>
         <meta
           name="description"
-          content="The Artist Self-Development Platform"
+          content="Dive in to our ever-growing archives"
         />
         <meta name="keywords" content="Music production, business, marketing" />
         <meta property="og:title" content="Unlock Your Sound" />
         <meta
           property="og:description"
-          content="The Artist Self-Development Platform"
+          content="Dive in to our ever-growing archives"
         />
         <meta
           property="og:image"
@@ -34,10 +34,10 @@ export default function SearchPage() {
         />
         <meta property="og:url" content="http://unlockyoursound.com" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Unlock Your Sound" />
+        <meta name="twitter:title" content="The Vault" />
         <meta
           name="twitter:description"
-          content="The Artist Self-Development Platform"
+          content="Dive in to our ever-growing archives"
         />
         <meta
           name="twitter:image"

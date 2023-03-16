@@ -10,46 +10,32 @@ export default function PrivacyPage() {
     <>
       <Head>
         <title>Privacy</title>
-        {/* <meta
+        <meta
           name="description"
-          content="Get a constructive mix review from a working audio engineer"
+          content="Learn what we do and don't do with your data"
         />
-
-        <meta itemprop="name" content="Free Mix Feedback" />
-        <meta
-          itemprop="description"
-          content="Get a constructive mix review from a working audio engineer"
-        />
-        <meta
-          itemprop="image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
-        />
-
-        <meta
-          property="og:url"
-          content="https://uys-js.vercel.app/free-mix-feedback"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Free Mix Feedback" />
+        <meta name="keywords" content="Music production, business, marketing" />
+        <meta property="og:title" content="Privacy" />
         <meta
           property="og:description"
-          content="Get a constructive mix review from a working audio engineer"
+          content="Learn what we do and don't do with your data"
         />
         <meta
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Mix Feedback" />
+        <meta property="og:url" content="http://unlockyoursound.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Privacy" />
         <meta
           name="twitter:description"
-          content="Get a constructive mix review from a working audio engineer"
+          content="Learn what we do and don't do with your data"
         />
         <meta
           name="twitter:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
-        /> */}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">
