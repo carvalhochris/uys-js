@@ -46,6 +46,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* background-color: black;
+  color: white; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -101,7 +103,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background-color: #ffffff;
+  background-color: black;
 }
 
 a {
