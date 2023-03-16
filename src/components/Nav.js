@@ -35,6 +35,7 @@ export default function Nav() {
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
+        <a className="no-js">
           <Box
             boxSize="80px"
             mr={5}
@@ -56,6 +57,7 @@ export default function Nav() {
               />
             )}
           </Box>
+          </a>
         </Link>
         <Link href="/free" legacyBehavior style={{ position: "relative" }}>
           <Box
