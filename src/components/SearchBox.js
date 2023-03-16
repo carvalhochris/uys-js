@@ -143,9 +143,11 @@ export default function SearchPage() {
                 height={1000}
               />
             </Link>
+            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
             <Heading as="h3" style={{ cursor: "pointer" }}>
               {result.title}
             </Heading>
+            </Link>
             <Text fontSize="lg">{result.seo.metaDesc}</Text>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               <Text fontSize="lg" as="u">
