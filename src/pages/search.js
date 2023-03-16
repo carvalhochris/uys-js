@@ -23,7 +23,7 @@ export default function SearchPage() {
           content="Dive in to our ever-growing archives"
         />
         <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="Unlock Your Sound" />
+        <meta property="og:title" content="The Vault" />
         <meta
           property="og:description"
           content="Dive in to our ever-growing archives"
