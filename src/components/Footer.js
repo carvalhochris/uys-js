@@ -38,73 +38,82 @@ export default function Nav() {
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            boxSize="80px"
-            mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            {colorMode === "light" ? (
-              <Image
-                src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
-                alt="Unlock Your Sound light logo"
-                // maxWidth={70}
-              />
-            ) : (
-              <Image
-                src="https://unlockyoursound.com/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
-                alt="Unlock Your Sound dark logo"
-                // maxWidth={70}
-              />
-            )}
-          </Box>
+          <a className="no-js">
+            <Box
+              boxSize="80px"
+              mr={5}
+              display="flex"
+              alignItems="center"
+              cursor="pointer"
+            >
+              {colorMode === "light" ? (
+                <Image
+                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
+                  alt="Unlock Your Sound light logo"
+                  // maxWidth={70}
+                />
+              ) : (
+                <Image
+                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
+                  alt="Unlock Your Sound dark logo"
+                  // maxWidth={70}
+                />
+              )}
+            </Box>
+          </a>
         </Link>
-        {/* <Link href="/" legacyBehavior>
-          <a style={{ marginRight: "10px", fontSize: textSize }}>Home</a>
-        </Link> */}
         <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            <AiFillHeart
-              color={isCurrentPage("/free") ? activeColor : ""}
-            />
-          </Box>
+          <a className="no-js">
+            <Box
+              // boxSize="80px"
+              // mr={10}
+              display="flex"
+              alignItems="center"
+              cursor="pointer"
+              ml={0}
+            >
+              <AiFillHeart color={isCurrentPage("/free") ? activeColor : ""} />
+            </Box>
+          </a>
         </Link>
-        <Link href="/christopher-carvalho" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            <AiFillInfoCircle 
-            color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
-            />
-          </Box>
+
+        <Link
+          href="/christopher-carvalho"
+          legacyBehavior
+          style={{ position: "relative" }}
+        >
+          <a className="no-js">
+            <Box
+              // boxSize="80px"
+              // mr={10}
+              display="flex"
+              alignItems="center"
+              cursor="pointer"
+              ml={0}
+            >
+              <AiFillInfoCircle
+                color={
+                  isCurrentPage("/christopher-carvalho") ? activeColor : ""
+                }
+              />
+            </Box>
+          </a>
         </Link>
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
-            <AiOutlineSearch 
-            color={isCurrentPage("/search") ? activeColor : ""}
-            />
-          </Box>
+          <a className="no-js">
+            <Box
+              // boxSize="80px"
+              // mr={10}
+              display="flex"
+              alignItems="center"
+              cursor="pointer"
+              ml={0}
+            >
+              <AiOutlineSearch
+                color={isCurrentPage("/search") ? activeColor : ""}
+              />
+            </Box>
+          </a>
         </Link>
         <MyMenu />
       </footer>
@@ -117,7 +126,10 @@ export default function Nav() {
         </ChakraLink>
       </Text>
       <Text fontSize="md" mb={10}>
-        © 2023 Unlock Your Sound Ltd | <Link href="/privacy" legacyBehavior style={{ position: "relative" }}>Privacy Policy</Link>
+        © 2023 Unlock Your Sound Ltd |{" "}
+        <Link href="/privacy" legacyBehavior style={{ position: "relative" }}>
+          Privacy Policy
+        </Link>
       </Text>
     </>
   );
