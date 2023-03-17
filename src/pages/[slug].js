@@ -46,6 +46,7 @@ export default function Post({ post }) {
           content={`https://unlockyoursound.com/${post.slug}`}
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://unlockyoursound.com/search" />
         <meta property="og:title" content={post.title} />
         {post.seo.metaDesc && (
           <meta property="og:description" content={post.seo.metaDesc} />
