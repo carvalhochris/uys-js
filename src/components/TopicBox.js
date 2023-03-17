@@ -23,7 +23,7 @@ export default function TopicBox() {
     { value: "publishing", label: "Publishing" },
     { value: "distribution", label: "Distribution" },
     { value: "marketing", label: "Marketing" },
-    { value: "production", label: "Production" },
+    { value: "audio", label: "Audio" },
   ]);
 
   const handleSearch = async (event) => {
