@@ -35,7 +35,7 @@ export default function MusicMarketing({ posts }) {
 
         <meta
           property="og:url"
-          content="https://uys-js.vercel.app/music-marketing"
+          content="https://unlockyoursound.com/music-marketing"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Music Marketing" />

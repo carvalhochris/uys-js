@@ -43,7 +43,7 @@ export default function Post({ post }) {
         )}
         <meta
           property="og:url"
-          content={`https://uys-js.vercel.app/${post.slug}`}
+          content={`https://unlockyoursound.com/${post.slug}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={post.title} />
@@ -73,7 +73,7 @@ export default function Post({ post }) {
         <meta name="twitter:image:alt" content={post.title} />
         <meta
           name="twitter:url"
-          content={`https://uys-js.vercel.app/${post.slug}`}
+          content={`https://unlockyoursound.com/${post.slug}`}
         />
       </Head>
 

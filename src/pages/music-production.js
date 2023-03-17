@@ -35,7 +35,7 @@ import {
 
         <meta
           property="og:url"
-          content="https://uys-js.vercel.app/music-production"
+          content="https://unlockyoursound.com/music-production"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Music Production" />

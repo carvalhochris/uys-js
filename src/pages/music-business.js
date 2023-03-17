@@ -34,7 +34,7 @@ export default function MusicBusiness({ posts }) {
 
         <meta
           property="og:url"
-          content="https://uys-js.vercel.app/music-business"
+          content="https://unlockyoursound.com/music-business"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Music Business" />
