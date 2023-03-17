@@ -27,7 +27,7 @@ export default function MixFeedback() {
 
         <meta
           property="og:url"
-          content="https://uys-js.vercel.app/free-mix-feedback"
+          content="https://unlockyoursound.com/free-mix-feedback"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Free Mix Feedback" />

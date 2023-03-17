@@ -24,7 +24,7 @@ export default function PrivacyPage() {
           property="og:image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <meta property="og:url" content="http://unlockyoursound.com" />
+        <meta property="og:url" content="http://unlockyoursound.com/privacy" />
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="Privacy" />
         <meta
