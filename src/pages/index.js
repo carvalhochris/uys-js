@@ -11,6 +11,7 @@ import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { Button, Box } from "@chakra-ui/react";
 import { GrHomeOption } from "react-icons/gr";
+import TopicBox from "@/components/TopicBox";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
@@ -100,7 +101,8 @@ export default function Home({ posts }) {
         </Container>
         <div className={styles.main}>
           <Container maxW="xl">
-            <Search />
+            {/* <Search /> */}
+            <TopicBox />
             {/* <Nav /> */}
             <Divider mt={10} mb={5} />
             <Heading>Featured Content</Heading>

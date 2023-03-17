@@ -13,7 +13,7 @@ import Image from "next/image";
 import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
 // import Image from "next/image";
 
-export default function SearchPage() {
+export default function TopicBox() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -73,35 +73,37 @@ export default function SearchPage() {
         {/* <label>
             Input */}
         <Heading size="lg" as="h1">
-          Search
+          The Vault
         </Heading>
-        <Text mb={5}>Find what you are looking for</Text>
+        <Text mb={5}>Dive in to our ever-growing archives</Text>
         {/* <br></br> */}
-        {colorMode === "light" ? (
-          <Input
-            type="text"
-            name="search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            _placeholder={{ color: "grey" }}
-            placeholder="Search..."
-            // size={100}
-            size="lg"
-            borderColor="#white"
-          />
-        ) : (
-          <Input
-            type="text"
-            name="search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            _placeholder={{ color: "grey" }}
-            placeholder="Search..."
-            // size={100}
-            size="lg"
-            borderColor="#white"
-          />
-        )}
+
+        <Select
+          placeholder="Choose a topic"
+          size="lg"
+          mt={3}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        >
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </Select>
+        {/* 
+        <Input
+          type="text"
+          name="search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          _placeholder={{ color: "grey" }}
+          placeholder="Search..."
+          // size={100}
+          size="lg"
+          borderColor="#white"
+        /> */}
+
         {/* <Select
           placeholder="Select a keyword or enter your own..."
           size="lg"
@@ -128,8 +130,10 @@ export default function SearchPage() {
           // backgroundColor="#7756E3"
           color="#white"
         >
-          Search
+          Browse
+          {/* {searchTerm} */}
         </Button>
+
         <br></br>
         <br></br>
 

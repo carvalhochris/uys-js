@@ -17,13 +17,13 @@ export default function SearchPage() {
   return (
     <>
       <Head>
-        <title>The Vault</title>
+        <title>Search</title>
         <meta
           name="description"
           content="Dive in to our ever-growing archives"
         />
         <meta name="keywords" content="Music production, business, marketing" />
-        <meta property="og:title" content="The Vault" />
+        <meta property="og:title" content="Search" />
         <meta
           property="og:description"
           content="Dive in to our ever-growing archives"
@@ -34,7 +34,7 @@ export default function SearchPage() {
         />
         <meta property="og:url" content="http://unlockyoursound.com" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="The Vault" />
+        <meta name="twitter:title" content="Search" />
         <meta
           name="twitter:description"
           content="Dive in to our ever-growing archives"
