@@ -94,20 +94,19 @@ export default function SearchPage() {
             borderColor="#white"
           />
         )}
-        <Select
+        {/* <Select
           placeholder="Select a keyword or enter your own..."
           size="lg"
           mt={3}
           onChange={(e) => setSearchTerm(e.target.value)}
         >
           <option value="royalties">royalties</option>
-          {/* <option value="music production">music production</option> */}
+         
           <option value="publishing">publishing</option>
           <option value="distribution">distribution</option>
           <option value="marketing">marketing</option>
-          {/* add more options here */}
-          {/* <option value={searchTerm}>Enter your own keyword...</option> */}
-        </Select>
+         
+        </Select> */}
 
         {/* </label> */}
         {/* <br></br> */}
