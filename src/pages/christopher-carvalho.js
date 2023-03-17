@@ -1,15 +1,16 @@
 import axios from "axios";
-import { Container, Heading } from "@chakra-ui/react";
+import { Container, Heading, Link as ChakraLink } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import { EmailIcon } from "@chakra-ui/icons";
 
 export default function About({ pageContent }) {
   return (
     <>
       <Head>
-      <title>Christopher Carvalho — Founder of Unlock Your Sound</title>
+        <title>Christopher Carvalho — Founder of Unlock Your Sound</title>
         <meta
           name="description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -27,7 +28,10 @@ export default function About({ pageContent }) {
         />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://unlockyoursound.com/christopher-carvalho" />
+        <meta
+          property="og:url"
+          content="https://unlockyoursound.com/christopher-carvalho"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Christopher Carvalho" />
         <meta
@@ -51,18 +55,23 @@ export default function About({ pageContent }) {
           content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
       </Head>
-   
-    <div className={styles.main}>
-      <Container maxW="xl">
-        <Nav />
-        <Heading ml={0} size="lg" as="h1">Christopher Carvalho</Heading>
-        <div
-          style={{ paddingTop: "10px", paddingBottom: "10px" }}
-          dangerouslySetInnerHTML={{ __html: pageContent }}
-        ></div>
-        <Footer />
-      </Container>
-    </div>
+
+      <div className={styles.main}>
+        <Container maxW="xl">
+          <Nav />
+          <Heading ml={0} size="lg" as="h1">
+            Christopher Carvalho
+          </Heading>
+          <div
+            style={{ paddingTop: "10px", paddingBottom: "10px" }}
+            dangerouslySetInnerHTML={{ __html: pageContent }}
+          ></div>
+          <ChakraLink href="mailto:enquires@unlockyoursound.com">
+            <EmailIcon boxSize={25} />
+          </ChakraLink>
+          <Footer />
+        </Container>
+      </div>
     </>
   );
 }
