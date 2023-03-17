@@ -27,7 +27,7 @@ export default function About({ pageContent }) {
         />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://uys-js.vercel.app" />
+        <meta property="og:url" content="https://unlockyoursound.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Christopher Carvalho" />
         <meta
