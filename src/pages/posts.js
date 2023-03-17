@@ -3,7 +3,7 @@ import { Container } from "@chakra-ui/react";
 import axios from "axios";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
-import { Divider } from "@chakra-ui/react";
+import { Divider, Heading } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 
@@ -28,7 +28,7 @@ export default function Posts({ posts }) {
           {posts.map((post) => (
             <div key={post.slug}>
               <Link href={`/posts/${post.slug}`}>
-                <Text as="u">{post.title}</Text>
+                <Heading as="h2">{post.title}</Heading>
                 <Divider mt={5} mb={5} />
               </Link>
             </div>

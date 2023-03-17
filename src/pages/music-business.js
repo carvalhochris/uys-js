@@ -75,7 +75,7 @@ export default function MusicBusiness({ posts }) {
                   width={500}
                   height={500}
                 />
-                <Heading as="h3" mb={5}>
+                <Heading as="h2" mb={5}>
                   {post.title}
                 </Heading>
                 <Divider mt={10} mb={5} />
