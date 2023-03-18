@@ -32,7 +32,10 @@ export default function MusicMarketing({ posts }) {
           itemprop="image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/music-marketing`}
+        />
         <meta
           property="og:url"
           content="https://unlockyoursound.com/music-marketing"

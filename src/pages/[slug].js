@@ -41,6 +41,10 @@ export default function Post({ post }) {
         {post.featuredImage?.node?.sourceUrl && (
           <meta itemprop="image" content={post.featuredImage.node.sourceUrl} />
         )}
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/${post.slug}`}
+        />
         <meta
           property="og:url"
           content={`https://unlockyoursound.com/${post.slug}`}

@@ -23,6 +23,10 @@ export default function MusicMarketing({ posts }) {
           content="The Artist Self-Development Platform"
         />
         <meta name="keywords" content="Music production, business, marketing" />
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/featured-posts`}
+        />
         <meta property="og:title" content="Unlock Your Sound" />
         <meta
           property="og:description"

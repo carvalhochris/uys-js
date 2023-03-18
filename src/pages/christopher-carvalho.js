@@ -26,7 +26,10 @@ export default function About({ pageContent }) {
           itemprop="image"
           content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
-
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/free`}
+        />
         {/* <!-- Facebook Meta Tags --> */}
         <meta
           property="og:url"

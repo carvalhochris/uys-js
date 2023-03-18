@@ -23,6 +23,10 @@ export default function SearchPage() {
           content="Dive in to our ever-growing archives"
         />
         <meta name="keywords" content="Music production, business, marketing" />
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/search`}
+        />
         <meta property="og:title" content="Search" />
         <meta
           property="og:description"
