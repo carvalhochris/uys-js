@@ -24,7 +24,7 @@ export default function About({ pageContent }) {
         />
         <meta
           itemprop="image"
-          content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
+          content="https://unlockyoursound.io/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
         <link
           rel="canonical"
@@ -55,7 +55,7 @@ export default function About({ pageContent }) {
         />
         <meta
           name="twitter:image"
-          content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
+          content="https://unlockyoursound.io/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
       </Head>
 
@@ -81,7 +81,7 @@ export default function About({ pageContent }) {
 
 export async function getStaticProps() {
   const response = await axios.get(
-    "https://unlockyoursound.com/wp-json/wp/v2/pages/14091"
+    "https://unlockyoursound.io/wp-json/wp/v2/pages/14091"
   );
   const pageContent = response.data.content.rendered;
   return {

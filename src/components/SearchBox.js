@@ -30,7 +30,7 @@ export default function SearchPage() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("https://unlockyoursound.com/graphql", {
+      const response = await axios.post("https://unlockyoursound.io/graphql", {
         query: `
         query SearchPosts($search: String!) {
           posts(first: 1000, where: { search: $search }) {

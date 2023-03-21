@@ -34,12 +34,9 @@ export default function Home({ posts }) {
         />
         <meta
           itemprop="image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-        <link
-          rel="canonical"
-          href={`https://unlockyoursound.com/`}
-        />
+        <link rel="canonical" href={`https://unlockyoursound.com/`} />
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://unlockyoursound.com" />
         <meta property="og:type" content="website" />
@@ -50,7 +47,7 @@ export default function Home({ posts }) {
         />
         <meta
           property="og:image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -62,7 +59,7 @@ export default function Home({ posts }) {
         />
         <meta
           name="twitter:image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 
         {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
@@ -118,13 +115,14 @@ export default function Home({ posts }) {
                     style={{ textDecoration: "none" }}
                   >
                     {/* <Box bg="#RRGGBB" w={500} p={0} h={350} color="white"> */}
-                    <Image
-                      src={post.featuredImage.node.sourceUrl}
-                      alt={post.title}
-                      width={1000}
-                      height={1000}
-                      // objectFit="cover"
-                    />
+                    {post.featuredImage && (
+                      <Image
+                        src={post.featuredImage.node.sourceUrl}
+                        alt={post.title}
+                        width={1000}
+                        height={1000}
+                      />
+                    )}
                     <Heading as="h3" mb={5}>
                       {post.title}
                     </Heading>
@@ -173,7 +171,7 @@ const GET_FEATURED_POSTS = `
 `;
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: GET_FEATURED_POSTS,
   });
   const posts = response.data.data.posts.nodes;

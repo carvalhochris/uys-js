@@ -41,7 +41,7 @@ export default function Posts({ posts }) {
 }
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: GET_ALL_POSTS,
   });
   const posts = response.data.data.posts.nodes;

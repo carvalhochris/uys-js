@@ -109,7 +109,7 @@ export default function Post({ post }) {
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: GET_POST_BY_SLUG,
     variables: { slug },
   });
@@ -130,7 +130,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: `
       query GetAllPosts {
         posts(first: 1000) {

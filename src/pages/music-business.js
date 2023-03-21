@@ -108,7 +108,7 @@ const GET_BIZ_POSTS = `
   `;
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: GET_BIZ_POSTS,
   });
   const posts = response.data.data.posts.nodes;

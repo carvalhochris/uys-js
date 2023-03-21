@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['unlockyoursound.com'],
+    domains: ['unlockyoursound.io'],
   },
 }

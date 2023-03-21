@@ -45,13 +45,13 @@ export default function Nav() {
             >
               {colorMode === "light" ? (
                 <Image
-                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
+                  src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
                   alt="Unlock Your Sound light logo"
                   // maxWidth={70}
                 />
               ) : (
                 <Image
-                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
+                  src="https://unlockyoursound.io/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
                   alt="Unlock Your Sound dark logo"
                   // maxWidth={70}
                 />
