@@ -1,10 +1,9 @@
 import {
   Container,
   Heading,
-  Text,
   Divider,
-  // Image,
-  Link,
+  // Link,
+  Text
 } from "@chakra-ui/react";
 import axios from "axios";
 import Nav from "@/components/Nav";
@@ -12,6 +11,7 @@ import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function MusicMarketing({ posts }) {
   return (

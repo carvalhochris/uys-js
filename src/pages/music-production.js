@@ -1,17 +1,17 @@
 import {
-    Container,
-    Heading,
-    Text,
-    Divider,
-    // Image,
-    Link,
-  } from "@chakra-ui/react";
-  import axios from "axios";
-  import Nav from "@/components/Nav";
-  import Footer from "@/components/Footer";
-  import styles from "@/styles/Home.module.css";
-  import Image from "next/image";
-  import Head from "next/head";
+  Container,
+  Heading,
+  Divider,
+  // Link,
+  Text
+} from "@chakra-ui/react";
+import axios from "axios";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import styles from "@/styles/Home.module.css";
+import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
   
   export default function MusicProduction({ posts }) {
     return (
