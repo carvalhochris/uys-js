@@ -21,22 +21,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ```
 query GetPosts {
-    posts(first: 1000) {
-        edges {
-        node {
+  posts(first: 1000) {
+    edges {
+      node {
         id
         title
         slug
         content
         seo {
-            metaDesc
+          metaDesc
         }
         featuredImage {
-            node {
+          node {
             sourceUrl
-            }
+          }
         }
-        }
+      }
     }
   }
 }
