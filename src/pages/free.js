@@ -24,7 +24,7 @@ export default function FreeResources() {
         />
         <meta
           itemprop="image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
         <link
           rel="canonical"
@@ -39,7 +39,7 @@ export default function FreeResources() {
         />
         <meta
           property="og:image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -50,7 +50,7 @@ export default function FreeResources() {
         />
         <meta
           name="twitter:image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
 
