@@ -97,6 +97,7 @@ export default function Post({ post }) {
               {post.title}
             </Heading>
             <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            <br></br>
             <ShareButton postSlug={post.slug} />
           </Box>
           <Footer />
