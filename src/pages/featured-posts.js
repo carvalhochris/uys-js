@@ -45,7 +45,7 @@ export default function MusicMarketing({ posts }) {
         />
         <meta
           name="twitter:image"
-          content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
+          content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -96,7 +96,7 @@ const GET_MARKETING_POSTS = `
   `;
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.com/graphql", {
+  const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: GET_MARKETING_POSTS,
   });
   const posts = response.data.data.posts.nodes;
