@@ -1,8 +1,8 @@
 # Next js frontend for Unlock Your Sound, leveraging, GraphQL, Headless Wordpress, and Static Generation
 
-Trying this to add Yoast data to GraphQL: https://wordpress.org/plugins/add-wpgraphql-seo/
-
 [View site](https://unlockyoursound.com/)
+
+## Resources used in this project
 
 This hack allowed me to query all posts and thus have them in the static build: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
 
@@ -10,7 +10,9 @@ Hey Meta, a tool for checking meta tags: https://www.heymeta.com/
 
 This plugin helped me include Yoast REST objects in GraphQL query: https://github.com/ashhitch/wp-graphql-yoast-seo 
 
-# General GraphQL Query
+The Wordpress GraphQP Plugin for serving my content to the frontend
+
+# Primary GraphQL Query
 
 ```
 query GetPosts {
