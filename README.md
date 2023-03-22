@@ -17,6 +17,32 @@ Hey Meta: https://www.heymeta.com/
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# General GraphQL Query
+
+```
+query GetPosts {
+    posts(first: 1000) {
+        edges {
+        node {
+        id
+        title
+        slug
+        content
+        seo {
+            metaDesc
+        }
+        featuredImage {
+            node {
+            sourceUrl
+            }
+        }
+        }
+    }
+  }
+}
+
+```
+
 ## Getting Started
 
 First, run the development server:
