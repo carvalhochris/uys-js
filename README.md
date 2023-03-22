@@ -1,21 +1,14 @@
-# Creating a new frontend for Unlock Your Sound leveraging Next.js, GraphQL, Headless Wordpress, and Static Generation
-
-Things to do:
-
-1. Fetch and render meta tags and page title from posts
-2. ALL THE SEO - including fetching meta data from Wordpress posts
-3. Switch meta urls to production domain
-4. Cross-reference sitemap to live site
+# Next js frontend for Unlock Your Sound, leveraging, GraphQL, Headless Wordpress, and Static Generation
 
 Trying this to add Yoast data to GraphQL: https://wordpress.org/plugins/add-wpgraphql-seo/
 
-[Current site](https://unlockyoursound.com/) | [Next.js site](https://uys-js.vercel.app/)
+[View site](https://unlockyoursound.com/)
 
-Life saver: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
+This hack allowed me to query all posts and thus have them in the static build: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
 
-Hey Meta: https://www.heymeta.com/ 
+Hey Meta, a tool for checking meta tags: https://www.heymeta.com/ 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This plugin helped me include Yoast REST objects in GraphQL query: https://github.com/ashhitch/wp-graphql-yoast-seo 
 
 # General GraphQL Query
 
@@ -42,8 +35,9 @@ query GetPosts {
 }
 
 ```
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<!-- ## Getting Started
 
 First, run the development server:
 
@@ -78,4 +72,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
