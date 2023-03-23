@@ -163,9 +163,18 @@ export default function SearchPage() {
             </Link>
             <Text fontSize="lg">{result.seo.metaDesc}</Text>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Text fontSize="lg" as="u">
+              <Button
+                // type="submit"
+                mt={6}
+                mb={5}
+                size="md"
+                borderColor="grey"
+                variant="outline"
+                backgroundColor="#000000"
+                color="white"
+              >
                 Read on
-              </Text>
+              </Button>
             </Link>
             <Divider mt={10} mb={5} />
             {/* <Divider /> */}

@@ -134,8 +134,19 @@ export default function Home({ posts }) {
                     href={`/${post.slug}`}
                     style={{ textDecoration: "none" }}
                   >
-                    <Text fontSize="lg" as="u">
-                      Read on
+                    <Text fontSize="lg">
+                      <Button
+                        // type="submit"
+                        mt={6}
+                        mb={5}
+                        size="md"
+                        borderColor="grey"
+                        variant="outline"
+                        backgroundColor="#000000"
+                        color="white"
+                      >
+                        Read on
+                      </Button>
                     </Text>
                   </Link>
                   <Divider mt={10} mb={5} />
