@@ -1,4 +1,4 @@
-# Next js frontend for Unlock Your Sound, leveraging, GraphQL, Headless Wordpress, and Static Generation
+# Next.js frontend for Unlock Your Sound, leveraging GraphQL, Headless Wordpress, and Static Generation
 
 [View site](https://unlockyoursound.com/)
 
