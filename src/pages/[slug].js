@@ -99,6 +99,19 @@ export default function Post({ post }) {
             <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
             <br></br>
             <ShareButton postSlug={post.slug} />
+            <iframe
+              src="https://unlockyoursound.substack.com/embed"
+              width="100%"
+              height="320"
+              style={{
+                border: "1px solid #EEE",
+                background: "#f1f1f1",
+                color: "white",
+              }}
+              frameborder="0"
+              scrolling="no"
+              ></iframe>
+              <br></br>
           </Box>
           <Footer />
         </Container>
