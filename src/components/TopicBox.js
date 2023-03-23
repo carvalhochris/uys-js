@@ -24,6 +24,7 @@ export default function TopicBox() {
     { value: "distribution", label: "Distribution" },
     { value: "marketing", label: "Marketing" },
     { value: "audio", label: "Audio" },
+    { value: "bandcamp", label: "Bandcamp" },
   ]);
 
   const handleSearch = async (event) => {
@@ -147,12 +148,18 @@ export default function TopicBox() {
         searchResults.map((result) => (
           <div key={result.id}>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Image
-                src={result.featuredImage.node.sourceUrl}
-                alt={result.title}
-                width={1000}
-                height={1000}
-              />
+              {result.featuredImage &&
+              result.featuredImage.node &&
+              result.featuredImage.node.sourceUrl ? (
+                <Image
+                  src={result.featuredImage.node.sourceUrl}
+                  alt={result.title}
+                  width={1000}
+                  height={1000}
+                />
+              ) : (
+                <p>No image available</p>
+              )}
             </Link>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               <Heading as="h3" style={{ cursor: "pointer" }}>

@@ -18,13 +18,13 @@ export default function SearchPage() {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const { colorMode } = useColorMode();
-  const [options, setOptions] = useState([
-    { value: "royalties", label: "Royalties" },
-    { value: "publishing", label: "Publishing" },
-    { value: "distribution", label: "Distribution" },
-    { value: "marketing", label: "Marketing" },
-    { value: "production", label: "Production" },
-  ]);
+  // const [options, setOptions] = useState([
+  //   { value: "royalties", label: "Royalties" },
+  //   { value: "publishing", label: "Publishing" },
+  //   { value: "distribution", label: "Distribution" },
+  //   { value: "marketing", label: "Marketing" },
+  //   { value: "production", label: "Production" },
+  // ]);
 
   const handleSearch = async (event) => {
     event.preventDefault();
@@ -143,12 +143,18 @@ export default function SearchPage() {
         searchResults.map((result) => (
           <div key={result.id}>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Image
-                src={result.featuredImage.node.sourceUrl}
-                alt={result.title}
-                width={1000}
-                height={1000}
-              />
+              {result.featuredImage &&
+              result.featuredImage.node &&
+              result.featuredImage.node.sourceUrl ? (
+                <Image
+                  src={result.featuredImage.node.sourceUrl}
+                  alt={result.title}
+                  width={1000}
+                  height={1000}
+                />
+              ) : (
+                <p>No image available</p>
+              )}
             </Link>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               <Heading as="h3" style={{ cursor: "pointer" }}>
