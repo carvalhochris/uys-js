@@ -7,18 +7,20 @@
 1. Add null handler for all for featured images across code base
 
 ```
-{result.featuredImage &&
-              result.featuredImage.node &&
-              result.featuredImage.node.sourceUrl ? (
-                <Image
-                  src={result.featuredImage.node.sourceUrl}
-                  alt={result.title}
-                  width={1000}
-                  height={1000}
-                />
-              ) : (
-                <p>No image available</p>
-              )}
+{
+  result.featuredImage &&
+  result.featuredImage.node &&
+  result.featuredImage.node.sourceUrl ? (
+    <Image
+      src={result.featuredImage.node.sourceUrl}
+      alt={result.title}
+      width={1000}
+      height={1000}
+    />
+  ) : (
+    <p>No image available</p>
+  );
+}
 ```
 
 ## Resources used in this project
