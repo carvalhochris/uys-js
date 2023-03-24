@@ -1,10 +1,18 @@
 import axios from "axios";
-import { Container, Heading, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Container,
+  Divider,
+  Heading,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import { EmailIcon } from "@chakra-ui/icons";
+import { Icon, HStack } from "@chakra-ui/react";
+import { MdSettings } from "react-icons/md";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function About({ pageContent }) {
   return (
@@ -26,10 +34,7 @@ export default function About({ pageContent }) {
           itemprop="image"
           content="https://unlockyoursound.io/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
-        <link
-          rel="canonical"
-          href={`https://unlockyoursound.com/free`}
-        />
+        <link rel="canonical" href={`https://unlockyoursound.com/free`} />
         {/* <!-- Facebook Meta Tags --> */}
         <meta
           property="og:url"
@@ -69,9 +74,27 @@ export default function About({ pageContent }) {
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             dangerouslySetInnerHTML={{ __html: pageContent }}
           ></div>
-          <ChakraLink href="mailto:enquires@unlockyoursound.com">
-            <EmailIcon boxSize={25} />
-          </ChakraLink>
+
+          <HStack spacing={7} mt={5}>
+            {/* The default icon size is 1em (16px) */}
+            {/* <Icon as={MdSettings} /> */}
+
+            <ChakraLink href="mailto:enquires@unlockyoursound.com" isExternal>
+              <EmailIcon boxSize={30} />
+            </ChakraLink>
+            <ChakraLink href="https://github.com/carvalhochris" isExternal>
+              <AiFillGithub size={30} />
+            </ChakraLink>
+            <ChakraLink href="https://github.com/carvalhochris" isExternal>
+              <AiFillLinkedin size={30} />
+            </ChakraLink>
+            {/* Use the `boxSize` prop to change the icon size */}
+            {/* <Icon as={MdReceipt} boxSize={6} /> */}
+
+            {/* Use the `color` prop to change the icon color */}
+            {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
+          </HStack>
+          <Divider />
           <Footer />
         </Container>
       </div>
