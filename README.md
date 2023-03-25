@@ -23,6 +23,8 @@
 }
 ```
 
+2. Export posts as json, convert to markdown, create static API
+
 ## Resources used in this project
 
 This hack allowed me to query all posts and thus have them in the static build: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
