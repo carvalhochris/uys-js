@@ -1,10 +1,10 @@
 import {
-    Container,
-    Heading,
-    Divider,
-    // Link,
-    Text
-  } from "@chakra-ui/react";
+  Container,
+  Heading,
+  Divider,
+  // Link,
+  Text,
+} from "@chakra-ui/react";
 import axios from "axios";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -17,7 +17,7 @@ export default function MusicBusiness({ posts }) {
   return (
     <>
       <Head>
-      <title>Music Business</title>
+        <title>Music Business</title>
         <meta
           name="description"
           content="Read about the ever-evolving business of music"
@@ -32,7 +32,10 @@ export default function MusicBusiness({ posts }) {
           itemprop="image"
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/music-business`}
+        />
         <meta
           property="og:url"
           content="https://unlockyoursound.com/music-business"
@@ -59,34 +62,35 @@ export default function MusicBusiness({ posts }) {
           content="http://unlockyoursound.com/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-    
-  
-    <div className={styles.main}>
-      <Container maxW="xl">
-        <Nav />
-        <Heading size="lg" as="h1">Music Business</Heading>
-        <Text>Read about the ever-evolving business of music</Text>
-        <ul>
-          {posts.map((post) => (
-            <div key={post.slug}>
-              <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
-                <Image
-                  src={post.featuredImage.node.sourceUrl}
-                  alt={post.title}
-                  width={500}
-                  height={500}
-                />
-                <Heading as="h2" mb={5}>
-                  {post.title}
-                </Heading>
-                <Divider mt={10} mb={5} />
-              </Link>
-            </div>
-          ))}
-        </ul>
-        <Footer />
-      </Container>
-    </div>
+
+      <div className={styles.main}>
+        <Container maxW="xl">
+          <Nav />
+          <Heading size="lg" as="h1">
+            Music Business
+          </Heading>
+          <Text>Read about the ever-evolving business of music</Text>
+          <ul>
+            {posts.map((post) => (
+              <div key={post.slug}>
+                <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
+                  <Image
+                    src={post.featuredImage.node.sourceUrl}
+                    alt={post.title}
+                    width={500}
+                    height={500}
+                  />
+                  <Heading as="h2" mb={5}>
+                    {post.title}
+                  </Heading>
+                  <Divider mt={10} mb={5} />
+                </Link>
+              </div>
+            ))}
+          </ul>
+          <Footer />
+        </Container>
+      </div>
     </>
   );
 }

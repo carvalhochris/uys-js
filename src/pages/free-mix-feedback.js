@@ -20,6 +20,11 @@ export default function MixFeedback() {
           itemprop="description"
           content="Get a constructive mix review from a working audio engineer"
         />
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/free-mix-feedback`}
+        />
+
         <meta
           itemprop="image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
