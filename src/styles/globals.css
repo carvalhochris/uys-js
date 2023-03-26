@@ -125,6 +125,11 @@ figure {
   height: auto;
 }
 
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 .wp-block-quote p {
   font-size: 24px;
   padding: 20px;
