@@ -80,7 +80,7 @@ figure .wp-element-caption {
 .main img {
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .main hr {
