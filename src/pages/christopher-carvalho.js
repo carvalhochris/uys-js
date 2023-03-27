@@ -34,14 +34,20 @@ export default function About({ pageContent }) {
           itemprop="image"
           content="https://unlockyoursound.io/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
-        <link rel="canonical" href={`https://unlockyoursound.com/christopher-carvalho`} />
+        <link
+          rel="canonical"
+          href={`https://unlockyoursound.com/christopher-carvalho`}
+        />
         {/* <!-- Facebook Meta Tags --> */}
         <meta
           property="og:url"
           content="https://unlockyoursound.com/christopher-carvalho"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Christopher Carvalho" />
+        <meta
+          property="og:title"
+          content="Christopher Carvalho — Founder of Unlock Your Sound"
+        />
         <meta
           property="og:description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -53,7 +59,10 @@ export default function About({ pageContent }) {
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Christopher Carvalho" />
+        <meta
+          name="twitter:title"
+          content="Christopher Carvalho — Founder of Unlock Your Sound"
+        />
         <meta
           name="twitter:description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -68,7 +77,7 @@ export default function About({ pageContent }) {
         <Container maxW="xl">
           <Nav />
           <Heading ml={0} size="lg" as="h1">
-            Christopher Carvalho
+            Christopher Carvalho — Founder of Unlock Your Sound
           </Heading>
           <div
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
