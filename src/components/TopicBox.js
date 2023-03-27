@@ -25,6 +25,7 @@ export default function TopicBox() {
     { value: "marketing", label: "Marketing" },
     { value: "audio", label: "Audio" },
     { value: "bandcamp", label: "Bandcamp" },
+    { value: "logic pro x", label: "Logic Pro X" },
   ]);
 
   const handleSearch = async (event) => {
