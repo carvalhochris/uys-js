@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ShareButton from "@/components/WhatsAppButton";
 import Head from "next/head";
+import { useColorMode } from '@chakra-ui/react';
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
@@ -30,6 +31,10 @@ const GET_POST_BY_SLUG = `
 `;
 
 export default function Post({ post }) {
+  const { colorMode } = useColorMode();
+  const textColor = colorMode === 'dark' ? 'gray.100' : 'gray.900';
+  const headingColor = colorMode === 'dark' ? 'white' : 'gray.900';
+
   return (
     <>
       <Head>
@@ -93,10 +98,10 @@ export default function Post({ post }) {
                 height={2000}
               />
             )}
-            <Heading size="md" as="h1">
-              {post.title}
-            </Heading>
-            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            <Heading size="md" as="h1" color={headingColor}>
+        {post.title}
+      </Heading>
+      <Text color={textColor} dangerouslySetInnerHTML={{ __html: post.content }} />
             <br></br>
             <ShareButton postSlug={post.slug} />
             <iframe

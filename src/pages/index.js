@@ -15,6 +15,8 @@ import TopicBox from "@/components/TopicBox";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
+  const textColor = colorMode === 'dark' ? 'gray.300' : 'gray.800';
+  const headingColor = colorMode === 'dark' ? 'gray.300' : 'gray.900';
 
   return (
     <>
@@ -129,7 +131,7 @@ export default function Home({ posts }) {
                     {/* <Divider mt={10} mb={5} /> */}
                     {/* </Box> */}
                   </Link>
-                  <Text fontSize="lg">{post.seo.metaDesc}</Text>
+                  <Text fontSize="lg" color={textColor} >{post.seo.metaDesc}</Text>
                   <Link
                     href={`/${post.slug}`}
                     style={{ textDecoration: "none" }}
