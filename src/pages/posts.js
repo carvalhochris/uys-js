@@ -41,11 +41,11 @@ export default function Posts({ posts }) {
         />
         <link
           rel="canonical"
-          href={`https://unlockyoursound.com/music-business`}
+          href={`https://unlockyoursound.com/posts`}
         />
         <meta
           property="og:url"
-          content="https://unlockyoursound.com/music-business"
+          content="https://unlockyoursound.com/posts"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Posts" />
