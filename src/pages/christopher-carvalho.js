@@ -18,7 +18,7 @@ export default function About({ pageContent }) {
   return (
     <>
       <Head>
-        <title>Christopher Carvalho — Founder of Unlock Your Sound</title>
+        <title>Christopher Carvalho — Founder of Unlock Your Sound and Songcards</title>
         <meta
           name="description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
@@ -77,7 +77,7 @@ export default function About({ pageContent }) {
         <Container maxW="xl">
           <Nav />
           <Heading ml={0} size="lg" as="h1">
-            Christopher Carvalho — Founder of Unlock Your Sound
+            Christopher Carvalho — Founder of Unlock Your Sound and Songcards
           </Heading>
           <div
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
