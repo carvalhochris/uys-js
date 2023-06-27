@@ -98,7 +98,7 @@ export default function Post({ post }) {
                 height={2000}
               />
             )}
-            <Heading size="md" as="h1" color={headingColor}>
+            <Heading as="h1" color={headingColor} >
         {post.title}
       </Heading>
       <Text color={textColor} dangerouslySetInnerHTML={{ __html: post.content }} />

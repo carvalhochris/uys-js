@@ -23,7 +23,8 @@
 .main h1 {
   margin-bottom: 25px;
   margin-top: 25px;
-  font-size: 50px;
+  line-height: 60px;
+  font-size: 45px;
   font-family: var(--font-primary);
   /* letter-spacing: 2px; */
   /* font-weight: 100; */
