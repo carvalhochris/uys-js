@@ -25,14 +25,14 @@ export default function Home({ posts }) {
         <title>Unlock Your Sound</title>
         <meta
           name="description"
-          content="The Artist Services Platform"
+          content="The artist self-development platform"
         />
 
         {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Unlock Your Sound" />
         <meta
           itemprop="description"
-          content="The Artist Services Platform"
+          content="The artist self-development platform"
         />
         <meta
           itemprop="image"
@@ -45,7 +45,7 @@ export default function Home({ posts }) {
         <meta property="og:title" content="Unlock Your Sound" />
         <meta
           property="og:description"
-          content="The Artist Services Platform"
+          content="The artist self-development platform"
         />
         <meta
           property="og:image"
@@ -57,7 +57,7 @@ export default function Home({ posts }) {
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta
           name="twitter:description"
-          content="The Artist Services Platform"
+          content="The artist self-development platform"
         />
         <meta
           name="twitter:image"
@@ -70,7 +70,7 @@ export default function Home({ posts }) {
         <Container maxW="xl">
           <Nav />
           <Heading as="h1">
-            Unlock Your Sound is an artist services platform
+            Unlock Your Sound is an artist self-development platform
           </Heading>
           <Divider mt={5} mb={5} />
           <Text>
