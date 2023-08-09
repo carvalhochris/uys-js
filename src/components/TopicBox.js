@@ -24,7 +24,8 @@ export default function TopicBox() {
     { value: "distribution", label: "Distribution" },
     { value: "marketing", label: "Marketing" },
     { value: "audio", label: "Audio" },
-    { value: "bandcamp", label: "Bandcamp" },
+    // { value: "bandcamp", label: "Bandcamp" },
+    { value: "songcards", label: "Songcards" },
     { value: "logic pro x", label: "Logic Pro X" },
   ]);
 
