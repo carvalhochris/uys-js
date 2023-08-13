@@ -76,6 +76,7 @@ export default function MixFeedback() {
             Please only submit ONE song/track.<br></br>
             <br></br>
             We look forward to hearing your music.
+            <br></br>
           </Text>
           <Link
             isExternal
