@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import SubmitMix from "@/components/SubmitMix"
 
 export default function MixFeedback() {
   return (
@@ -96,6 +97,7 @@ export default function MixFeedback() {
               <ExternalLinkIcon mx="2px" />
             </Button>
           </Link>
+          <SubmitMix />
           <Footer />
         </Container>
       </div>
