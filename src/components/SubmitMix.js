@@ -66,6 +66,7 @@ function SubmitMix() {
     axios.post('https://service.songcards.io/submit-mix', formData);
     // alert('sent!')
     // alert(inputs);
+    setIsPosting(false);
   };
 
   return (
