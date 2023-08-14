@@ -10,6 +10,7 @@ function SubmitMix() {
   const [descValue, setDescValue] = useState("");
   const [isPosting, setIsPosting] = useState(false);
   const [discValue, setDiscoverValue] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     setIsPosting(false);
@@ -50,7 +51,7 @@ function SubmitMix() {
   const handleSubmit = () => {
     setIsPosting(true);
     // event.preventDefault();
-    console.log(isPosting);
+    // console.log(isPosting);
     const formData = new FormData();
     formData.append("name", nameValue);
     formData.append("email", emailValue);
@@ -59,14 +60,15 @@ function SubmitMix() {
     formData.append("disc", discValue);
     console.log("formData is...");
     console.log(formData);
-    // setTimeout(() => {
-    //   setIsPosting(false);
-    // }, 5000);
+    setTimeout(() => {
+      console.log("Delayed for 1 second.");
+      setIsPosting(false);
+      setShowSuccess(true);
+      axios.post('https://service.songcards.io/submit-mix', formData);
+    }, 1000);
 
-    axios.post('https://service.songcards.io/submit-mix', formData);
     // alert('sent!')
     // alert(inputs);
-    setIsPosting(false);
   };
 
   return (
@@ -98,7 +100,7 @@ function SubmitMix() {
           />
         </label>
         <br />
-        
+
         {/* <label>
           What best describes you? (Artist, Producer, Engineer?):
           <Input
@@ -108,7 +110,7 @@ function SubmitMix() {
             onChange={handleChange}
           />
         </label> */}
-        
+
         {/* <label>
           Where can we hear yyour previous work?
           <Input
@@ -159,7 +161,8 @@ function SubmitMix() {
             onChange={handleDiscover}
           />
         </label>
-        <br /><br />
+        <br />
+        <br />
         <label>
           Please provide a link to your track here
           <Input
@@ -171,20 +174,22 @@ function SubmitMix() {
         </label>
         <br />
         {/* <input type="submit" /> */}
-        <Button onClick={handleSubmit}
-        mt={10}
-        // mt={6}
-        mb={5}
-        size="lg"
-        borderColor="grey"
-        variant="outline"
-        backgroundColor="#7756E3"
-        color="white"
-        
-        
-        >Submit Mix</Button>
+        <Button
+          onClick={handleSubmit}
+          mt={10}
+          // mt={6}
+          mb={5}
+          size="lg"
+          borderColor="grey"
+          variant="outline"
+          backgroundColor="#7756E3"
+          color="white"
+        >
+          Submit Mix
+        </Button>
       </form>
       {isPosting && <Spinner />}
+      {showSuccess && <p>sent!</p>}
     </>
   );
 }
