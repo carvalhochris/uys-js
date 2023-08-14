@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Spinner, Button } from "@chakra-ui/react";
+import { Spinner, Button, Input } from "@chakra-ui/react";
 
 function SubmitMix() {
   //   const [inputs, setInputs] = useState({});
@@ -9,6 +9,7 @@ function SubmitMix() {
   const [linkValue, setLinkValue] = useState("");
   const [descValue, setDescValue] = useState("");
   const [isPosting, setIsPosting] = useState(false);
+  const [discValue, setDiscoverValue] = useState("");
 
   useEffect(() => {
     setIsPosting(false);
@@ -31,27 +32,19 @@ function SubmitMix() {
   const handleLink = (event) => {
     const eventlink = event.target.value;
     setLinkValue(eventlink);
-    // setNameValue = event.target.name;
     console.log(linkValue);
   };
 
-  const handleDesc = (event) => {};
+  const handleDesc = (event) => {
+    const eventdesc = event.target.value;
+    setDescValue(eventdesc);
+    console.log(descValue);
+  };
 
-  const handleDiscover = (event) => {};
-
-  const handleChange = (event) => {
-    // console.log("handleChange data is ...");
-    // const nameValue = event.target.name;
-    // console.log(nameValue)
-    // const emailValue = event.target.email;
-    // console.log(emailValue)
-    // const formData = new FormData();
-    // formData.append("name", nameValue);
-    // formData.append("email", emailValue);
-    // formData.append("link", linkValue);
-    // console.log("formData is...")
-    // console.log(formData)
-    // setInputs((values) => ({ ...values, [name]: value }));
+  const handleDiscover = (event) => {
+    const eventdisc = event.target.value;
+    setDiscoverValue(eventdisc);
+    console.log(discValue);
   };
 
   const handleSubmit = () => {
@@ -81,7 +74,7 @@ function SubmitMix() {
       >
         <label>
           Enter your name:
-          <input
+          <Input
             type="text"
             // value={nameValue}
             // name="name"
@@ -93,7 +86,7 @@ function SubmitMix() {
         <br />
         <label>
           Enter your email:
-          <input
+          <Input
             type="text"
             // name="email"
             // value={inputs.age || ""}
@@ -101,26 +94,26 @@ function SubmitMix() {
           />
         </label>
         <br />
-        <br />
-        <label>
+        
+        {/* <label>
           What best describes you? (Artist, Producer, Engineer?):
-          <input
+          <Input
             type="number"
             name="age"
             // value={inputs.age || ""}
             onChange={handleChange}
           />
-        </label>
-        <br />
-        <label>
+        </label> */}
+        
+        {/* <label>
           Where can we hear yyour previous work?
-          <input
+          <Input
             type="number"
             name="age"
             // value={inputs.age || ""}
             onChange={handleChange}
           />
-        </label>
+        </label> */}
         <br />
         {/* <label>
           What are you hoping to accomplish with this project?
@@ -133,8 +126,8 @@ function SubmitMix() {
         </label>
         <br /> */}
         <label>
-          Please describe your project in detail
-          <input
+          Tell us a bit about you and the project
+          <Input
             type="text"
             // name="age"
             // value={inputs.age || ""}
@@ -155,17 +148,17 @@ function SubmitMix() {
         <br /> */}
         <label>
           How did you discover Unlock Your Sound?
-          <input
+          <Input
             type="text"
             // name="age"
             // value={inputs.age || ""}
             onChange={handleDiscover}
           />
         </label>
-        <br />
+        <br /><br />
         <label>
           Please provide a link to your track here
-          <input
+          <Input
             type="text"
             // name="age"
             // value={inputs.age || ""}
@@ -174,7 +167,18 @@ function SubmitMix() {
         </label>
         <br />
         {/* <input type="submit" /> */}
-        <Button onClick={handleSubmit}>Submit Mix</Button>
+        <Button onClick={handleSubmit}
+        mt={10}
+        // mt={6}
+        mb={5}
+        size="lg"
+        borderColor="grey"
+        variant="outline"
+        backgroundColor="#7756E3"
+        color="white"
+        
+        
+        >Submit Mix</Button>
       </form>
       {isPosting && <Spinner />}
     </>

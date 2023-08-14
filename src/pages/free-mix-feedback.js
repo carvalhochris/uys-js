@@ -97,7 +97,7 @@ export default function MixFeedback() {
               <ExternalLinkIcon mx="2px" />
             </Button>
           </Link>
-          <SubmitMix />
+          {/* <SubmitMix /> */}
           <Footer />
         </Container>
       </div>
