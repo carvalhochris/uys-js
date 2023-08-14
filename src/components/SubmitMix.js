@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { Spinner } from "@chakra-ui/react";
+import { Spinner, Button } from "@chakra-ui/react";
 
 function SubmitMix() {
   //   const [inputs, setInputs] = useState({});
@@ -8,7 +8,11 @@ function SubmitMix() {
   const [emailValue, setEmailValue] = useState("");
   const [linkValue, setLinkValue] = useState("");
   const [descValue, setDescValue] = useState("");
-  const [isPosting, setIsPosting] = useState("");
+  const [isPosting, setIsPosting] = useState(false);
+
+  useEffect(() => {
+    setIsPosting(false);
+  }, []);
 
   const handleName = (event) => {
     const eventname = event.target.value;
@@ -50,18 +54,21 @@ function SubmitMix() {
     // setInputs((values) => ({ ...values, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsPosting(true)
+  const handleSubmit = () => {
+    setIsPosting(true);
+    // event.preventDefault();
+    console.log(isPosting);
     const formData = new FormData();
     formData.append("name", nameValue);
     formData.append("email", emailValue);
     formData.append("link", linkValue);
-    console.log("formData is...")
-    console.log(formData)
-    axios.post('https://service.songcards.io/submit-mix', formData)
-    setIsPosting(false)
+    console.log("formData is...");
+    console.log(formData);
+    setTimeout(() => {
+      setIsPosting(false);
+    }, 5000);
 
+    // axios.post('https://service.songcards.io/submit-mix', formData);
     // alert(inputs);
   };
 
@@ -69,7 +76,9 @@ function SubmitMix() {
     <>
       <br />
       <br />
-      <form onSubmit={handleSubmit}>
+      <form
+      // onSubmit={handleSubmit}
+      >
         <label>
           Enter your name:
           <input
@@ -164,7 +173,8 @@ function SubmitMix() {
           />
         </label>
         <br />
-        <input type="submit" />
+        {/* <input type="submit" /> */}
+        <Button onClick={handleSubmit}>Submit Mix</Button>
       </form>
       {isPosting && <Spinner />}
     </>
