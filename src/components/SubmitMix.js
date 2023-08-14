@@ -55,6 +55,8 @@ function SubmitMix() {
     formData.append("name", nameValue);
     formData.append("email", emailValue);
     formData.append("link", linkValue);
+    formData.append("link", descValue);
+    formData.append("link", discValue);
     console.log("formData is...");
     console.log(formData);
     setTimeout(() => {
