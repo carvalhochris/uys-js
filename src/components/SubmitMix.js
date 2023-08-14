@@ -55,15 +55,16 @@ function SubmitMix() {
     formData.append("name", nameValue);
     formData.append("email", emailValue);
     formData.append("link", linkValue);
-    formData.append("link", descValue);
-    formData.append("link", discValue);
+    formData.append("desc", descValue);
+    formData.append("disc", discValue);
     console.log("formData is...");
     console.log(formData);
-    setTimeout(() => {
-      setIsPosting(false);
-    }, 5000);
+    // setTimeout(() => {
+    //   setIsPosting(false);
+    // }, 5000);
 
-    // axios.post('https://service.songcards.io/submit-mix', formData);
+    axios.post('https://service.songcards.io/submit-mix', formData);
+    // alert('sent!')
     // alert(inputs);
   };
 
