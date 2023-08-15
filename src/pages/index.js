@@ -155,6 +155,12 @@ export default function Home({ posts }) {
                 </div>
               ))}
             </ul>
+            <iframe
+            src="https://unlockyoursound.substack.com/embed"
+            height={350}
+            width="100%"
+            style={{ border: "solid" }}
+          ></iframe>
             <Footer />
           </Container>
         </div>
