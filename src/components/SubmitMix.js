@@ -88,7 +88,7 @@ function SubmitMix() {
       console.log("Delayed for 1 second.");
       setIsPosting(false);
       setShowSuccess(true);
-      // axios.post("https://service.songcards.io/submit-mix", formData);
+      axios.post("https://service.songcards.io/submit-mix", formData);
     }, 1000);
     // alert('sent!')
     // alert(inputs);
