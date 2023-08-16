@@ -116,7 +116,6 @@ function SubmitMix() {
           </FormControl>
         </label>
         <br />
-        <br />
         {/* <label> */}
         <FormControl isRequired>
           <FormLabel>Enter your email:</FormLabel>
@@ -185,6 +184,18 @@ function SubmitMix() {
         </label>
         <br /> */}
         {/* <label> */}
+
+       <FormControl isRequired>
+          <FormLabel>Please provide a link to your track here</FormLabel>
+          <Input
+            type="text"
+            // name="age"
+            // value={inputs.age || ""}
+            onChange={handleLink}
+          />
+        </FormControl>
+        <br /> 
+
         <FormControl isRequired>
           <FormLabel>How did you discover Unlock Your Sound?</FormLabel>
           <Input
@@ -198,17 +209,8 @@ function SubmitMix() {
         {/* <br /> */}
         <br />
         {/* <label> */}
-        <FormControl isRequired>
-          <FormLabel>Please provide a link to your track here</FormLabel>
-          <Input
-            type="text"
-            // name="age"
-            // value={inputs.age || ""}
-            onChange={handleLink}
-          />
-        </FormControl>
-        {/* </label> */}
-        <br />
+                {/* </label> */}
+        
         {/* <input type="submit" /> */}
       </form>
       {isPosting && <Spinner />}
@@ -217,7 +219,7 @@ function SubmitMix() {
       {isError && (
         <Button
           onClick={handleSubmit}
-          mt={10}
+          // mt={10}
           // mt={6}
           mb={5}
           size="lg"

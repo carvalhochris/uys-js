@@ -79,25 +79,7 @@ export default function MixFeedback() {
             We look forward to hearing your music.
             <br></br>
           </Text>
-          <Link
-            isExternal
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeUOV5KF1VWDBiuNTv91tYza2LKOIOcttbUqjWOSCpcafVnDg/viewform?usp=sf_link"
-          >
-            <Button
-              mt={10}
-              // mt={6}
-              mb={5}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-              backgroundColor="#7756E3"
-              color="white"
-            >
-              Submit Mix
-              <ExternalLinkIcon mx="2px" />
-            </Button>
-          </Link>
-          {/* <SubmitMix /> */}
+                    <SubmitMix /> 
           <Footer />
         </Container>
       </div>
