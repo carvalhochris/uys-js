@@ -6,6 +6,7 @@ import {
   Input,
   FormControl,
   FormLabel,
+  Text
 } from "@chakra-ui/react";
 
 function SubmitMix() {
@@ -215,7 +216,7 @@ function SubmitMix() {
       </form>
       {isPosting && <Spinner />}
       {showSuccess && <p>sent!</p>}
-      {!isError && <p>fill in required fields</p>}
+      {!isError && <><Text fontSize="sm" color="red">* please fill in required fields</Text></>}
       {isError && (
         <Button
           onClick={handleSubmit}
