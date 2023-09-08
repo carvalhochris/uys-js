@@ -1,10 +1,17 @@
-import { Heading, Text, Link, Button, Container, Divider } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Link,
+  Button,
+  Container,
+  Divider,
+} from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
 import Footer from "@/components/Footer";
-import SubmitMix from "@/components/SubmitMix"
+import SubmitMix from "@/components/SubmitMix";
 
 export default function MixFeedback() {
   return (
@@ -79,11 +86,16 @@ export default function MixFeedback() {
             We look forward to hearing your music.
             <br></br>
           </Text>
-                    <SubmitMix /> 
-                    <Divider />
-                    <Text>Did you know that we also offer a bunch of free resources to help you create and release your music?</Text>
-                    <Link href="/free"><Text>Learn more</Text></Link>
-                    {/* <<Heading>Free resources</Heading>
+          <SubmitMix />
+          <Divider />
+          <Text>
+            Did you know that we also offer a bunch of <b>free resources</b> to help
+            you create and release your music?
+          </Text>
+          <Link href="/free">
+            <Text>Learn more</Text>
+          </Link>
+          {/* <<Heading>Free resources</Heading>
                     <iframe
             src="https://unlockyoursound.substack.com/embed"
             height={350}
