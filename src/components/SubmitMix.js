@@ -6,7 +6,7 @@ import {
   Input,
   FormControl,
   FormLabel,
-  Text
+  Text,
 } from "@chakra-ui/react";
 
 function SubmitMix() {
@@ -86,11 +86,24 @@ function SubmitMix() {
     console.log(formData);
 
     setTimeout(() => {
-      console.log("Delayed for 1 second.");
-      setIsPosting(false);
-      setShowSuccess(true);
-      axios.post("https://service.songcards.io/submit-mix", formData);
-    }, 1000);
+      // console.log("Delayed for 1 second.");
+      setIsPosting(true);
+      axios
+        .post("https://service.songcards.io/submit-mix", formData)
+        .then(function (response) {
+          console.log(response);
+          setShowSuccess(true);
+          setIsPosting(false);
+        })
+        .catch(function (error) {
+          console.log(error);
+          // setIsUploading(false);
+          setShowSuccess(false);
+          alert("There was an error, please check all required fields");
+          setIsPosting(false);
+        });
+    });
+
     // alert('sent!')
     // alert(inputs);
   };
@@ -128,40 +141,9 @@ function SubmitMix() {
             onChange={handleEmail}
           />
         </FormControl>
-        {/* </label> */}
-        {/* <br /> */}
 
-        {/* <label>
-          What best describes you? (Artist, Producer, Engineer?):
-          <Input
-            type="number"
-            name="age"
-            // value={inputs.age || ""}
-            onChange={handleChange}
-          />
-        </label> */}
-
-        {/* <label>
-          Where can we hear yyour previous work?
-          <Input
-            type="number"
-            name="age"
-            // value={inputs.age || ""}
-            onChange={handleChange}
-          />
-        </label> */}
         <br />
-        {/* <label>
-          What are you hoping to accomplish with this project?
-          <input
-            type="number"
-            name="age"
-            // value={inputs.age || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br /> */}
-        {/* <label> */}
+
         <FormControl isRequired>
           <FormLabel>Tell us a bit about you and the project</FormLabel>
           <Input
@@ -171,22 +153,10 @@ function SubmitMix() {
             onChange={handleDesc}
           />
         </FormControl>
-        {/* </label> */}
-        {/* <br /> */}
-        <br />
-        {/* <label>
-          What is your biggest obstacle at this time?
-          <input
-            type="number"
-            name="age"
-            // value={inputs.age || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <br /> */}
-        {/* <label> */}
 
-       <FormControl isRequired>
+        <br />
+
+        <FormControl isRequired>
           <FormLabel>Please provide a link to your track here</FormLabel>
           <Input
             type="text"
@@ -195,7 +165,7 @@ function SubmitMix() {
             onChange={handleLink}
           />
         </FormControl>
-        <br /> 
+        <br />
 
         <FormControl isRequired>
           <FormLabel>How did you discover Unlock Your Sound?</FormLabel>
@@ -206,32 +176,35 @@ function SubmitMix() {
             onChange={handleDiscover}
           />
         </FormControl>
-        {/* </label> */}
-        {/* <br /> */}
+
         <br />
-        {/* <label> */}
-                {/* </label> */}
-        
-        {/* <input type="submit" /> */}
       </form>
       {isPosting && <Spinner />}
-      {showSuccess && <p>sent!</p>}
-      {!isError && <><Text fontSize="sm" color="red">* please fill in required fields</Text></>}
-      {isError && (
-        <Button
-          onClick={handleSubmit}
-          // mt={10}
-          // mt={6}
-          mb={5}
-          size="lg"
-          borderColor="grey"
-          variant="outline"
-          backgroundColor="#7756E3"
-          color="white"
-        >
-          Submit Mix
-        </Button>
+      {showSuccess && (
+        <p>Success! A member of the team will get back to you asap.</p>
       )}
+      {!isError && (
+        <>
+          <Text fontSize="sm" color="red">
+            * please fill in required fields
+          </Text>
+        </>
+      )}
+      {/* {isError && ( */}
+      <Button
+        onClick={handleSubmit}
+        // mt={10}
+        // mt={6}
+        mb={5}
+        size="lg"
+        borderColor="grey"
+        variant="outline"
+        backgroundColor="#7756E3"
+        color="white"
+      >
+        Submit Mix
+      </Button>
+      {/* )} */}
     </>
   );
 }
