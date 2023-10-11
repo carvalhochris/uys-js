@@ -103,6 +103,7 @@ export default function About({ pageContent }) {
             {/* Use the `color` prop to change the icon color */}
             {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
           </HStack>
+          
           <Divider />
           <Footer />
         </Container>
