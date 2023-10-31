@@ -102,9 +102,15 @@ export default function About({ pageContent }) {
 
             {/* Use the `color` prop to change the icon color */}
             {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
+            
           </HStack>
-          
           <Divider />
+          <iframe
+            src="https://unlockyoursound.substack.com/embed"
+            height={350}
+            width="100%"
+            style={{ border: "solid" }}
+          ></iframe>
           <Footer />
         </Container>
       </div>
