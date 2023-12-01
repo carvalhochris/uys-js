@@ -142,7 +142,7 @@ export async function getStaticProps({ params }) {
     console.log("It will be printed in 5 seconds");
   }
 
-  newStyleDelay();
+  await newStyleDelay();
 
   const post = response.data.data.postBy;
 
