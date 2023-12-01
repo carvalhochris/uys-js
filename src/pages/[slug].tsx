@@ -2,15 +2,19 @@ import axios from "axios";
 import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-import Nav from "@/components/Nav";
+// import Nav from "@/components/Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import Image from "next/image";
-import ShareButton from "@/components/WhatsAppButton";
+// import ShareButton from "@/components/WhatsAppButton";
+import ShareButton from "../components/WhatsAppButton";
 import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
+import React from "react";
 
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
@@ -42,10 +46,10 @@ export default function Post({ post }) {
         {/* Facebook Meta Tags */}
         <title>{post.title}</title>
         <meta name="description" content={post.seo?.metaDesc ?? ""} />
-        <meta itemprop="name" content={post.title ?? ""} />
-        <meta itemprop="description" content={post.seo?.metaDesc ?? ""} />
+        <meta itemProp="name" content={post.title ?? ""} />
+        <meta itemProp="description" content={post.seo?.metaDesc ?? ""} />
         {post.featuredImage?.node?.sourceUrl && (
-          <meta itemprop="image" content={post.featuredImage.node.sourceUrl} />
+          <meta itemProp="image" content={post.featuredImage.node.sourceUrl} />
         )}
         <link
           rel="canonical"
@@ -87,7 +91,9 @@ export default function Post({ post }) {
         />
       </Head>
 
-      <div className={styles.main}>
+      <div 
+      // className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
           <Box css={{ all: "unset" }}>
@@ -117,8 +123,8 @@ export default function Post({ post }) {
                 background: "#f1f1f1",
                 color: "white",
               }}
-              frameborder="0"
-              scrolling="no"
+              // frameBorder="0"
+              // scrolling="no"
             ></iframe>
             <br></br>
           </Box>

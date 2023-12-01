@@ -2,22 +2,32 @@ import Link from "next/link";
 import { Container, Heading, Text, Center } from "@chakra-ui/react";
 import axios from "axios";
 import styles from "@/styles/Home.module.css";
-import Nav from "@/components/Nav";
+// import Nav from "@/components/Nav";
+import Nav from "../components/Nav";
 import { Divider } from "@chakra-ui/react";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
+
 import Image from "next/image";
 import Search from "../components/SearchBox";
 import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { Button, Box } from "@chakra-ui/react";
 import { GrHomeOption } from "react-icons/gr";
-import TopicBox from "@/components/TopicBox";
-import Example from "@/components/Command";
+// import TopicBox from "@/components/TopicBox";
+import TopicBox from "../components/TopicBox";
+// import Example from "@/components/Command";
+import Example from "../components/Command";
+import React from "react";
 
-export default function Home({ posts }) {
+interface HomeProps {
+  posts: {}
+}
+
+export default function Home({ posts }: HomeProps) {
   const { colorMode } = useColorMode();
-  const textColor = colorMode === 'dark' ? 'gray.300' : 'gray.800';
-  const headingColor = colorMode === 'dark' ? 'gray.300' : 'gray.900';
+  const textColor = colorMode === "dark" ? "gray.300" : "gray.800";
+  const headingColor = colorMode === "dark" ? "gray.300" : "gray.900";
 
   return (
     <>
@@ -30,13 +40,13 @@ export default function Home({ posts }) {
         />
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Unlock Your Sound" />
+        <meta itemProp="name" content="Unlock Your Sound" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="The artist self-development platform"
         />
         <meta
-          itemprop="image"
+          itemProp="image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
         <link rel="canonical" href={`https://unlockyoursound.com/`} />
@@ -133,7 +143,9 @@ export default function Home({ posts }) {
                     {/* <Divider mt={10} mb={5} /> */}
                     {/* </Box> */}
                   </Link>
-                  <Text fontSize="lg" color={textColor} >{post.seo.metaDesc}</Text>
+                  <Text fontSize="lg" color={textColor}>
+                    {post.seo.metaDesc}
+                  </Text>
                   <Link
                     href={`/${post.slug}`}
                     style={{ textDecoration: "none" }}
@@ -158,11 +170,11 @@ export default function Home({ posts }) {
               ))}
             </ul>
             <iframe
-            src="https://unlockyoursound.substack.com/embed"
-            height={350}
-            width="100%"
-            style={{ border: "solid" }}
-          ></iframe>
+              src="https://unlockyoursound.substack.com/embed"
+              height={350}
+              width="100%"
+              style={{ border: "solid" }}
+            ></iframe>
             <Footer />
           </Container>
         </div>

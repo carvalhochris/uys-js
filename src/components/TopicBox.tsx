@@ -11,7 +11,12 @@ import { Spinner } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
+import React from "react";
 // import Image from "next/image";
+
+interface TopicBoxProps {
+  
+}
 
 export default function TopicBox() {
   const [searchTerm, setSearchTerm] = useState("");

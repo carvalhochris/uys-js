@@ -1,7 +1,7 @@
 import React from "react";
 import { useColorMode, Box, Image, Divider, Button } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { Link } from "next/link";
+// import { Link } from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";

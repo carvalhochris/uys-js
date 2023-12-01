@@ -1,25 +1,23 @@
 import Link from "next/link";
+import { useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { HStack, useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Button } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
-import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
-import { AiFillGithub } from "react-icons/ai";
-import { Link as ChakraLink } from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
 import { AiFillInfoCircle } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import MyMenu from "./MyMenu";
+import { AiOutlineSearch } from "react-icons/ai";
 import { FaDice } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
+import React from "react";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
-  //   const textSize = 17;
-
+  const textSize = 17;
   const router = useRouter();
   const activeColor = "#7756E3";
 
@@ -29,12 +27,12 @@ export default function Nav() {
 
   return (
     <>
-      <footer
+      <nav
         style={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: "30px",
+          // textDecoration: "none",
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
@@ -116,23 +114,8 @@ export default function Nav() {
           </a>
         </Link>
         <MyMenu />
-      </footer>
+      </nav>
       <Divider mt={5} mb={5} />
-      <Text fontSize="md">
-        The source code for the frontend of this website is available{" "}
-        <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
-          <a className="no-js">
-            on GitHub.
-            <ExternalLinkIcon mx="2px" />
-          </a>
-        </ChakraLink>
-      </Text>
-      <Text fontSize="md" mb={10}>
-        © 2023 Unlock Your Sound Ltd |{" "}
-        <Link href="/privacy" legacyBehavior style={{ position: "relative" }}>
-          <a className="no-js">Privacy Policy</a>
-        </Link>
-      </Text>
     </>
   );
 }

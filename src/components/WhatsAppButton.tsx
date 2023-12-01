@@ -2,6 +2,7 @@
 import { WhatsappShareButton } from "react-share";
 import { Button } from "@chakra-ui/react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import React from "react";
 
 function ShareButton({ postSlug }) {
   const domainUrl = "https://unlockyoursound.com";
