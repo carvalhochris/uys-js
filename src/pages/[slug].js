@@ -134,8 +134,8 @@ export async function getStaticProps({ params }) {
   });
 
   setTimeout(() => {
-    console.log("Props delayed for 200 seconds.");
-  }, "200000");
+    console.log("Props delayed for 21 seconds.");
+  }, "21000");
 
   const post = response.data.data.postBy;
 
@@ -165,9 +165,9 @@ export async function getStaticPaths() {
     `,
   });
 
-  setTimeout(() => {
-    console.log("Paths delayed for 200 seconds.");
-  }, "200000");
+  // setTimeout(() => {
+  //   console.log("Paths delayed for 200 seconds.");
+  // }, "200000");
 
   const posts = response.data.data.posts.nodes;
 
