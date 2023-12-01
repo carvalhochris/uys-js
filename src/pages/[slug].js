@@ -146,6 +146,8 @@ export async function getStaticProps({ params }) {
 
   const post = await response.data.data.postBy;
 
+  console.log(post)
+
   if (!post) {
     return {
       notFound: true,
@@ -188,6 +190,8 @@ export async function getStaticPaths() {
   const paths = await posts.map((post) => ({
     params: { slug: post.slug },
   }));
+
+  console.log(paths)
 
   return {
     paths,
