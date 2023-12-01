@@ -137,14 +137,14 @@ export async function getStaticProps({ params }) {
     variables: { slug },
   });
 
-  async function newStyleDelay() {
+  async function delayRender() {
     await setTimeout(5000);
-    console.log("It will be printed in 5 seconds");
+    console.log("The page will be rendered in 5 seconds");
   }
 
-  await newStyleDelay();
+  await delayRender();
 
-  const post = response.data.data.postBy;
+  const post = await response.data.data.postBy;
 
   if (!post) {
     return {
@@ -176,9 +176,16 @@ export async function getStaticPaths() {
   //   console.log("Paths delayed for 200 seconds.");
   // }, "200000");
 
-  const posts = response.data.data.posts.nodes;
+  async function delayPath() {
+    await setTimeout(5000);
+    console.log("The path will be rendered in 5 seconds");
+  }
 
-  const paths = posts.map((post) => ({
+  await delayPath();
+
+  const posts = await response.data.data.posts.nodes;
+
+  const paths = await posts.map((post) => ({
     params: { slug: post.slug },
   }));
 
