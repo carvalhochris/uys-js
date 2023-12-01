@@ -138,15 +138,15 @@ export async function getStaticProps({ params }) {
   });
 
   async function delayRender() {
-    await setTimeout(5000);
-    console.log("The page will be rendered in 5 seconds");
+    await setTimeout(10000);
+    console.log("The page will be rendered in 10 seconds");
   }
 
   await delayRender();
 
   const post = await response.data.data.postBy;
 
-  console.log(post)
+  // console.log(post)
 
   if (!post) {
     return {
