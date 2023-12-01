@@ -12,6 +12,7 @@ import Head from "next/head";
 import { Button, Box } from "@chakra-ui/react";
 import { GrHomeOption } from "react-icons/gr";
 import TopicBox from "@/components/TopicBox";
+import Example from "@/components/Command";
 
 export default function Home({ posts }) {
   const { colorMode } = useColorMode();
@@ -94,6 +95,7 @@ export default function Home({ posts }) {
             </a>
           </Link>
           <Divider mt={100} mb={10} />
+          <Example />
           {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
           <GrHomeOption
             style={{ position: "fixed", bottom: "20px", right: "20px" }}
