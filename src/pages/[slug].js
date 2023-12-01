@@ -135,7 +135,7 @@ export async function getStaticProps({ params }) {
 
   setTimeout(() => {
     console.log("Props delayed for 21 seconds.");
-  }, "21000");
+  }, 21000);
 
   const post = response.data.data.postBy;
 
