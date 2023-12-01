@@ -152,7 +152,7 @@ export async function getStaticPaths() {
   const response = await axios.post("https://unlockyoursound.io/graphql", {
     query: `
       query GetAllPosts {
-        posts(first: 1000) {
+        posts(first: 500) {
           nodes {
             slug
           }
