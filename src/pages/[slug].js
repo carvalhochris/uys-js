@@ -133,6 +133,10 @@ export async function getStaticProps({ params }) {
     variables: { slug },
   });
 
+  setTimeout(() => {
+    console.log("Delayed for 1 second.");
+  }, "1000");
+
   const post = response.data.data.postBy;
 
   if (!post) {
