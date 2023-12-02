@@ -44,7 +44,7 @@ export default function TopicBox() {
     { value: "logic pro x", label: "Logic Pro X" },
   ]);
 
-  const handleSearch = async (event) => {
+  const handleSearch = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
       setLoading(true);
