@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 import { Center, Container, Divider, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { Link as ChakraLink } from "@chakra-ui/react";
-import Nav from "@/components/Nav";
+// import Nav from "@/components/Nav";
 import { Input } from "@chakra-ui/react";
 import { Button, Select, Text } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
@@ -14,8 +14,18 @@ import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
 import React from "react";
 // import Image from "next/image";
 
-interface TopicBoxProps {
-  
+interface ResultProps {
+  id: number,
+  title: string,
+  slug: string,
+  seo: {
+    metaDesc: string,
+  }
+  featuredImage: {
+    node: {
+      sourceUrl: string,
+    }
+  }
 }
 
 export default function TopicBox() {
@@ -80,7 +90,7 @@ export default function TopicBox() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading size="lg" as="h2">
+        <Heading as="h1" size="lg">
           The Vault
         </Heading>
         <Text mb={5}>Dive in to our ever-growing archives</Text>
@@ -152,7 +162,7 @@ export default function TopicBox() {
           <Spinner size="xl" mt={10} color="#7756E3" />
         </Center>
       ) : searchResults.length > 0 ? (
-        searchResults.map((result) => (
+        searchResults.map((result: ResultProps) => (
           <div key={result.id}>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               {result.featuredImage &&
