@@ -13,7 +13,7 @@ const theme = extendTheme({
     },
   },
   styles: {
-    global: (props) => ({
+    global: (props: { colorMode: string; }) => ({
       body: {
         bg: props.colorMode === "dark" ? "dark.900" : "white", // use the custom background color for dark mode
         color: props.colorMode === "dark" ? "white" : "black", // use the custom text color for dark mode
