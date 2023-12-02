@@ -114,9 +114,9 @@ const Example = () => {
         )}
       </CommandPalette.Page>
 
-      <CommandPalette.Page id="projects">
+      {/* <CommandPalette.Page id="projects"> */}
         {/* Projects page */}
-      </CommandPalette.Page>
+      {/* </CommandPalette.Page> */}
     </CommandPalette>
   );
 };
