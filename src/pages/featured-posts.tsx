@@ -13,7 +13,21 @@ import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Head from "next/head";
 
-export default function MusicMarketing({ posts }) {
+interface PostProps {
+  title: string,
+  slug: string,
+  featuredImage: {
+    node: {
+      sourceUrl: string,
+    }
+  }
+}
+
+interface FeatPostsProps {
+  posts: PostProps[]
+}
+
+export default function MusicMarketing({ posts }: FeatPostsProps) {
   return (
     <>
       <Head>
