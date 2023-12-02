@@ -21,7 +21,7 @@ export default function Nav() {
   const router = useRouter();
   const activeColor = "#7756E3";
 
-  const isCurrentPage = (pathname) => {
+  const isCurrentPage = (pathname: string) => {
     return router.pathname === pathname;
   };
 
