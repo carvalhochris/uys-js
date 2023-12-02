@@ -36,7 +36,7 @@ export default function Nav() {
         }}
       >
         <Link href="/" legacyBehavior style={{ position: "relative" }}>
-          <a className="no-js">
+          {/* <a className="no-js"> */}
             <Box
               boxSize="80px"
               mr={5}
@@ -58,10 +58,10 @@ export default function Nav() {
                 />
               )}
             </Box>
-          </a>
+          {/* </a> */}
         </Link>
         <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-          <a className="no-js">
+          {/* <a className="no-js"> */}
             <Box
               // boxSize="80px"
               // mr={10}
@@ -72,7 +72,7 @@ export default function Nav() {
             >
               <AiFillHeart color={isCurrentPage("/free") ? activeColor : ""} />
             </Box>
-          </a>
+          {/* </a> */}
         </Link>
 
         <Link
@@ -80,7 +80,7 @@ export default function Nav() {
           legacyBehavior
           style={{ position: "relative" }}
         >
-          <a className="no-js">
+          {/* <a className="no-js"> */}
             <Box
               // boxSize="80px"
               // mr={10}
@@ -95,10 +95,10 @@ export default function Nav() {
                 }
               />
             </Box>
-          </a>
+          {/* </a> */}
         </Link>
         <Link href="/search" legacyBehavior style={{ position: "relative" }}>
-          <a className="no-js">
+          {/* <a className="no-js"> */}
             <Box
               // boxSize="80px"
               // mr={10}
@@ -111,7 +111,7 @@ export default function Nav() {
                 color={isCurrentPage("/search") ? activeColor : ""}
               />
             </Box>
-          </a>
+          {/* </a> */}
         </Link>
         <MyMenu />
       </nav>

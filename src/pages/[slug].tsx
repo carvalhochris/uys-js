@@ -14,7 +14,7 @@ import ShareButton from "../components/WhatsAppButton";
 import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface ParamProps {
   params: {
@@ -62,6 +62,9 @@ export default function Post({ post }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
+  // const body = sanitizeHTML(post.content)
+
+  // console.log(post.content);
 
   return (
     <>
@@ -115,11 +118,11 @@ export default function Post({ post }: PostProps) {
       </Head>
 
       <div
-      // className={styles.main}
+      className={styles.main}
       >
         <Container maxW="xl">
           <Nav />
-          <Box css={{ all: "unset" }}>
+          <Box>
             {post.featuredImage && (
               <Image
                 src={post.featuredImage.node.sourceUrl}
@@ -128,13 +131,13 @@ export default function Post({ post }: PostProps) {
                 height={2000}
               />
             )}
-            <Heading as="h1" color={headingColor}>
+            <h1>
               {post.title}
-            </Heading>
-            <Text
-              color={textColor}
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            </h1>
+            
+            {/* <div dangerouslySetInnerHTML={body} /> */}
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            
             <br></br>
             <ShareButton postSlug={post.slug} />
             <iframe
@@ -227,3 +230,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+function sanitizeHTML(content: string) {
+  throw new Error("Function not implemented.");
+}
+
