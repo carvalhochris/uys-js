@@ -40,19 +40,19 @@ const Example = () => {
         items: [
           {
             id: "home",
-            // children: "Home",
+            children: "Home",
             icon: "HomeIcon",
             href: "/",
           },
           {
             id: "free",
-            // children: "Free",
+            children: "Free",
             icon: "CogIcon",
             href: "/free",
           },
           {
             id: "info",
-            // children: "Info",
+            children: "Info",
             icon: "CogIcon",
             href: "/free",
           },
