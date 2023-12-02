@@ -118,7 +118,7 @@ export default function Home({ posts }: HomeProps) {
             </a>
           </Link>
           <Divider mt={100} mb={10} />
-          <Example />
+          {/* <Example /> */}
           {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
           <GrHomeOption
             style={{ position: "fixed", bottom: "20px", right: "20px" }}

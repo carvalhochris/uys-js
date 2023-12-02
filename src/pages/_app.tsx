@@ -5,6 +5,7 @@ import theme from '../theme';
 import "@fontsource/questrial";
 import React from 'react';
 import type { AppProps } from 'next/app'
+import Command from '@/components/Command';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
+      <Command />
     </ChakraProvider>
   )
 }

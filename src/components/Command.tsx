@@ -7,7 +7,7 @@ import CommandPalette, {
 import { useEffect, useState } from "react";
 import React from "react";
 
-const Example = () => {
+const Command = () => {
   const [page, setPage] = useState<"root" | "projects">("root");
   const [open, setOpen] = useState<boolean>(true);
   const [search, setSearch] = useState("");
@@ -121,4 +121,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Command;
