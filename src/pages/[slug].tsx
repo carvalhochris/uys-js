@@ -167,8 +167,8 @@ export async function getStaticProps({ params }: ParamProps) {
   });
 
   async function delayRender() {
-    await setTimeout(10000);
-    console.log("The page will be rendered in 10 seconds");
+    await setTimeout(20000);
+    console.log("The page will be rendered in 20 seconds");
   }
 
   await delayRender();
