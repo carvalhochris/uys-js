@@ -16,7 +16,7 @@ export default function MyMenu() {
       {/* <EmailIcon />
       <AiFillGithub /> */}
       <Divider orientation="vertical" colorScheme="purple" variant="solid" />
-      <Button onClick={toggleColorMode} size={10} mr={10} mb={0}>
+      <Button onClick={toggleColorMode} size="lg" mr={10} mb={0}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       </Button>
     </>
