@@ -14,7 +14,17 @@ import { Icon, HStack } from "@chakra-ui/react";
 import { MdSettings } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-export default function About({ pageContent }) {
+interface AboutPageProps {
+  pageContent: {
+    data: {
+      content: {
+        rendered: string;
+      };
+    };
+  };
+}
+
+export default function About({ pageContent }: AboutPageProps) {
   return (
     <>
       <Head>
@@ -25,13 +35,13 @@ export default function About({ pageContent }) {
         />
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Christopher Carvalho" />
+        <meta itemProp="name" content="Christopher Carvalho" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
         />
         <meta
-          itemprop="image"
+          itemProp="image"
           content="https://unlockyoursound.io/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
         <link
@@ -102,7 +112,6 @@ export default function About({ pageContent }) {
 
             {/* Use the `color` prop to change the icon color */}
             {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
-            
           </HStack>
           <Divider />
           <iframe
