@@ -215,7 +215,7 @@ export async function getStaticPaths() {
     console.log("The path will be rendered in 5 seconds");
   }
 
-  await delayPath();
+  // await delayPath();
 
   const posts = await response.data.data.posts.nodes;
 
@@ -227,7 +227,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 function sanitizeHTML(content: string) {
