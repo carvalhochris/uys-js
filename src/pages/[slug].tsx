@@ -187,6 +187,7 @@ export async function getStaticProps({ params }: ParamProps) {
     props: {
       post,
     },
+    revalidate: 86400,
   };
 }
 
