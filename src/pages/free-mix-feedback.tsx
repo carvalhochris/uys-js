@@ -1,7 +1,7 @@
 import {
   Heading,
   Text,
-  Link,
+  // Link,
   Button,
   Container,
   Divider,
@@ -12,6 +12,7 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import SubmitMix from "@/components/SubmitMix";
+import Link from "next/link";
 
 export default function MixFeedback() {
   return (
