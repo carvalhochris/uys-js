@@ -23,9 +23,9 @@ export default function MixFeedback() {
           content="Get a constructive mix review from a working audio engineer"
         />
 
-        <meta itemprop="name" content="Free Mix Feedback" />
+        <meta itemProp="name" content="Free Mix Feedback" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Get a constructive mix review from a working audio engineer"
         />
         <link
@@ -34,7 +34,7 @@ export default function MixFeedback() {
         />
 
         <meta
-          itemprop="image"
+          itemProp="image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 

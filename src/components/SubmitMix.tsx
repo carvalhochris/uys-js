@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 import {
   Spinner,
@@ -26,7 +26,7 @@ function SubmitMix() {
     setIsError(false);
   }, []);
 
-  const handleName = (event) => {
+  const handleName = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventname = event.target.value;
     setNameValue(eventname);
@@ -34,7 +34,7 @@ function SubmitMix() {
     console.log(nameValue);
   };
 
-  const handleEmail = (event) => {
+  const handleEmail = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventemail = event.target.value;
     setEmailValue(eventemail);
@@ -42,21 +42,21 @@ function SubmitMix() {
     console.log(emailValue);
   };
 
-  const handleLink = (event) => {
+  const handleLink = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventlink = event.target.value;
     setLinkValue(eventlink);
     console.log(linkValue);
   };
 
-  const handleDesc = (event) => {
+  const handleDesc = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventdesc = event.target.value;
     setDescValue(eventdesc);
     console.log(descValue);
   };
 
-  const handleDiscover = (event) => {
+  const handleDiscover = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventdisc = event.target.value;
     setDiscoverValue(eventdisc);
