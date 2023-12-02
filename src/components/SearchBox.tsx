@@ -13,6 +13,20 @@ import Image from "next/image";
 import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
 // import Image from "next/image";
 
+interface SearchProps {
+    id: number,
+    slug: string,
+    title: string,
+    seo: {
+      metaDesc: string,
+    }
+    featuredImage: {
+      node: {
+        sourceUrl: string,
+      }
+    }
+}
+
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -26,7 +40,7 @@ export default function SearchPage() {
   //   { value: "production", label: "Production" },
   // ]);
 
-  const handleSearch = async (event) => {
+  const handleSearch = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
       setLoading(true);
@@ -140,7 +154,7 @@ export default function SearchPage() {
           <Spinner size="xl" mt={10} color="#7756E3" />
         </Center>
       ) : searchResults.length > 0 ? (
-        searchResults.map((result) => (
+        searchResults.map((result: SearchProps) => (
           <div key={result.id}>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               {result.featuredImage &&
