@@ -101,8 +101,10 @@ export default function Home({ posts }: HomeProps) {
             Access a bundle of free resources to help you create and release
             your music
           </Text>
-          <Link href="/free" legacyBehavior style={{ position: "relative" }}>
-            <a className="no-js" style={{ textDecoration: "none" }}>
+          <Link href="/free" 
+          // legacyBehavior style={{ position: "relative" }}
+          >
+            {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
               <Button
                 // type="submit"
                 mt={6}
@@ -115,7 +117,7 @@ export default function Home({ posts }: HomeProps) {
               >
                 Unlock Resources{" "}
               </Button>
-            </a>
+            {/* </a> */}
           </Link>
           <Divider mt={100} mb={10} />
           {/* <Example /> */}

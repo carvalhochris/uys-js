@@ -84,10 +84,10 @@ export default function FreeResources() {
           engineers.
           <Link
             href="/free-mix-feedback"
-            legacyBehavior
-            style={{ position: "relative" }}
+            // legacyBehavior
+            // style={{ position: "relative" }}
           >
-            <a className="no-js" style={{ textDecoration: "none" }}>
+            {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
               <Button
                 mt={10}
                 mb={50}
@@ -99,7 +99,7 @@ export default function FreeResources() {
               >
                 Get Feedback
               </Button>
-            </a>
+            {/* </a> */}
           </Link>
           <Divider mt={5} mb={5} />
           <Footer />

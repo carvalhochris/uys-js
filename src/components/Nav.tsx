@@ -35,7 +35,11 @@ export default function Nav() {
           // textDecoration: "none",
         }}
       >
-        <Link href="/" legacyBehavior style={{ position: "relative" }}>
+        <Link 
+        href="/" 
+        // legacyBehavior 
+        // style={{ position: "relative" }}
+        >
           {/* <a className="no-js"> */}
             <Box
               boxSize="80px"
@@ -60,7 +64,9 @@ export default function Nav() {
             </Box>
           {/* </a> */}
         </Link>
-        <Link href="/free" legacyBehavior style={{ position: "relative" }}>
+        <Link href="/free" 
+        // legacyBehavior style={{ position: "relative" }}
+        >
           {/* <a className="no-js"> */}
             <Box
               // boxSize="80px"
@@ -77,8 +83,8 @@ export default function Nav() {
 
         <Link
           href="/christopher-carvalho"
-          legacyBehavior
-          style={{ position: "relative" }}
+          // legacyBehavior
+          // style={{ position: "relative" }}
         >
           {/* <a className="no-js"> */}
             <Box
@@ -97,7 +103,9 @@ export default function Nav() {
             </Box>
           {/* </a> */}
         </Link>
-        <Link href="/search" legacyBehavior style={{ position: "relative" }}>
+        <Link href="/search" 
+        // legacyBehavior style={{ position: "relative" }}
+        >
           {/* <a className="no-js"> */}
             <Box
               // boxSize="80px"
