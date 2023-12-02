@@ -20,8 +20,21 @@ import TopicBox from "../components/TopicBox";
 import Example from "../components/Command";
 import React from "react";
 
+interface PostProp {
+  title: string,
+  slug: string,
+  seo: {
+    metaDesc: string,
+  }
+  featuredImage: {
+    node: {
+      sourceUrl: string,
+    }
+  }
+}
+
 interface HomeProps {
-  posts: {}
+  posts: PostProp[]
 }
 
 export default function Home({ posts }: HomeProps) {
