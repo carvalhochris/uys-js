@@ -174,7 +174,7 @@ export async function getStaticProps({ params }: ParamProps) {
     console.log("The page will be rendered in 20 seconds");
   }
 
-  // await delayRender();
+  await delayRender();
 
   const post = await response.data.data.postBy;
 
@@ -215,7 +215,7 @@ export async function getStaticPaths() {
     console.log("The path will be rendered in 5 seconds");
   }
 
-  // await delayPath();
+  await delayPath();
 
   const posts = await response.data.data.posts.nodes;
 
@@ -229,8 +229,5 @@ export async function getStaticPaths() {
     paths,
     fallback: true,
   };
-}
-function sanitizeHTML(content: string) {
-  throw new Error("Function not implemented.");
 }
 
