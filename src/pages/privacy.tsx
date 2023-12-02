@@ -43,26 +43,32 @@ export default function PrivacyPage() {
           <Heading as="h1">Privacy</Heading>
           <Text>
             This policy explains how we collect, use, and share your personal
-            information. <br></br><br></br><b>We do not use cookies on this site</b>, so
-            we do not collect any personal information through cookies.<br></br><br></br>However,
-            we may collect other types of personal information that you provide
-            to us directly, such as your name, email address, or other contact
-            information. <br></br><br></br>We will only use your personal
-            information to provide you with the products and services that you
-            have requested. <br></br><br></br>We may use third-party services, such as Substack,
-            for email marketing purposes. If you sign up for our email list, we
-            will provide your name and email address to Substack in order to
-            send you marketing emails.<br></br><br></br>You can unsubscribe from our
-            email list at any time by clicking the &quot;unsubscribe&quot; link
-            in our emails. <br></br><br></br>We will not sell or share your personal information
-            with third parties for marketing purposes. <br></br><br></br>We take reasonable measures to protect your personal
+            information. <br></br>
+            <br></br>
+            <b>We do not use cookies on this site</b>, so we do not collect any
+            personal information through cookies.<br></br>
+            <br></br>However, we may collect other types of personal information
+            that you provide to us directly, such as your name, email address,
+            or other contact information. <br></br>
+            <br></br>We will only use your personal information to provide you
+            with the products and services that you have requested. <br></br>
+            <br></br>We may use third-party services, such as Substack, for
+            email marketing purposes. If you sign up for our email list, we will
+            provide your name and email address to Substack in order to send you
+            marketing emails.<br></br>
+            <br></br>You can unsubscribe from our email list at any time by
+            clicking the &quot;unsubscribe&quot; link in our emails. <br></br>
+            <br></br>We will not sell or share your personal information with
+            third parties for marketing purposes. <br></br>
+            <br></br>We take reasonable measures to protect your personal
             information from unauthorized access, use, or disclosure. However,
             we cannot guarantee the security of your information, and you use
-            our app at your own risk. <br></br><br></br>We may update this
-            privacy policy from time to time. If we make significant changes to
-            the policy, we will update this page accordingly.<br></br><br></br>If you have any questions or concerns
-            about this privacy policy, please contact us at
-            enquries@unlockyoursound.com
+            our app at your own risk. <br></br>
+            <br></br>We may update this privacy policy from time to time. If we
+            make significant changes to the policy, we will update this page
+            accordingly.<br></br>
+            <br></br>If you have any questions or concerns about this privacy
+            policy, please contact us at enquries@unlockyoursound.com
           </Text>
           <Footer />
         </Container>

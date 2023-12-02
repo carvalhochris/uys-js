@@ -17,13 +17,13 @@ export default function FreeResources() {
           content="Unlock a bundle of free resources to help you create and release your music"
         />
 
-        <meta itemprop="name" content="Free Resources" />
+        <meta itemProp="name" content="Free Resources" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Unlock a bundle of free resources to help you create and release your music"
         />
         <meta
-          itemprop="image"
+          itemProp="image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
         <link
