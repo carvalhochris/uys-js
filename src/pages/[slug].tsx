@@ -16,6 +16,29 @@ import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React from "react";
 
+interface ParamProps {
+  params: {
+    slug: string;
+  };
+}
+
+interface PostProps {
+  slug: string;
+  post: {
+    title: string;
+    seo: {
+      metaDesc: string,
+    }
+    slug: string;
+    content: string,
+    featuredImage: {
+      node: {
+        sourceUrl: string,
+      }
+    }
+  };
+}
+
 const GET_POST_BY_SLUG = `
   query GetPostBySlug($slug: String!) {
     postBy(slug: $slug) {
@@ -35,7 +58,7 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post }) {
+export default function Post({ post }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -91,7 +114,7 @@ export default function Post({ post }) {
         />
       </Head>
 
-      <div 
+      <div
       // className={styles.main}
       >
         <Container maxW="xl">
@@ -135,7 +158,7 @@ export default function Post({ post }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
   const response = await axios.post("https://unlockyoursound.io/graphql", {
@@ -193,11 +216,11 @@ export async function getStaticPaths() {
 
   const posts = await response.data.data.posts.nodes;
 
-  const paths = await posts.map((post) => ({
+  const paths = await posts.map((post: PostProps) => ({
     params: { slug: post.slug },
   }));
 
-  console.log(paths)
+  console.log(paths);
 
   return {
     paths,
