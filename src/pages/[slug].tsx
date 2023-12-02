@@ -27,15 +27,15 @@ interface PostProps {
   post: {
     title: string;
     seo: {
-      metaDesc: string,
-    }
+      metaDesc: string;
+    };
     slug: string;
-    content: string,
+    content: string;
     featuredImage: {
       node: {
-        sourceUrl: string,
-      }
-    }
+        sourceUrl: string;
+      };
+    };
   };
 }
 
@@ -86,7 +86,7 @@ export default function Post({ post }: PostProps) {
           content={`https://unlockyoursound.com/${post.slug}`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={post.title} />
+        <meta property="og:title" content={post.title ?? ""} />
         {post.seo.metaDesc && (
           <meta property="og:description" content={post.seo.metaDesc} />
         )}
@@ -96,11 +96,12 @@ export default function Post({ post }: PostProps) {
             content={post.featuredImage.node.sourceUrl}
           />
         )}
-        <meta property="og:image:alt" content={post.title} />
+        {post.title && <meta property="og:image:alt" content={post.title} />}
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
+
+        {post.title && <meta name="twitter:title" content={post.title} />}
         {post.seo.metaDesc && (
           <meta name="twitter:description" content={post.seo.metaDesc} />
         )}
@@ -110,34 +111,30 @@ export default function Post({ post }: PostProps) {
             content={post.featuredImage.node.sourceUrl}
           />
         )}
-        <meta name="twitter:image:alt" content={post.title} />
+        {post.title && <meta name="twitter:image:alt" content={post.title} />}
         <meta
           name="twitter:url"
           content={`https://unlockyoursound.com/${post.slug}`}
         />
       </Head>
 
-      <div
-      className={styles.main}
-      >
+      <div className={styles.main}>
         <Container maxW="xl">
           <Nav />
           <Box>
             {post.featuredImage && (
               <Image
                 src={post.featuredImage.node.sourceUrl}
-                alt={post.title}
+                alt={post.title ?? ""}
                 width={2000}
                 height={2000}
               />
             )}
-            <h1>
-              {post.title}
-            </h1>
-            
+            <h1>{post.title ?? ""}</h1>
+
             {/* <div dangerouslySetInnerHTML={body} /> */}
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            
+
             <br></br>
             <ShareButton postSlug={post.slug} />
             <iframe
@@ -227,7 +224,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
-
