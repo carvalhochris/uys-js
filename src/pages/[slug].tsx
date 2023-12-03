@@ -16,6 +16,10 @@ import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React, { ReactNode } from "react";
 
+// interface ResponseProps {
+//   response: Response
+// }
+
 interface ParamProps {
   params: {
     slug: string;
@@ -161,9 +165,14 @@ export default function Post({ post }: PostProps) {
 export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
-  const response = await axios.post("https://unlockyoursound.io/graphql", {
-    query: GET_POST_BY_SLUG,
-    variables: { slug },
+  const response = await fetch("https://unlockyoursound.io/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
+    // variables: { slug },
   });
 
   async function delayRender() {
@@ -173,7 +182,11 @@ export async function getStaticProps({ params }: ParamProps) {
 
   await delayRender();
 
-  const post = await response.data.data.postBy;
+  const jay = await response.json()
+
+  console.log(jay)
+
+  const post = await jay.data.postBy;
 
   // console.log(post)
 
