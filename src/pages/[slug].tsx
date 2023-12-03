@@ -184,7 +184,7 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const jay = await response.json()
 
-  console.log(jay)
+  // console.log(jay)
 
   const post = await jay.data.postBy;
 
