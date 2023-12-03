@@ -177,17 +177,17 @@ export async function getStaticProps({ params }: ParamProps) {
 
   // console.log(post)
 
-  if (!post) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (!post) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
   return {
     props: {
       post,
     },
-    revalidate: 86400,
+    revalidate: 60,
   };
 }
 
@@ -223,8 +223,8 @@ export async function getStaticPaths() {
 
   console.log(paths);
 
-  return {
-    paths,
-    fallback: false,
-  };
+  // We'll pre-render only these paths at build time.
+  // { fallback: 'blocking' } will server-render pages
+  // on-demand if the path doesn't exist.
+  return { paths, fallback: 'blocking' }
 }
