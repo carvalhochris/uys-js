@@ -28,6 +28,7 @@ interface ParamProps {
 
 interface PostProps {
   slug: string;
+  thebody: string,
   post: {
     title: string;
     seo: {
@@ -62,7 +63,7 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post }: PostProps) {
+export default function Post({ post, thebody }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -137,7 +138,7 @@ export default function Post({ post }: PostProps) {
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div dangerouslySetInnerHTML={{ __html: thebody }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
@@ -188,6 +189,10 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const post = await jay.data.postBy;
 
+  const thebody = await jay.data.postBy.content;
+
+  console.log(thebody)
+
   // console.log(post)
 
   // if (!post) {
@@ -199,6 +204,7 @@ export async function getStaticProps({ params }: ParamProps) {
   return {
     props: {
       post,
+      thebody,
     },
     revalidate: 60,
   };
