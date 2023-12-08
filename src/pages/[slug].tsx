@@ -172,7 +172,7 @@ export async function getStaticProps({ params }: ParamProps) {
       "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
+    body: ({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
     // variables: { slug },
   });
 
@@ -191,7 +191,7 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const thebody = await jay.data.postBy.content;
 
-  console.log(thebody)
+  // console.log(thebody)
 
   // console.log(post)
 
