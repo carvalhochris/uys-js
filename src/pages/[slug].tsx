@@ -28,7 +28,8 @@ interface ParamProps {
 
 interface PostProps {
   slug: string;
-  thebody: string,
+  thebody: string;
+  jbody: string;
   post: {
     title: string;
     seo: {
@@ -63,7 +64,7 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post, thebody }: PostProps) {
+export default function Post({ post, thebody, jbody }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -138,7 +139,7 @@ export default function Post({ post, thebody }: PostProps) {
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: thebody }} />
+            <div dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
@@ -167,12 +168,16 @@ export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
   const response = await fetch("https://unlockyoursound.io/graphql", {
+    body: JSON.stringify({
+      query: GET_POST_BY_SLUG,
+      variables: { slug },
+    }),
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: ({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
+    // body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
     // variables: { slug },
   });
 
@@ -183,15 +188,23 @@ export async function getStaticProps({ params }: ParamProps) {
 
   await delayRender();
 
-  const jay = await response.json()
+  const jay = await response.json();
+
+  // console.log(jay)
 
   // console.log(jay)
 
   const post = await jay.data.postBy;
 
+  // console.log(post)
+
   const thebody = await jay.data.postBy.content;
 
   // console.log(thebody)
+
+  const jbody = JSON.stringify(thebody);
+
+  console.log(jbody);
 
   // console.log(post)
 
@@ -205,6 +218,7 @@ export async function getStaticProps({ params }: ParamProps) {
     props: {
       post,
       thebody,
+      jbody,
     },
     revalidate: 60,
   };
@@ -245,5 +259,5 @@ export async function getStaticPaths() {
   // We'll pre-render only these paths at build time.
   // { fallback: 'blocking' } will server-render pages
   // on-demand if the path doesn't exist.
-  return { paths, fallback: 'blocking' }
+  return { paths, fallback: "blocking" };
 }
