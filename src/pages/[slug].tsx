@@ -15,7 +15,7 @@ import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React, { ReactNode } from "react";
-import sanitizeHtml from "sanitize-html"
+import sanitizeHtml from "sanitize-html";
 
 // interface ResponseProps {
 //   response: Response
@@ -31,6 +31,7 @@ interface PostProps {
   slug: string;
   thebody: string;
   jbody: string;
+  clean: string;
   post: {
     title: string;
     seo: {
@@ -165,7 +166,6 @@ export default function Post({ post, thebody, jbody, clean }: PostProps) {
   );
 }
 
-
 export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
@@ -204,9 +204,7 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const thebody = await post.content;
 
-
   const clean = sanitizeHtml(thebody);
-
 
   // console.log(clean)
 
