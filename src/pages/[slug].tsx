@@ -15,6 +15,7 @@ import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React, { ReactNode } from "react";
+import sanitizeHtml from "sanitize-html"
 
 // interface ResponseProps {
 //   response: Response
@@ -64,7 +65,7 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post, thebody, jbody }: PostProps) {
+export default function Post({ post, thebody, jbody, clean }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -139,7 +140,7 @@ export default function Post({ post, thebody, jbody }: PostProps) {
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
+            <div dangerouslySetInnerHTML={{ __html: `${clean}` }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
@@ -164,6 +165,7 @@ export default function Post({ post, thebody, jbody }: PostProps) {
   );
 }
 
+
 export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
@@ -182,8 +184,8 @@ export async function getStaticProps({ params }: ParamProps) {
   });
 
   async function delayRender() {
-    await setTimeout(5000);
-    console.log("The page will be rendered in 5 seconds");
+    await setTimeout(1000);
+    console.log("The page will be rendered in 1 seconds");
   }
 
   await delayRender();
@@ -202,7 +204,11 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const thebody = await post.content;
 
-  console.log(thebody)
+
+  const clean = sanitizeHtml(thebody);
+
+
+  // console.log(clean)
 
   // const jbody = JSON.stringify(thebody);
 
@@ -220,6 +226,7 @@ export async function getStaticProps({ params }: ParamProps) {
     props: {
       post,
       thebody,
+      clean,
       // jbody,
     },
     revalidate: 60,
@@ -249,8 +256,8 @@ export async function getStaticPaths() {
   // }, "200000");
 
   async function delayPath() {
-    await setTimeout(5000);
-    console.log("The path will be rendered in 5 seconds");
+    await setTimeout(1000);
+    console.log("The path will be rendered in 1 second");
   }
 
   await delayPath();
