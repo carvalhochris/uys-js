@@ -225,16 +225,21 @@ export async function getStaticProps({ params }: ParamProps) {
 }
 
 export async function getStaticPaths() {
-  const response = await axios.post("https://unlockyoursound.io/graphql", {
-    query: `
-      query GetAllPosts {
+  const response = await fetch("https://unlockyoursound.io/graphql", {
+    body: JSON.stringify({
+      query: `query GetAllPosts {
         posts(first: 1000) {
           nodes {
             slug
           }
         }
-      }
-    `,
+      }`,
+    }),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
   });
 
   // setTimeout(() => {
@@ -248,7 +253,9 @@ export async function getStaticPaths() {
 
   await delayPath();
 
-  const posts = await response.data.data.posts.nodes;
+  const jaay = await response.json();
+
+  const posts = await jaay.data.posts.nodes;
 
   const paths = await posts.map((post: PostProps) => ({
     params: { slug: post.slug },
