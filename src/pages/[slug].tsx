@@ -174,7 +174,7 @@ export async function getStaticProps({ params }: ParamProps) {
     }),
     method: "POST",
     headers: {
-      // "Content-Type": "application/json",
+      "Content-Type": "application/json; charset=UTF-8",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     // body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
@@ -188,6 +188,8 @@ export async function getStaticProps({ params }: ParamProps) {
 
   await delayRender();
 
+  // console.log(response)
+
   const jay = await response.json();
 
   // console.log(jay)
@@ -198,13 +200,13 @@ export async function getStaticProps({ params }: ParamProps) {
 
   // console.log(post)
 
-  const thebody = await jay.data.postBy.content;
+  const thebody = await post.content;
 
-  // console.log(thebody)
+  console.log(thebody)
 
-  const jbody = JSON.stringify(thebody);
+  // const jbody = JSON.stringify(thebody);
 
-  console.log(jbody);
+  // console.log(jbody);
 
   // console.log(post)
 
@@ -218,7 +220,7 @@ export async function getStaticProps({ params }: ParamProps) {
     props: {
       post,
       thebody,
-      jbody,
+      // jbody,
     },
     revalidate: 60,
   };
