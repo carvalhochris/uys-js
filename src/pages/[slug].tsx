@@ -174,7 +174,7 @@ export async function getStaticProps({ params }: ParamProps) {
     }),
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     // body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
