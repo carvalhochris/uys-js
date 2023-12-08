@@ -260,9 +260,20 @@ export async function getStaticPaths() {
 
   await delayPath();
 
-  const jaay = await response.json();
+  const jsonif = async () => {
+    try {
+      const jaay = await response.json();
+      return (jaay)
+    } catch (err) {
+      console.log("chris' json error: ", err);
+    }
+    // return jaay
+  }
 
-  const posts = await jaay.data.posts.nodes;
+  const jaaay = await jsonif();
+
+
+  const posts = await jaaay.data.posts.nodes;
 
   const paths = await posts.map((post: PostProps) => ({
     params: { slug: post.slug },
