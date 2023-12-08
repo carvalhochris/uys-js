@@ -54,7 +54,7 @@ const Command = () => {
             id: "info",
             children: "Info",
             icon: "CogIcon",
-            href: "/about",
+            href: "/christopher-carvalho",
           },
         ],
       },
