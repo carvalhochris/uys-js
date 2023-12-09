@@ -79,7 +79,10 @@ export default function Footer() {
             cursor="pointer"
             ml={0}
           >
-            <AiFillHeart color={isCurrentPage("/free") ? activeColor : ""} />
+            <AiFillHeart
+              color={isCurrentPage("/free") ? activeColor : ""}
+              size={20}
+            />
           </Box>
           {/* </a> */}
         </Link>
@@ -100,6 +103,7 @@ export default function Footer() {
           >
             <AiFillInfoCircle
               color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
+              size={20}
             />
           </Box>
           {/* </a> */}
@@ -119,6 +123,7 @@ export default function Footer() {
           >
             <AiOutlineSearch
               color={isCurrentPage("/search") ? activeColor : ""}
+              size={20}
             />
           </Box>
           {/* </a> */}

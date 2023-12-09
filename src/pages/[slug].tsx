@@ -15,7 +15,8 @@ import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React, { ReactNode } from "react";
-import sanitizeHtml from "sanitize-html";
+// import sanitizeHtml from "sanitize-html";
+// import { ustyle } from "@/ustyle";
 
 // interface ResponseProps {
 //   response: Response
@@ -70,10 +71,10 @@ const GET_POST_BY_SLUG = `
 export default function Post({
   post,
   thebody,
-  jbody,
-  clean,
-  thestring,
-}: PostProps) {
+}: // jbody,
+// clean,
+// thestring,
+PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -133,7 +134,9 @@ export default function Post({
         />
       </Head>
 
-      <div className={styles.main}>
+      <div
+      // className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
           <Box>
@@ -145,13 +148,20 @@ export default function Post({
                 height={2000}
               />
             )}
-            <h1>{post.title ?? ""}</h1>
+            <Heading as="h1" size="3xl" lineHeight={1.3} mt={10} mb={10}>
+              {post.title ?? ""}
+            </Heading>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <Text dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
+            <Text
+              className={styles.main}
+              dangerouslySetInnerHTML={{ __html: `${thebody}` }}
+            />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
+            <br />
+            <br />
             <iframe
               src="https://unlockyoursound.substack.com/embed"
               width="100%"
@@ -273,21 +283,23 @@ export async function getStaticPaths() {
     console.log("The path will be rendered in 1 second");
   }
 
-  await delayPath();
+  // await delayPath();
 
-  const jsonif = async () => {
-    try {
-      const jaay = await response.json();
-      return jaay;
-    } catch (err) {
-      console.log("chris' json error: ", err);
-    }
-    // return jaay
-  };
+  // const jsonif = async () => {
+  //   try {
+  //     const jaay = await response.json();
+  //     return jaay;
+  //   } catch (err) {
+  //     console.log("chris' json error: ", err);
+  //   }
+  //   // return jaay
+  // };
 
-  const jaaay = await jsonif();
+  // const jaaay = await jsonif();
 
-  const posts = await jaaay.data.posts.nodes;
+  const jay = await response.json();
+
+  const posts = await jay.data.posts.nodes;
 
   const paths = await posts.map((post: PostProps) => ({
     params: { slug: post.slug },

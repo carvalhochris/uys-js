@@ -86,7 +86,7 @@ export default function SearchPage() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading size="lg" as="h1">
+        <Heading size="xl" as="h1" mt={10} mb={5} >
           Search
         </Heading>
         <Text mb={5}>Find what you are looking for</Text>

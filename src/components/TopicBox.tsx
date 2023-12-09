@@ -90,7 +90,7 @@ export default function TopicBox() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading as="h1" size="lg">
+        <Heading as="h2" size="xl" mt={10} mb={5}>
           The Vault
         </Heading>
         <Text mb={5}>Dive in to our ever-growing archives</Text>

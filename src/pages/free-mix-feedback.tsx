@@ -65,11 +65,13 @@ export default function MixFeedback() {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-      <div className={styles.main}>
+      <div 
+      // className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
-          <Heading as="h1">Free Mix Feedback</Heading>
-          <Text>
+          <Heading as="h1" size="xl" lineHeight={1.4} mt={10} mb={5}>Free Mix Feedback</Heading>
+          <Text mt={10} mb={5} fontSize="xl">
             Submit your mix to get constructive feedback from a working audio
             engineer.<br></br>
             <br></br>
@@ -89,12 +91,12 @@ export default function MixFeedback() {
           </Text>
           <SubmitMix />
           <Divider />
-          <Text>
+          <Text mt={10} mb={5} fontSize="xl">
             Did you know that we also offer a bunch of <b>free resources</b> to help
             you create and release your music?
           </Text>
           <Link href="/free">
-            <Text>Learn more</Text>
+            <Text mt={10} mb={5} fontSize="xl"><u>Learn more</u></Text>
           </Link>
           {/* <<Heading>Free resources</Heading>
                     <iframe

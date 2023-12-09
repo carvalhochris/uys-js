@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container, Heading, Text, Center } from "@chakra-ui/react";
 import axios from "axios";
-import styles from "@/styles/Home.module.css";
+// import styles from "@/styles/Home.module.css";
 // import Nav from "@/components/Nav";
 import Nav from "../components/Nav";
 import { Divider } from "@chakra-ui/react";
@@ -90,14 +90,16 @@ export default function Home({ posts }: HomeProps) {
 
         {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
       </Head>
-      <div className={styles.main}>
+      <div
+      // className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
-          <Heading as="h1">
+          <Heading size="2xl" as="h1" lineHeight={1.4} mt={10}>
             Unlock Your Sound is an artist self-development platform
           </Heading>
           <Divider mt={5} mb={5} />
-          <Text>
+          <Text mt={10} mb={5} fontSize='xl'>
             Access a bundle of free resources to help you create and release
             your music
           </Text>
@@ -109,7 +111,7 @@ export default function Home({ posts }: HomeProps) {
             <Button
               // type="submit"
               mt={6}
-              mb={5}
+              mb={0}
               size="lg"
               borderColor="grey"
               variant="outline"
@@ -120,7 +122,7 @@ export default function Home({ posts }: HomeProps) {
             </Button>
             {/* </a> */}
           </Link>
-          <Divider mt={100} mb={10} />
+          <Divider mt={10} mb={10} />
           {/* <Example /> */}
           {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
           <GrHomeOption
@@ -129,14 +131,20 @@ export default function Home({ posts }: HomeProps) {
           />
           </Link> */}
         </Container>
-        <div className={styles.main}>
+        <div
+        // className={styles.main}
+        >
           <Container maxW="xl">
             {/* <Search /> */}
             <TopicBox />
             {/* <Nav /> */}
             <Divider mt={10} mb={5} />
-            <Heading>Featured Content</Heading>
-            <Text>The hall of fame</Text>
+            <Heading mt={10} mb={5}>
+              Featured Content
+            </Heading>
+            <Text mt={5} mb={5}>
+              The hall of fame
+            </Text>
             <ul>
               {posts.map((post) => (
                 <div key={post.slug}>
@@ -151,9 +159,10 @@ export default function Home({ posts }: HomeProps) {
                         alt={post.title}
                         width={1000}
                         height={1000}
+                        // mt={10}
                       />
                     )}
-                    <Heading as="h3" mb={5}>
+                    <Heading as="h3" mb={5} mt={5}>
                       {post.title}
                     </Heading>
                     {/* <Divider mt={10} mb={5} /> */}

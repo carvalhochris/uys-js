@@ -1,5 +1,5 @@
-import '@/styles/globals.css'
-import { ChakraProvider } from '@chakra-ui/react'
+// import '@/styles/globals.css'
+import { CSSReset, ChakraProvider } from '@chakra-ui/react'
 // import theme from '@/theme'
 import theme from '../theme';
 import "@fontsource/questrial";

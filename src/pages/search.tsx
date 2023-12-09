@@ -49,7 +49,9 @@ export default function SearchPage() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className={styles.main}>
+      <div 
+      // className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
           {/* <h1>Hello search</h1> */}

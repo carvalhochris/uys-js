@@ -32,52 +32,57 @@ export default function Nav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          marginTop: 40,
           // textDecoration: "none",
         }}
       >
-        <Link 
-        href="/" 
-        // legacyBehavior 
-        // style={{ position: "relative" }}
+        <Link
+          href="/"
+          // legacyBehavior
+          // style={{ position: "relative" }}
         >
           {/* <a className="no-js"> */}
-            <Box
-              boxSize="80px"
-              mr={5}
-              display="flex"
-              alignItems="center"
-              cursor="pointer"
-            >
-              {colorMode === "light" ? (
-                <Image
-                  src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
-                  alt="Unlock Your Sound light logo"
-                  // maxWidth={70}
-                />
-              ) : (
-                <Image
-                  src="https://unlockyoursound.io/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
-                  alt="Unlock Your Sound dark logo"
-                  // maxWidth={70}
-                />
-              )}
-            </Box>
+          <Box
+            boxSize="80px"
+            mr={5}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+          >
+            {colorMode === "light" ? (
+              <Image
+                src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
+                alt="Unlock Your Sound light logo"
+                // maxWidth={70}
+              />
+            ) : (
+              <Image
+                src="https://unlockyoursound.io/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
+                alt="Unlock Your Sound dark logo"
+                // maxWidth={70}
+              />
+            )}
+          </Box>
           {/* </a> */}
         </Link>
-        <Link href="/free" 
-        // legacyBehavior style={{ position: "relative" }}
+        <Link
+          href="/free"
+          // legacyBehavior style={{ position: "relative" }}
         >
           {/* <a className="no-js"> */}
-            <Box
-              // boxSize="80px"
-              // mr={10}
-              display="flex"
-              alignItems="center"
-              cursor="pointer"
-              ml={0}
-            >
-              <AiFillHeart color={isCurrentPage("/free") ? activeColor : ""} />
-            </Box>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <AiFillHeart
+              color={isCurrentPage("/free") ? activeColor : ""}
+              size={20}
+            />
+          </Box>
           {/* </a> */}
         </Link>
 
@@ -87,38 +92,39 @@ export default function Nav() {
           // style={{ position: "relative" }}
         >
           {/* <a className="no-js"> */}
-            <Box
-              // boxSize="80px"
-              // mr={10}
-              display="flex"
-              alignItems="center"
-              cursor="pointer"
-              ml={0}
-            >
-              <AiFillInfoCircle
-                color={
-                  isCurrentPage("/christopher-carvalho") ? activeColor : ""
-                }
-              />
-            </Box>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <AiFillInfoCircle
+              color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
+              size={20}
+            />
+          </Box>
           {/* </a> */}
         </Link>
-        <Link href="/search" 
-        // legacyBehavior style={{ position: "relative" }}
+        <Link
+          href="/search"
+          // legacyBehavior style={{ position: "relative" }}
         >
           {/* <a className="no-js"> */}
-            <Box
-              // boxSize="80px"
-              // mr={10}
-              display="flex"
-              alignItems="center"
-              cursor="pointer"
-              ml={0}
-            >
-              <AiOutlineSearch
-                color={isCurrentPage("/search") ? activeColor : ""}
-              />
-            </Box>
+          <Box
+            // boxSize="80px"
+            // mr={10}
+            display="flex"
+            alignItems="center"
+            cursor="pointer"
+            ml={0}
+          >
+            <AiOutlineSearch
+              size={20}
+              color={isCurrentPage("/search") ? activeColor : ""}
+            />
+          </Box>
           {/* </a> */}
         </Link>
         <MyMenu />

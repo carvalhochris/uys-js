@@ -83,7 +83,9 @@ export default function About({ pageContent }: AboutPageProps) {
         />
       </Head>
 
-      <div className={styles.main}>
+      <div 
+      className={styles.main}
+      >
         <Container maxW="xl">
           <Nav />
           <Heading ml={0} size="lg" as="h1">
