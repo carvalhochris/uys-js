@@ -6,14 +6,18 @@ import "@fontsource/questrial";
 import React from 'react';
 import type { AppProps } from 'next/app'
 import Command from '@/components/Command';
+import Footer from '@/components/Footer';
+import Nav from '@/components/Nav';
 
 
 export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
+      <Nav />
       <Component {...pageProps} />
       <Command />
+      <Footer />
     </ChakraProvider>
   )
 }

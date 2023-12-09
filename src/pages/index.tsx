@@ -94,7 +94,7 @@ export default function Home({ posts }: HomeProps) {
       // className={styles.main}
       >
         <Container maxW="xl">
-          <Nav />
+          {/* <Nav /> */}
           <Heading size="2xl" as="h1" lineHeight={1.4} mt={10}>
             Unlock Your Sound is an artist self-development platform
           </Heading>
@@ -200,7 +200,7 @@ export default function Home({ posts }: HomeProps) {
               width="100%"
               style={{ border: "solid" }}
             ></iframe>
-            <Footer />
+            {/* <Footer /> */}
           </Container>
         </div>
       </div>

@@ -2,25 +2,16 @@
 import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-// import Nav from "@/components/Nav";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { Stack, StackDivider, Box, Text } from "@chakra-ui/react";
-// import Footer from "@/components/Footer";
 import Image from "next/image";
-// import ShareButton from "@/components/WhatsAppButton";
 import ShareButton from "../components/WhatsAppButton";
 import Head from "next/head";
 import { useColorMode } from "@chakra-ui/react";
 import { setTimeout } from "timers/promises";
 import React, { ReactNode } from "react";
-// import sanitizeHtml from "sanitize-html";
-// import { ustyle } from "@/ustyle";
-
-// interface ResponseProps {
-//   response: Response
-// }
 
 interface ParamProps {
   params: {
@@ -148,7 +139,7 @@ PostProps) {
                 height={2000}
               />
             )}
-            <Heading as="h1" size="3xl" lineHeight={1.3} mt={10} mb={10}>
+            <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
               {post.title ?? ""}
             </Heading>
 
@@ -211,38 +202,9 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const jay = await response.json();
 
-  // console.log(jay)
-
-  // console.log(jay)
-
   const post = await jay.data.postBy;
 
   const thebody = await post.content;
-
-  // console.log(post);
-
-  // const thebody = await post.content;
-  // console.log(post)
-
-  // const clean = sanitizeHtml(thebody);
-
-  // const thestring = JSON.stringify(thebody)
-
-  // console.log(thebody)
-
-  // console.log(clean)
-
-  // const jbody = JSON.stringify(thebody);
-
-  // console.log(jbody);
-
-  // console.log(post)
-
-  // if (!post) {
-  //   return {
-  //     notFound: true,
-  //   };
-  // }
 
   return {
     props: {
@@ -284,18 +246,6 @@ export async function getStaticPaths() {
   }
 
   // await delayPath();
-
-  // const jsonif = async () => {
-  //   try {
-  //     const jaay = await response.json();
-  //     return jaay;
-  //   } catch (err) {
-  //     console.log("chris' json error: ", err);
-  //   }
-  //   // return jaay
-  // };
-
-  // const jaaay = await jsonif();
 
   const jay = await response.json();
 

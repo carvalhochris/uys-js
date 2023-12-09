@@ -3,7 +3,7 @@ import { useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { Button } from "@chakra-ui/react";
-import { Divider } from "@chakra-ui/react";
+import { Divider, Container } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
@@ -27,12 +27,13 @@ export default function Nav() {
 
   return (
     <>
+    <Container maxW="xl">
       <nav
         style={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: 40,
+          marginTop: 35,
           // textDecoration: "none",
         }}
       >
@@ -130,6 +131,7 @@ export default function Nav() {
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
+      </Container>
     </>
   );
 }

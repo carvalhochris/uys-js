@@ -52,38 +52,8 @@ export default function SearchPage() {
       <div 
       // className={styles.main}
       >
-        <Container maxW="xl">
-          <Nav />
-          {/* <h1>Hello search</h1> */}
+        <Container maxW="xl" mb={300}>
           <Search />
-          {/* <Text fontSize="md" mb={10}>
-            © 2023 Unlock Your Sound Ltd
-          </Text> */}
-          {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
-            <Box
-              boxSize="80px"
-              mr={5}
-              display="flex"
-              alignItems="center"
-              cursor="pointer"
-            >
-              {colorMode === "light" ? (
-                <ChakraImage
-                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
-                  alt="Unlock Your Sound light logo"
-                  // maxWidth={70}
-                />
-              ) : (
-                <ChakraImage
-                  src="https://unlockyoursound.com/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
-                  alt="Unlock Your Sound dark logo"
-                  // maxWidth={70}
-                />
-              )}
-            </Box>
-          </Link> */}
-          {/* <Divider /> */}
-          {/* <Footer /> */}
         </Container>
       </div>
     </>
