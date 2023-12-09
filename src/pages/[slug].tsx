@@ -195,7 +195,7 @@ export async function getStaticProps({ params }: ParamProps) {
     console.log("The page will be rendered in 1 seconds");
   }
 
-  await delayRender();
+  // await delayRender();
 
   // console.log(response)
 
