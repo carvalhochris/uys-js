@@ -129,7 +129,7 @@ PostProps) {
       // className={styles.main}
       >
         <Container maxW="xl">
-          <Nav />
+          {/* <Nav /> */}
           <Box>
             {post.featuredImage && (
               <Image
@@ -167,7 +167,7 @@ PostProps) {
             ></iframe>
             <br></br>
           </Box>
-          <Footer />
+          {/* <Footer /> */}
         </Container>
       </div>
     </>
