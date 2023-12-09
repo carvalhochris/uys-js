@@ -21,20 +21,20 @@ import Example from "../components/Command";
 import React from "react";
 
 interface PostProp {
-  title: string,
-  slug: string,
+  title: string;
+  slug: string;
   seo: {
-    metaDesc: string,
-  }
+    metaDesc: string;
+  };
   featuredImage: {
     node: {
-      sourceUrl: string,
-    }
-  }
+      sourceUrl: string;
+    };
+  };
 }
 
 interface HomeProps {
-  posts: PostProp[]
+  posts: PostProp[];
 }
 
 export default function Home({ posts }: HomeProps) {
@@ -101,22 +101,23 @@ export default function Home({ posts }: HomeProps) {
             Access a bundle of free resources to help you create and release
             your music
           </Text>
-          <Link href="/free" 
-          // legacyBehavior style={{ position: "relative" }}
+          <Link
+            href="/free"
+            // legacyBehavior style={{ position: "relative" }}
           >
             {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
-              <Button
-                // type="submit"
-                mt={6}
-                mb={5}
-                size="lg"
-                borderColor="grey"
-                variant="outline"
-                backgroundColor="#7756E3"
-                color="white"
-              >
-                Unlock Resources{" "}
-              </Button>
+            <Button
+              // type="submit"
+              mt={6}
+              mb={5}
+              size="lg"
+              borderColor="grey"
+              variant="outline"
+              backgroundColor="#7756E3"
+              color="white"
+            >
+              Unlock Resources{" "}
+            </Button>
             {/* </a> */}
           </Link>
           <Divider mt={100} mb={10} />
@@ -219,10 +220,18 @@ const GET_FEATURED_POSTS = `
 `;
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.io/graphql", {
-    query: GET_FEATURED_POSTS,
+  const response = await fetch("https://unlockyoursound.io/graphql", {
+    body: JSON.stringify({
+      query: GET_FEATURED_POSTS,
+    }),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
   });
-  const posts = response.data.data.posts.nodes;
+  const jay = await response.json();
+  const posts = await jay.data.posts.nodes;
 
   return {
     props: {

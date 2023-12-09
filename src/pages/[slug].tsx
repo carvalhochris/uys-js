@@ -30,7 +30,7 @@ interface ParamProps {
 interface PostProps {
   slug: string;
   thebody: string;
-  thestring: string,
+  thestring: string;
   jbody: string;
   clean: string;
   post: {
@@ -67,7 +67,13 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post, thebody, jbody, clean, thestring }: PostProps) {
+export default function Post({
+  post,
+  thebody,
+  jbody,
+  clean,
+  thestring,
+}: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -201,15 +207,18 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const post = await jay.data.postBy;
 
-  // console.log(post)
-
   const thebody = await post.content;
 
-  const clean = sanitizeHtml(thebody);
+  // console.log(post);
 
-  const thestring = JSON.stringify(thebody)
+  // const thebody = await post.content;
+  // console.log(post)
 
-  console.log(thestring)
+  // const clean = sanitizeHtml(thebody);
+
+  // const thestring = JSON.stringify(thebody)
+
+  // console.log(thebody)
 
   // console.log(clean)
 
@@ -229,8 +238,8 @@ export async function getStaticProps({ params }: ParamProps) {
     props: {
       post,
       thebody,
-      clean,
-      thestring,
+      // clean,
+      // thestring,
       // jbody,
     },
     revalidate: 60,
@@ -269,15 +278,14 @@ export async function getStaticPaths() {
   const jsonif = async () => {
     try {
       const jaay = await response.json();
-      return (jaay)
+      return jaay;
     } catch (err) {
       console.log("chris' json error: ", err);
     }
     // return jaay
-  }
+  };
 
   const jaaay = await jsonif();
-
 
   const posts = await jaaay.data.posts.nodes;
 
@@ -285,7 +293,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  console.log(paths);
+  // console.log(paths);
 
   // We'll pre-render only these paths at build time.
   // { fallback: 'blocking' } will server-render pages
