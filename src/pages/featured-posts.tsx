@@ -92,7 +92,7 @@ export default function MusicMarketing({ posts }: FeatPostsProps) {
   );
 }
 
-const GET_MARKETING_POSTS = `
+const GET_FEATURED_POSTS = `
     query GetFeaturedPosts {
       posts(first: 1000, where: { categoryId: 322 }) {
         nodes {
@@ -110,10 +110,20 @@ const GET_MARKETING_POSTS = `
   `;
 
 export async function getStaticProps() {
-  const response = await axios.post("https://unlockyoursound.io/graphql", {
-    query: GET_MARKETING_POSTS,
+  const response = await fetch("https://unlockyoursound.io/graphql", {
+    body: JSON.stringify({
+      query: GET_FEATURED_POSTS,
+    }),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    // body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
+    // variables: { slug },
   });
-  const posts = response.data.data.posts.nodes;
+  const jay = await response.json()
+  const posts = jay.data.data.posts.nodes;
 
   return {
     props: {

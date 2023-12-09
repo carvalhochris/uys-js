@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -142,7 +142,7 @@ export default function Post({ post, thebody, jbody, clean, thestring }: PostPro
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: `${thestring}` }} />
+            <div dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
