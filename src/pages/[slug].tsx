@@ -30,6 +30,7 @@ interface ParamProps {
 interface PostProps {
   slug: string;
   thebody: string;
+  thestring: string,
   jbody: string;
   clean: string;
   post: {
@@ -66,7 +67,7 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({ post, thebody, jbody, clean }: PostProps) {
+export default function Post({ post, thebody, jbody, clean, thestring }: PostProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
@@ -141,7 +142,7 @@ export default function Post({ post, thebody, jbody, clean }: PostProps) {
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: `${clean}` }} />
+            <div dangerouslySetInnerHTML={{ __html: `${thestring}` }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
@@ -206,6 +207,10 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const clean = sanitizeHtml(thebody);
 
+  const thestring = JSON.stringify(thebody)
+
+  console.log(thestring)
+
   // console.log(clean)
 
   // const jbody = JSON.stringify(thebody);
@@ -225,6 +230,7 @@ export async function getStaticProps({ params }: ParamProps) {
       post,
       thebody,
       clean,
+      thestring,
       // jbody,
     },
     revalidate: 60,
