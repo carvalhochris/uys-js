@@ -148,7 +148,7 @@ export default function Post({
             <h1>{post.title ?? ""}</h1>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
+            <Text dangerouslySetInnerHTML={{ __html: `${thebody}` }} />
 
             <br></br>
             <ShareButton postSlug={post.slug} />
