@@ -61,6 +61,7 @@
 
 .main iframe {
   margin-top: 25px;
+  max-width: 100% !important;
   /* margin-bottom: 25px; */
 }
 
@@ -70,6 +71,10 @@
   background: #f1f1f1;
   /* padding: 0.2rem 0.4rem; */
   border-radius: 4px;
+}
+
+.main figure {
+  max-width: 100% !important;
 }
 
 figure .wp-element-caption {
