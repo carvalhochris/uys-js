@@ -70,7 +70,7 @@ export default function MixFeedback() {
       >
         <Container maxW="xl">
           {/* <Nav /> */}
-          <Heading as="h1" size="xl" lineHeight={1.4} mt={10} mb={5}>Free Mix Feedback</Heading>
+          <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>Free Mix Feedback</Heading>
           <Text mt={10} mb={5} fontSize="xl">
             Submit your mix to get constructive feedback from a working audio
             engineer.<br></br>

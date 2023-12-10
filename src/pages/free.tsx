@@ -56,7 +56,7 @@ export default function FreeResources() {
       >
         <Container maxW="xl">
           {/* <Nav /> */}
-          <Heading size="2xl" as="h1" lineHeight={1.4} mt={10}>
+          <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
             Free resources to help you create and release your music
           </Heading>
           <Text mt={10} mb={5} fontSize="xl">

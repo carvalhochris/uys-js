@@ -83,20 +83,21 @@ export default function About({ pageContent }: AboutPageProps) {
         />
       </Head>
 
-      <div 
-      className={styles.main}
+      <div
+      // className={styles.main}
       >
         <Container maxW="xl">
           {/* <Nav /> */}
-          <Heading ml={0} size="lg" as="h1">
+          <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
             Christopher Carvalho — Founder of Unlock Your Sound
           </Heading>
           <div
+            className={styles.main}
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             dangerouslySetInnerHTML={{ __html: pageContent }}
           ></div>
 
-          <HStack spacing={7} mt={5}>
+          <HStack spacing={7} mt={5} mb={10}>
             {/* The default icon size is 1em (16px) */}
             {/* <Icon as={MdSettings} /> */}
 
