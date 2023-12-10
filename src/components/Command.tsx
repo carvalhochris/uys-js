@@ -1,4 +1,5 @@
 import "react-cmdk/dist/cmdk.css";
+import axios from "axios";
 import CommandPalette, {
   filterItems,
   getItemIndex,
@@ -6,14 +7,63 @@ import CommandPalette, {
 } from "react-cmdk";
 import { useEffect, useState } from "react";
 import React from "react";
+import { Text } from "@chakra-ui/react";
+import Link from "next/link";
+import { useRouter } from 'next/router'
 
 const Command = () => {
   const [page, setPage] = useState<"root" | "projects">("root");
   const [open, setOpen] = useState<boolean>(true);
-  const [search, setSearch] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const router = useRouter()
+
+  const handleClick = () => {
+
+  }
+
+  const handleSearch = async () => {
+    console.log("searching..." + searchTerm);
+    // event.preventDefault();
+    try {
+      setLoading(true);
+      const response = await axios.post("https://unlockyoursound.io/graphql", {
+        query: `
+        query SearchPosts($search: String!) {
+          posts(first: 1000, where: { search: $search }) {
+            nodes {
+              id
+              title
+              slug
+              seo {
+                metaDesc
+              }
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+            }
+          }
+        }
+      `,
+        variables: { search: searchTerm },
+      });
+      setSearchResults(response.data.data.posts.nodes);
+      console.log(searchResults);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // console.log(searchTerm);
 
   useEffect(() => {
+    // handleSearch();
     function handleKeyDown(e: KeyboardEvent) {
       if (e.metaKey && e.key === "k") {
         e.preventDefault();
@@ -85,14 +135,14 @@ const Command = () => {
       //   ],
       // },
     ],
-    search
+    searchTerm
   );
 
   return (
     <CommandPalette
-      onChangeSearch={setSearch}
+      onChangeSearch={setSearchTerm}
       onChangeOpen={setOpen}
-      search={search}
+      search={searchTerm}
       isOpen={isOpen}
       page={page}
     >
@@ -110,12 +160,42 @@ const Command = () => {
             </CommandPalette.List>
           ))
         ) : (
-          <CommandPalette.FreeSearchAction />
+          <>
+            {/* <p>hello</p> */}
+            <CommandPalette.FreeSearchAction onClick={handleSearch} />
+            {/* <>Hello page</> */}
+            <CommandPalette.List>
+              {searchResults.map((data: any, ...rest) => (
+                <div key={data.id}>
+                  <CommandPalette.ListItem index={data.id} onClick={() => router.push(`/${data.slug}`)}>
+                  {/* <Link href={`/${data.slug}`} > */}
+                  
+                    <Text color="white" mt={2} mb={2}>{data.title}</Text>
+
+                  {/* </Link> */}
+                  </CommandPalette.ListItem>
+                </div>
+              ))}
+            </CommandPalette.List>
+          </>
         )}
+      </CommandPalette.Page>
+      <CommandPalette.Page id="search">
+        <>new page child</>
+        <>Hello page</>
+            <CommandPalette.List>
+              {searchResults.map((data: any, ...rest) => (
+                <div key={data.id}>
+                  <Link href={`/${data.slug}`}>
+                    <Text color="white" mt={2} mb={2}>{data.title}</Text>
+                  </Link>
+                </div>
+              ))}
+            </CommandPalette.List>
       </CommandPalette.Page>
 
       {/* <CommandPalette.Page id="projects"> */}
-        {/* Projects page */}
+      {/* Projects page */}
       {/* </CommandPalette.Page> */}
     </CommandPalette>
   );
