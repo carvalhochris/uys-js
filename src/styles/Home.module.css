@@ -81,11 +81,15 @@ figure .wp-element-caption {
   font-size: 15px;
 }
 
-/* blockquote .wp-block-quote {
-    display: block;
-    font-size: 100px;
-  } */
+.main blockquote {
+    /* display: block; */
+    /* font-size: 100; */
+    padding: 40px;
+    /* font-size: large; */
+    font-weight: 800;
+    font-style: italic;
+  }
 
-/* .wp-block-quote p {
-    font-size: 24px;
+/* .main .wp-block-quote {
+    font-size: 100px;
   } */

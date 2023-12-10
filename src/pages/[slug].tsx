@@ -144,7 +144,7 @@ PostProps) {
             </Heading>
 
             {/* <div dangerouslySetInnerHTML={body} /> */}
-            <Text
+            <div
               className={styles.main}
               dangerouslySetInnerHTML={{ __html: `${thebody}` }}
             />
