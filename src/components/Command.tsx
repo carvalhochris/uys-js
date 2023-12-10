@@ -7,9 +7,9 @@ import CommandPalette, {
 } from "react-cmdk";
 import { useEffect, useState } from "react";
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Spinner } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const Command = () => {
   const [page, setPage] = useState<"root" | "projects">("root");
@@ -18,14 +18,17 @@ const Command = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [searchResults, setSearchResults] = useState([]);
-  const router = useRouter()
+  const [theLength, setTheLength] = useState<number>();
+  const router = useRouter();
 
-  const handleClick = () => {
-
-  }
+  const handleClick = (props: string) => {
+    setIsOpen(false);
+    router.push(`/${props}`);
+  };
 
   const handleSearch = async () => {
     console.log("searching..." + searchTerm);
+    setLoading(true);
     // event.preventDefault();
     try {
       setLoading(true);
@@ -52,6 +55,9 @@ const Command = () => {
         variables: { search: searchTerm },
       });
       setSearchResults(response.data.data.posts.nodes);
+      const length = searchResults.length;
+      setTheLength(length);
+      console.log("the length is  " + length);
       console.log(searchResults);
     } catch (error) {
       console.error(error);
@@ -163,35 +169,34 @@ const Command = () => {
           <>
             {/* <p>hello</p> */}
             <CommandPalette.FreeSearchAction onClick={handleSearch} />
-            {/* <>Hello page</> */}
+            {loading && <Spinner color="white" />}
             <CommandPalette.List>
-              {searchResults.map((data: any, ...rest) => (
-                <div key={data.id}>
-                  <CommandPalette.ListItem index={data.id} onClick={() => router.push(`/${data.slug}`)}>
-                  {/* <Link href={`/${data.slug}`} > */}
-                  
-                    <Text color="white" mt={2} mb={2}>{data.title}</Text>
-
-                  {/* </Link> */}
-                  </CommandPalette.ListItem>
-                </div>
-              ))}
+              {searchResults.map(
+                (data: { title: string; slug: string; id: number }) => (
+                  <div key={data.id}>
+                    <CommandPalette.ListItem
+                      key={data.id}
+                      index={data.id}
+                      // {...rest}
+                      onClick={() => handleClick(data.slug)}
+                    >
+                      <Link href={`/${data.slug}`}>
+                        <Text color="white" mt={2} mb={2}>
+                          {data.title}
+                        </Text>
+                      </Link>
+                    </CommandPalette.ListItem>
+                  </div>
+                )
+              )}
             </CommandPalette.List>
+            {/* <>Hello page</> */}
           </>
         )}
       </CommandPalette.Page>
       <CommandPalette.Page id="search">
         <>new page child</>
         <>Hello page</>
-            <CommandPalette.List>
-              {searchResults.map((data: any, ...rest) => (
-                <div key={data.id}>
-                  <Link href={`/${data.slug}`}>
-                    <Text color="white" mt={2} mb={2}>{data.title}</Text>
-                  </Link>
-                </div>
-              ))}
-            </CommandPalette.List>
       </CommandPalette.Page>
 
       {/* <CommandPalette.Page id="projects"> */}
