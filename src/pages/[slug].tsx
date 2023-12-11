@@ -26,7 +26,7 @@ interface ParamProps {
 interface PostProps {
   slug: string;
   thebody: string;
-  result: string,
+  result: string;
   thestring: string;
   jbody: string;
   clean: string;
@@ -67,7 +67,7 @@ const GET_POST_BY_SLUG = `
 export default function Post({
   post,
   thebody,
-  result
+  result,
 }: // jbody,
 // clean,
 // thestring,
@@ -76,23 +76,29 @@ PostProps) {
   const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
   const headingColor = colorMode === "dark" ? "white" : "gray.900";
   const [summary, setSummary] = useState("");
-  const [doingMagic, setDoingMagic] = useState(false)
-  const [showButton, setShowButton] = useState(true)
+  const [doingMagic, setDoingMagic] = useState(false);
+  const [showButton, setShowButton] = useState(true);
   // const body = sanitizeHTML(post.content)
 
   const handleSummarise = async () => {
-    setDoingMagic(true)
-    const res = await fetch(
-      `https://service.songcards.io/chatai?prompt=please summarise the following into a single sentence: ${result}`,
-      {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-      }
-    );
-    const string = await res.json();
-    console.log(string);
-    setSummary(string);
-    setDoingMagic(false)
-    setShowButton(false)
+    setDoingMagic(true);
+    if (result.length > 7000) {
+      alert("blog is too large to summarise");
+      setDoingMagic(false);
+      setShowButton(false);
+    } else {
+      const res = await fetch(
+        `https://service.songcards.io/chatai?prompt=please summarise the following into a single sentence: ${result}`,
+        {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+        }
+      );
+      const string = await res.json();
+      console.log(string);
+      setSummary(string);
+      setDoingMagic(false);
+      setShowButton(false);
+    }
   };
 
   // console.log(post.content);
@@ -166,9 +172,17 @@ PostProps) {
             <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
               {post.title ?? ""}
             </Heading>
-            {!doingMagic && showButton && <Container mb={5} ml={-2}><FaMagic onClick={() => handleSummarise()} /></Container>}
+            {!doingMagic && showButton && (
+              <Container mb={5} ml={-2}>
+                <FaMagic onClick={() => handleSummarise()} />
+              </Container>
+            )}
             {doingMagic && <Spinner />}
-            {summary && <Text mt={5} mb={5} color="purple">{summary}</Text>}
+            {summary && (
+              <Text mt={5} mb={5} color="purple">
+                {summary}
+              </Text>
+            )}
             {/* <div dangerouslySetInnerHTML={body} /> */}
             <div
               className={styles.main}
@@ -232,11 +246,11 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const thebody = await post.content;
 
-  const stripped =  stripHtml(thebody)
+  const stripped = stripHtml(thebody);
 
   const result = stripped.result;
 
-  console.log(stripped.result)
+  console.log(stripped.result);
 
   // assert.equal(
   //   stripHtml("Some text <b>and</b> text.").result,
