@@ -2,6 +2,43 @@
 
 [View site](https://unlockyoursound.com/)
 
+## Features
+
+- Command Pallete
+- Search
+- Music submission form
+
+## Stack
+
+- Next js 14 (pages router)
+- Wordpress (headless)
+- GraphQL
+- Vercel
+
+## Resources used in this project
+
+[This hack](https://www.devtwins.com/blog/wpgraphql-increase-post-limit) allowed me to query all posts and thus have them in the static build.
+
+Hey Meta, a tool for checking meta tags: https://www.heymeta.com/ 
+
+This plugin helped me include Yoast REST objects in GraphQL query: https://github.com/ashhitch/wp-graphql-yoast-seo 
+
+The Wordpress GraphQP Plugin for serving my content to the frontend
+
+## Roadmap
+
+- AI Content Summariser
+- Open source content
+
+## Issues
+
+Please submit via the issue tracker
+
+## PRs
+
+Pull requests welcome
+
+
 ## TODO
 
 1. Add null handler for all for featured images across code base
@@ -25,15 +62,7 @@
 
 2. Export posts as json, convert to markdown, create static API
 
-## Resources used in this project
 
-This hack allowed me to query all posts and thus have them in the static build: https://www.devtwins.com/blog/wpgraphql-increase-post-limit 
-
-Hey Meta, a tool for checking meta tags: https://www.heymeta.com/ 
-
-This plugin helped me include Yoast REST objects in GraphQL query: https://github.com/ashhitch/wp-graphql-yoast-seo 
-
-The Wordpress GraphQP Plugin for serving my content to the frontend
 
 # Primary GraphQL Query
 
