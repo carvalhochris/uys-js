@@ -79,6 +79,12 @@ const Command = () => {
           return !currentValue;
         });
       }
+      if (e.key === "Escape") {
+        console.log('escape')
+        setIsOpen(false);
+        e.preventDefault();
+        e.stopPropagation();
+      }
     }
 
     document.addEventListener("keydown", handleKeyDown);
@@ -172,11 +178,11 @@ const Command = () => {
             {loading && <Spinner color="white" />}
             <CommandPalette.List>
               {searchResults.map(
-                (data: { title: string; slug: string; id: number }) => (
+                (data: { title: string; slug: string; id: number }, index) => (
                   <div key={data.id}>
                     <CommandPalette.ListItem
                       key={data.id}
-                      index={data.id}
+                      index={index + 1}
                       // {...rest}
                       onClick={() => handleClick(data.slug)}
                     >
