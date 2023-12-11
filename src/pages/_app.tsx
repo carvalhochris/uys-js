@@ -8,12 +8,14 @@ import type { AppProps } from 'next/app'
 import Command from '@/components/Command';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
+import HelloBar from '@/components/HelloBar';
 
 
 export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
+      <HelloBar />
       <Nav />
       <Component {...pageProps} />
       <Command />
