@@ -30,6 +30,7 @@
     "react-icons": "^4.8.0",
     "react-share": "^4.4.1",
     "sanitize-html": "^2.11.0",
+    "string-strip-html": "^13.4.3",
     "typescript": "^5.3.2"
   },
   "devDependencies": {
