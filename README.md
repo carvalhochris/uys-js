@@ -38,33 +38,7 @@ Please submit via the issue tracker
 
 Pull requests welcome
 
-
-## TODO
-
-1. Add null handler for all for featured images across code base
-
-```
-{
-  result.featuredImage &&
-  result.featuredImage.node &&
-  result.featuredImage.node.sourceUrl ? (
-    <Image
-      src={result.featuredImage.node.sourceUrl}
-      alt={result.title}
-      width={1000}
-      height={1000}
-    />
-  ) : (
-    <p>No image available</p>
-  );
-}
-```
-
-2. Export posts as json, convert to markdown, create static API
-
-
-
-# Primary GraphQL Query
+## GraphQL Query to fetch all posts
 
 ```
 query GetPosts {
@@ -89,9 +63,32 @@ query GetPosts {
 }
 
 ```
+
+## GraphQL Query to get single post by slug
+
+```
+query GetPostBySlug($slug: String!) {
+    postBy(slug: $slug) {
+      id
+      title
+      slug
+      content
+      seo {
+        metaDesc
+      }
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+```
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<!-- ## Getting Started
+## Getting Started
 
 First, run the development server:
 
@@ -126,4 +123,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
