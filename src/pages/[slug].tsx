@@ -250,7 +250,7 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const result = stripped.result;
 
-  console.log(stripped.result);
+  // console.log(stripped.result);
 
   // assert.equal(
   //   stripHtml("Some text <b>and</b> text.").result,
