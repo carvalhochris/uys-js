@@ -68,7 +68,7 @@ export default function MixFeedback() {
       <div 
       // className={styles.main}
       >
-        <Container maxW="xl">
+        {/* <Container maxW="xl"> */}
           {/* <Nav /> */}
           <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>Free Mix Feedback</Heading>
           <Text mt={10} mb={5} fontSize="xl">
@@ -106,7 +106,7 @@ export default function MixFeedback() {
             style={{ border: "solid" }}
           ></iframe>> */}
           {/* <Footer /> */}
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   );

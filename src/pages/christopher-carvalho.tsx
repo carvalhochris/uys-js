@@ -86,7 +86,7 @@ export default function About({ pageContent }: AboutPageProps) {
       <div
       // className={styles.main}
       >
-        <Container maxW="xl">
+        {/* <Container maxW="xl"> */}
           {/* <Nav /> */}
           <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
             Christopher Carvalho — Founder of Unlock Your Sound
@@ -124,7 +124,7 @@ export default function About({ pageContent }: AboutPageProps) {
             style={{ border: "solid" }}
           ></iframe>
           {/* <Footer /> */}
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   );

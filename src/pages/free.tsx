@@ -54,7 +54,7 @@ export default function FreeResources() {
       <div
       // className={styles.main}
       >
-        <Container maxW="xl">
+        {/* <Container maxW="xl"> */}
           {/* <Nav /> */}
           <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
             Free resources to help you create and release your music
@@ -110,7 +110,7 @@ export default function FreeResources() {
           </Link>
           <Divider mt={5} mb={5} />
           {/* <Footer /> */}
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   );

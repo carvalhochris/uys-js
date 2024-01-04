@@ -30,7 +30,7 @@ export default function Footer() {
 
   return (
     <>
-      <Container maxW="xl">
+      {/* <Container maxW="xl"> */}
         <footer
           style={{
             display: "flex",
@@ -154,7 +154,7 @@ export default function Footer() {
             {/* </a> */}
           </Link>
         </Text>
-      </Container>
+      {/* </Container> */}
     </>
   );
 }

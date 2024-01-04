@@ -27,7 +27,7 @@ export default function Nav() {
 
   return (
     <>
-    <Container maxW="xl">
+    {/* <Container maxW="xl"> */}
       <nav
         style={{
           display: "flex",
@@ -131,7 +131,7 @@ export default function Nav() {
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
-      </Container>
+      {/* </Container> */}
     </>
   );
 }

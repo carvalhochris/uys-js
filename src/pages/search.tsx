@@ -52,9 +52,9 @@ export default function SearchPage() {
       <div 
       // className={styles.main}
       >
-        <Container maxW="xl" mb={300}>
+        <Box mb={300}>
           <Search />
-        </Container>
+        </Box>
       </div>
     </>
   );
