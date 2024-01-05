@@ -158,7 +158,7 @@ PostProps) {
       <div
       // className={styles.main}
       >
-        <Container maxW="xl">
+        {/* <Container maxW="xl"> */}
           {/* <Nav /> */}
           <Box>
             {post.featuredImage && (
@@ -208,7 +208,7 @@ PostProps) {
             <br></br>
           </Box>
           {/* <Footer /> */}
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   );
