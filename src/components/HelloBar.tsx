@@ -25,7 +25,7 @@ const HelloBar = () => {
         <Center>
           <Box>
             <Text mt={1} mb={2}>
-            Give the <Link href="https://beta.songcards.io/discover" target="#"><u>gift of music</u></Link> this holiday season 🎁
+              Try our <Link href="https://ai.songcards.io/" target="#"><u>FREE Album Artwork Generator</u> 🖌️</Link>
             </Text>
             {/* <br></br> */}
             {/* <Center>
