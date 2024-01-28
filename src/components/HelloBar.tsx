@@ -15,17 +15,24 @@ import {
   Box,
   // Image,
   Container,
+  useColorMode,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
 const HelloBar = () => {
+  const { colorMode } = useColorMode();
+
+  const backgroundColor = colorMode === "light" ? "#000" : "#7756E3";
+  const textColor = colorMode === "light" ? "white" : "white";
+
   return (
     <div className="hello-bar">
-      <Box bg="#7756E3" w="100%" p={2} color="white">
+      <Box bg={backgroundColor} w="100%" p={2} color={textColor}>
         <Center>
           <Box>
             <Text mt={1} mb={2}>
               Try our <Link href="https://ai.songcards.io/" target="#"><u>FREE Album Artwork Generator</u> 🖌️</Link>
+              
             </Text>
             {/* <br></br> */}
             {/* <Center>
