@@ -31,7 +31,7 @@ const HelloBar = () => {
         <Center>
           <Box>
             <Text mt={1} mb={2}>
-              Try our <Link href="https://ai.songcards.io/" target="#"><u>FREE Album Artwork Generator</u> 🖌️</Link>
+              Try our <Link href="https://ai.songcards.io/" target="#"><u>Free Music Artwork Generator</u> 🖌️</Link>
               
             </Text>
             {/* <br></br> */}
