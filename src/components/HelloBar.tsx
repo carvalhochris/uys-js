@@ -27,7 +27,14 @@ const HelloBar = () => {
 
   return (
     <div className="hello-bar">
-      <Box bg={backgroundColor} w="100%" p={2} color={textColor}>
+      <Box 
+      // className="bg-violet-900"
+      className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.600),theme(colors.violet.600),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-white bg-[length:200%_auto]"
+
+      // bg={backgroundColor} 
+      w="100%" p={2} 
+      // color={textColor}
+      >
         <Center>
           <Box>
             <Text mt={1} mb={2}>

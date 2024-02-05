@@ -1,4 +1,4 @@
-// import '@/styles/globals.css'
+import '@/styles/globals.css'
 import { CSSReset, ChakraProvider, Container } from "@chakra-ui/react";
 // import theme from '@/theme'
 import theme from "../theme";
