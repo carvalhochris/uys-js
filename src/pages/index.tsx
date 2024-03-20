@@ -88,10 +88,11 @@ export default function Home({ posts }: HomeProps) {
         {/* <Container maxW="xl"> */}
         {/* <Nav /> */}
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
-          Unlock Your Sound is an artist
-          <div className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
+          {/* <div className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
             self-development
-          </div>
+          </div> */}
+          Unlock Your Sound is an artist
+          self-development 
           platform
         </Heading>
         <Divider mt={5} mb={5} />

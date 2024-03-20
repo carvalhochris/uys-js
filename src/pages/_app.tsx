@@ -13,7 +13,7 @@ import HelloBar from "@/components/HelloBar";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-        <HelloBar />
+        {/* <HelloBar /> */}
       <Container maxW="xl">
         <Nav />
         <Component {...pageProps} />

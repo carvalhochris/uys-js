@@ -54,14 +54,15 @@ export default function FreeResources() {
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
           {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient"> */}
 
-          Free resources
           {/* </div> */}
+          Free resources 
           to help you
-          <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
+          create and release
+          your music
+          {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
 
             create and release
-          </div>
-          your music
+          </div> */}
         </Heading>
         <Text mt={10} mb={5} fontSize="xl">
           Join Labs and unlock your free bundle

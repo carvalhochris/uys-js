@@ -134,15 +134,14 @@ export default function Footer() {
           <MyMenu />
         </footer>
         <Divider mt={5} mb={5} />
-        <Text fontSize="md" mb={5}>
+        {/* <Text fontSize="md" mb={5}>
           The source code of this website is available{" "}
           <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
-            {/* <a className="no-js"> */}
             on GitHub.
             <ExternalLinkIcon mx="2px" />
-            {/* </a> */}
           </ChakraLink>
-        </Text>
+        </Text> */}
+        <Text mb={5}>This website was brought to you by <Link href={'https://beta.songcards.io'} target="#"><u>Songcards</u></Link></Text>
         <Text fontSize="md" mb={10}>
           © 2023 Unlock Your Sound Ltd |{" "}
           <Link
