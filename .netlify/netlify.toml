@@ -16,7 +16,7 @@ origin = "ui"
 [build]
 publish = "/Users/christophercarvalho/uys-js/out"
 publishOrigin = "ui"
-command = "npm run build"
+command = "next build"
 commandOrigin = "ui"
 functions = "/Users/christophercarvalho/uys-js/Users/christophercarvalho/uys-js/netlify/functions"
 

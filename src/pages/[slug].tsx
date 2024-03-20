@@ -266,7 +266,7 @@ export async function getStaticProps({ params }: ParamProps) {
       // thestring,
       // jbody,
     },
-    revalidate: 60,
+    revalidate: 86400,
   };
 }
 
