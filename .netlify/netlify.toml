@@ -1,5 +1,5 @@
-functionsDirectory = "/Users/christophercarvalho/uys-js/netlify/functions"
-functionsDirectoryOrigin = "config-v1"
+functionsDirectory = "/Users/christophercarvalho/uys-js/Users/christophercarvalho/uys-js/netlify/functions"
+functionsDirectoryOrigin = "ui"
 headers = []
 redirects = []
 
@@ -14,11 +14,11 @@ origin = "ui"
 [plugins.inputs]
 
 [build]
-publish = "/Users/christophercarvalho/uys-js/.next2"
-publishOrigin = "config"
+publish = "/Users/christophercarvalho/uys-js/out"
+publishOrigin = "ui"
 command = "npm run build"
-commandOrigin = "config"
-functions = "/Users/christophercarvalho/uys-js/netlify/functions"
+commandOrigin = "ui"
+functions = "/Users/christophercarvalho/uys-js/Users/christophercarvalho/uys-js/netlify/functions"
 
 [build.environment]
 NEXT_PRIVATE_TARGET = "server"
