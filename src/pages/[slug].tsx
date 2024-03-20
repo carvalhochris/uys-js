@@ -172,7 +172,7 @@ PostProps) {
             <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
               {post.title ?? ""}
             </Heading>
-            {!doingMagic && showButton && (
+            {/* {!doingMagic && showButton && (
               <Container mb={5} ml={-2}>
                 <FaMagic onClick={() => handleSummarise()} />
               </Container>
@@ -182,7 +182,7 @@ PostProps) {
               <Text mt={5} mb={5} color="purple">
                 {summary}
               </Text>
-            )}
+            )} */}
             {/* <div dangerouslySetInnerHTML={body} /> */}
             <div
               className={styles.main}
