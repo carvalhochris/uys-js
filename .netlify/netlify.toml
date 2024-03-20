@@ -1,0 +1,36 @@
+functionsDirectory = "/Users/christophercarvalho/uys-js/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+origin = "ui"
+
+[plugins.inputs]
+
+[build]
+publish = "/Users/christophercarvalho/uys-js/.next2"
+publishOrigin = "config"
+command = "npm run build"
+commandOrigin = "config"
+functions = "/Users/christophercarvalho/uys-js/netlify/functions"
+
+[build.environment]
+NEXT_PRIVATE_TARGET = "server"
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
