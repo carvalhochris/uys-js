@@ -1,4 +1,11 @@
-import { Button, Divider, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import {
+  Button,
+  Divider,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -53,12 +60,8 @@ export default function FreeResources() {
         {/* <Nav /> */}
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
           {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient"> */}
-
           {/* </div> */}
-          Free resources 
-          to help you
-          create and release
-          your music
+          Free resources to help you create and release your music
           {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
 
             create and release
@@ -91,13 +94,13 @@ export default function FreeResources() {
         <Divider mt={10} mb={5} />
         <Heading as="h2">Free Mix Review</Heading>
         <Text mt={10} mb={5} fontSize="xl">
-          We also offer a Free Mix Feedback Service where you can have your
-          mix reviewed by working audio engineers.
+          We also offer a Free Mix Feedback Service where you can have your mix
+          reviewed by working audio engineers.
         </Text>
         <Link
           href="/free-mix-feedback"
-        // legacyBehavior
-        // style={{ position: "relative" }}
+          // legacyBehavior
+          // style={{ position: "relative" }}
         >
           {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
           <Button

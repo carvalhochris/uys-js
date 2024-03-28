@@ -91,19 +91,17 @@ export default function Home({ posts }: HomeProps) {
           {/* <div className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
             self-development
           </div> */}
-          Unlock Your Sound is an artist
-          self-development 
-          platform
+          Unlock Your Sound is an artist self-development platform
         </Heading>
         <Divider mt={5} mb={5} />
-        <Text mt={10} mb={5} fontSize='xl'>
-          Access a bundle of free resources to help you create and release
-          your music
+        <Text mt={10} mb={5} fontSize="xl">
+          Access a bundle of free resources to help you create and release your
+          music
         </Text>
 
         <Link
           href="/free"
-        // legacyBehavior style={{ position: "relative" }}
+          // legacyBehavior style={{ position: "relative" }}
         >
           {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
           <Button
@@ -120,7 +118,6 @@ export default function Home({ posts }: HomeProps) {
             {/* <div className="mr-2 ml-2 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient"> */}
             Unlock Resources
             {/* </div> */}
-
           </Button>
           {/* </a> */}
         </Link>
@@ -150,10 +147,7 @@ export default function Home({ posts }: HomeProps) {
           <ul>
             {posts.map((post) => (
               <div key={post.slug}>
-                <Link
-                  href={`/${post.slug}`}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
                   {/* <Box bg="#RRGGBB" w={500} p={0} h={350} color="white"> */}
                   {post.featuredImage && (
                     <Image
@@ -161,7 +155,7 @@ export default function Home({ posts }: HomeProps) {
                       alt={post.title}
                       width={1000}
                       height={1000}
-                    // mt={10}
+                      // mt={10}
                     />
                   )}
                   <Heading as="h3" mb={5} mt={5}>
@@ -173,10 +167,7 @@ export default function Home({ posts }: HomeProps) {
                 <Text fontSize="lg" color={textColor}>
                   {post.seo.metaDesc}
                 </Text>
-                <Link
-                  href={`/${post.slug}`}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
                   <Text fontSize="lg">
                     <Button
                       // type="submit"

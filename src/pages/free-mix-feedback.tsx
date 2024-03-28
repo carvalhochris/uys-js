@@ -1,17 +1,6 @@
-import {
-  Heading,
-  Text,
-  // Link,
-  Button,
-  Container,
-  Divider,
-} from "@chakra-ui/react";
-import styles from "@/styles/Home.module.css";
-import Nav from "@/components/Nav";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import SubmitMix from "@/components/SubmitMix";
+import { Divider, Heading, Text } from "@chakra-ui/react";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function MixFeedback() {
@@ -65,47 +54,51 @@ export default function MixFeedback() {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-      <div 
+      <div
       // className={styles.main}
       >
         {/* <Container maxW="xl"> */}
-          {/* <Nav /> */}
-          <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>Free Mix Feedback</Heading>
+        {/* <Nav /> */}
+        <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>
+          Free Mix Feedback
+        </Heading>
+        <Text mt={10} mb={5} fontSize="xl">
+          Submit your mix to get constructive feedback from a working audio
+          engineer.<br></br>
+          <br></br>
+          We’ll get back to you as soon as we can.<br></br>
+          <br></br>
+          We ask that you use a service such as Dropbox to upload files so that
+          we can stream the file but also have the option to download if
+          necessary.<br></br>
+          <br></br>
+          Supported formats: aiff, wav, flac. <br></br>
+          <br></br>We do not accept links from streaming services.<br></br>
+          <br></br>
+          Please only submit ONE song/track.<br></br>
+          <br></br>
+          We look forward to hearing your music.
+          <br></br>
+        </Text>
+        <SubmitMix />
+        <Divider />
+        <Text mt={10} mb={5} fontSize="xl">
+          Did you know that we also offer a bunch of <b>free resources</b> to
+          help you create and release your music?
+        </Text>
+        <Link href="/free">
           <Text mt={10} mb={5} fontSize="xl">
-            Submit your mix to get constructive feedback from a working audio
-            engineer.<br></br>
-            <br></br>
-            We’ll get back to you as soon as we can.<br></br>
-            <br></br>
-            We ask that you use a service such as Dropbox to upload files so
-            that we can stream the file but also have the option to download if
-            necessary.<br></br>
-            <br></br>
-            Supported formats: aiff, wav, flac. <br></br>
-            <br></br>We do not accept links from streaming services.<br></br>
-            <br></br>
-            Please only submit ONE song/track.<br></br>
-            <br></br>
-            We look forward to hearing your music.
-            <br></br>
+            <u>Learn more</u>
           </Text>
-          <SubmitMix />
-          <Divider />
-          <Text mt={10} mb={5} fontSize="xl">
-            Did you know that we also offer a bunch of <b>free resources</b> to help
-            you create and release your music?
-          </Text>
-          <Link href="/free">
-            <Text mt={10} mb={5} fontSize="xl"><u>Learn more</u></Text>
-          </Link>
-          {/* <<Heading>Free resources</Heading>
+        </Link>
+        {/* <<Heading>Free resources</Heading>
                     <iframe
             src="https://unlockyoursound.substack.com/embed"
             height={350}
             width="100%"
             style={{ border: "solid" }}
           ></iframe>> */}
-          {/* <Footer /> */}
+        {/* <Footer /> */}
         {/* </Container> */}
       </div>
     </>

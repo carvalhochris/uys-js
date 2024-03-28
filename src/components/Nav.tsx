@@ -1,19 +1,8 @@
+import { Box, Divider, Image, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
-import { useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { Button } from "@chakra-ui/react";
-import { Divider, Container } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
-import { AiFillInfoCircle } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillHeart, AiFillInfoCircle, AiOutlineSearch } from "react-icons/ai";
 import MyMenu from "./MyMenu";
-import { AiOutlineSearch } from "react-icons/ai";
-import { FaDice } from "react-icons/fa";
-import { AiFillHeart } from "react-icons/ai";
-import React from "react";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -27,7 +16,7 @@ export default function Nav() {
 
   return (
     <>
-    {/* <Container maxW="xl"> */}
+      {/* <Container maxW="xl"> */}
       <nav
         style={{
           display: "flex",

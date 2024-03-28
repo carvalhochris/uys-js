@@ -1,9 +1,6 @@
-import { Heading, Text, Link, Button, Container } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
-import Nav from "@/components/Nav";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Container, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import Footer from "@/components/Footer";
 
 export default function PrivacyPage() {
   return (

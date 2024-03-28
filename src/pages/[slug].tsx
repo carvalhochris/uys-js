@@ -1,19 +1,11 @@
 // import axios from "axios";
-import { Button, Container, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
-import { Stack, StackDivider, Box, Text, Spinner } from "@chakra-ui/react";
-import Image from "next/image";
-import ShareButton from "../components/WhatsAppButton";
+import { Box, Heading, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-import { useColorMode } from "@chakra-ui/react";
+import Image from "next/image";
+import { useState } from "react";
 import { setTimeout } from "timers/promises";
-import React, { ReactNode, useState } from "react";
-import { strict as assert } from "assert";
-import { FaMagic } from "react-icons/fa";
+import ShareButton from "../components/WhatsAppButton";
 
 import { stripHtml } from "string-strip-html";
 
@@ -159,20 +151,20 @@ PostProps) {
       // className={styles.main}
       >
         {/* <Container maxW="xl"> */}
-          {/* <Nav /> */}
-          <Box>
-            {post.featuredImage && (
-              <Image
-                src={post.featuredImage.node.sourceUrl}
-                alt={post.title ?? ""}
-                width={2000}
-                height={2000}
-              />
-            )}
-            <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
-              {post.title ?? ""}
-            </Heading>
-            {/* {!doingMagic && showButton && (
+        {/* <Nav /> */}
+        <Box>
+          {post.featuredImage && (
+            <Image
+              src={post.featuredImage.node.sourceUrl}
+              alt={post.title ?? ""}
+              width={2000}
+              height={2000}
+            />
+          )}
+          <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
+            {post.title ?? ""}
+          </Heading>
+          {/* {!doingMagic && showButton && (
               <Container mb={5} ml={-2}>
                 <FaMagic onClick={() => handleSummarise()} />
               </Container>
@@ -183,31 +175,31 @@ PostProps) {
                 {summary}
               </Text>
             )} */}
-            {/* <div dangerouslySetInnerHTML={body} /> */}
-            <div
-              className={styles.main}
-              dangerouslySetInnerHTML={{ __html: `${thebody}` }}
-            />
+          {/* <div dangerouslySetInnerHTML={body} /> */}
+          <div
+            className={styles.main}
+            dangerouslySetInnerHTML={{ __html: `${thebody}` }}
+          />
 
-            <br></br>
-            <ShareButton postSlug={post.slug} />
-            <br />
-            <br />
-            <iframe
-              src="https://unlockyoursound.substack.com/embed"
-              width="100%"
-              height="320"
-              style={{
-                border: "1px solid #EEE",
-                background: "#f1f1f1",
-                color: "white",
-              }}
-              // frameBorder="0"
-              // scrolling="no"
-            ></iframe>
-            <br></br>
-          </Box>
-          {/* <Footer /> */}
+          <br></br>
+          <ShareButton postSlug={post.slug} />
+          <br />
+          <br />
+          <iframe
+            src="https://unlockyoursound.substack.com/embed"
+            width="100%"
+            height="320"
+            style={{
+              border: "1px solid #EEE",
+              background: "#f1f1f1",
+              color: "white",
+            }}
+            // frameBorder="0"
+            // scrolling="no"
+          ></iframe>
+          <br></br>
+        </Box>
+        {/* <Footer /> */}
         {/* </Container> */}
       </div>
     </>
@@ -266,7 +258,7 @@ export async function getStaticProps({ params }: ParamProps) {
       // thestring,
       // jbody,
     },
-    revalidate: 86400,
+    revalidate: 604800,
   };
 }
 

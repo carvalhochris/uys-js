@@ -1,17 +1,8 @@
-import axios from "axios";
-import {
-  Container,
-  Divider,
-  Heading,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import Head from "next/head";
 import { EmailIcon } from "@chakra-ui/icons";
-import { Icon, HStack } from "@chakra-ui/react";
-import { MdSettings } from "react-icons/md";
+import { Link as ChakraLink, Divider, HStack, Heading } from "@chakra-ui/react";
+import axios from "axios";
+import Head from "next/head";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 interface AboutPageProps {
@@ -87,43 +78,43 @@ export default function About({ pageContent }: AboutPageProps) {
       // className={styles.main}
       >
         {/* <Container maxW="xl"> */}
-          {/* <Nav /> */}
-          <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
-            Christopher Carvalho — Founder of Unlock Your Sound
-          </Heading>
-          <div
-            className={styles.main}
-            style={{ paddingTop: "10px", paddingBottom: "10px" }}
-            dangerouslySetInnerHTML={{ __html: pageContent }}
-          ></div>
+        {/* <Nav /> */}
+        <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
+          Christopher Carvalho — Founder of Unlock Your Sound
+        </Heading>
+        <div
+          className={styles.main}
+          style={{ paddingTop: "10px", paddingBottom: "10px" }}
+          dangerouslySetInnerHTML={{ __html: pageContent }}
+        ></div>
 
-          <HStack spacing={7} mt={5} mb={10}>
-            {/* The default icon size is 1em (16px) */}
-            {/* <Icon as={MdSettings} /> */}
+        <HStack spacing={7} mt={5} mb={10}>
+          {/* The default icon size is 1em (16px) */}
+          {/* <Icon as={MdSettings} /> */}
 
-            <ChakraLink href="mailto:enquires@unlockyoursound.com" isExternal>
-              <EmailIcon boxSize={30} />
-            </ChakraLink>
-            <ChakraLink href="https://github.com/carvalhochris" isExternal>
-              <AiFillGithub size={30} />
-            </ChakraLink>
-            <ChakraLink href="https://github.com/carvalhochris" isExternal>
-              <AiFillLinkedin size={30} />
-            </ChakraLink>
-            {/* Use the `boxSize` prop to change the icon size */}
-            {/* <Icon as={MdReceipt} boxSize={6} /> */}
+          <ChakraLink href="mailto:enquires@unlockyoursound.com" isExternal>
+            <EmailIcon boxSize={30} />
+          </ChakraLink>
+          <ChakraLink href="https://github.com/carvalhochris" isExternal>
+            <AiFillGithub size={30} />
+          </ChakraLink>
+          <ChakraLink href="https://github.com/carvalhochris" isExternal>
+            <AiFillLinkedin size={30} />
+          </ChakraLink>
+          {/* Use the `boxSize` prop to change the icon size */}
+          {/* <Icon as={MdReceipt} boxSize={6} /> */}
 
-            {/* Use the `color` prop to change the icon color */}
-            {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
-          </HStack>
-          <Divider />
-          <iframe
-            src="https://unlockyoursound.substack.com/embed"
-            height={350}
-            width="100%"
-            style={{ border: "solid" }}
-          ></iframe>
-          {/* <Footer /> */}
+          {/* Use the `color` prop to change the icon color */}
+          {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
+        </HStack>
+        <Divider />
+        <iframe
+          src="https://unlockyoursound.substack.com/embed"
+          height={350}
+          width="100%"
+          style={{ border: "solid" }}
+        ></iframe>
+        {/* <Footer /> */}
         {/* </Container> */}
       </div>
     </>

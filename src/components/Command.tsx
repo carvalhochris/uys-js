@@ -1,15 +1,10 @@
-import "react-cmdk/dist/cmdk.css";
+import { Spinner, Text } from "@chakra-ui/react";
 import axios from "axios";
-import CommandPalette, {
-  filterItems,
-  getItemIndex,
-  useHandleOpenCommandPalette,
-} from "react-cmdk";
-import { useEffect, useState } from "react";
-import React from "react";
-import { Text, Spinner } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import CommandPalette, { filterItems, getItemIndex } from "react-cmdk";
+import "react-cmdk/dist/cmdk.css";
 
 const Command = () => {
   const [page, setPage] = useState<"root" | "projects">("root");
@@ -80,7 +75,7 @@ const Command = () => {
         });
       }
       if (e.key === "Escape") {
-        console.log('escape')
+        console.log("escape");
         setIsOpen(false);
         e.preventDefault();
         e.stopPropagation();

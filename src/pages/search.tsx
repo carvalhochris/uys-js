@@ -1,15 +1,7 @@
-import { Container, Divider, Text } from "@chakra-ui/react";
-import styles from "@/styles/Home.module.css";
 import Search from "@/components/SearchBox";
-import Nav from "@/components/Nav";
 import Head from "next/head";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import { Image as ChakraImage } from "@chakra-ui/react";
 
-import Link from "next/link";
-import { Button, Box } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
 
 export default function SearchPage() {
   const { colorMode } = useColorMode();
@@ -23,10 +15,7 @@ export default function SearchPage() {
           content="Dive in to our ever-growing archives"
         />
         <meta name="keywords" content="Music production, business, marketing" />
-        <link
-          rel="canonical"
-          href={`https://unlockyoursound.com/search`}
-        />
+        <link rel="canonical" href={`https://unlockyoursound.com/search`} />
         <meta property="og:title" content="Search" />
         <meta
           property="og:description"
@@ -49,7 +38,7 @@ export default function SearchPage() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div 
+      <div
       // className={styles.main}
       >
         <Box mb={300}>
