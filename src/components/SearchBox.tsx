@@ -1,30 +1,31 @@
-import { useState, useEffect } from "react";
+import {
+  Button,
+  Center,
+  Divider,
+  Heading,
+  Input,
+  Spinner,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import axios from "axios";
-import styles from "@/styles/Home.module.css";
-import { Center, Container, Divider, Heading } from "@chakra-ui/react";
-import Link from "next/link";
-import { Link as ChakraLink } from "@chakra-ui/react";
-import Nav from "@/components/Nav";
-import { Input } from "@chakra-ui/react";
-import { Button, Select, Text } from "@chakra-ui/react";
-import { Spinner } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
-import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 // import Image from "next/image";
 
 interface SearchProps {
-    id: number,
-    slug: string,
-    title: string,
-    seo: {
-      metaDesc: string,
-    }
-    featuredImage: {
-      node: {
-        sourceUrl: string,
-      }
-    }
+  id: number;
+  slug: string;
+  title: string;
+  seo: {
+    metaDesc: string;
+  };
+  featuredImage: {
+    node: {
+      sourceUrl: string;
+    };
+  };
 }
 
 export default function SearchPage() {
@@ -40,7 +41,7 @@ export default function SearchPage() {
   //   { value: "production", label: "Production" },
   // ]);
 
-  const handleSearch = async (event: { preventDefault: () => void; }) => {
+  const handleSearch = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     try {
       setLoading(true);
@@ -86,7 +87,7 @@ export default function SearchPage() {
       <form onSubmit={handleSearch}>
         {/* <label>
             Input */}
-        <Heading size="2xl" as="h1" mt={10} mb={5} >
+        <Heading size="2xl" as="h1" mt={10} mb={5}>
           Search
         </Heading>
         <Text mb={5}>Find what you are looking for</Text>

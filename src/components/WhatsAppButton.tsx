@@ -1,11 +1,9 @@
 // import React from "react";
-import { WhatsappShareButton } from "react-share";
-import { Button } from "@chakra-ui/react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import React from "react";
+import { WhatsappShareButton } from "react-share";
 
 interface ShareProps {
-  postSlug: string,
+  postSlug: string;
 }
 
 function ShareButton({ postSlug }: ShareProps) {

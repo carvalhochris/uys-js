@@ -1,22 +1,4 @@
-import React from "react";
-import {
-  Card,
-  // Center,
-  CardBody,
-  CardFooter,
-  Text,
-  Heading,
-  Divider,
-  // Link,
-  Stack,
-  Grid,
-  Center,
-  Button,
-  Box,
-  // Image,
-  Container,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Box, Center, Text, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 
 const HelloBar = () => {
@@ -27,19 +9,21 @@ const HelloBar = () => {
 
   return (
     <div className="hello-bar">
-      <Box 
-      // className="bg-violet-900"
-      className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.600),theme(colors.violet.600),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-white bg-[length:200%_auto]"
-
-      // bg={backgroundColor} 
-      w="100%" p={2} 
-      // color={textColor}
+      <Box
+        // className="bg-violet-900"
+        className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.600),theme(colors.violet.600),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-white bg-[length:200%_auto]"
+        // bg={backgroundColor}
+        w="100%"
+        p={2}
+        // color={textColor}
       >
         <Center>
           <Box>
             <Text mt={1} mb={2}>
-              Try our <Link href="https://ai.songcards.io/" target="#"><u>Free Music Artwork Generator</u> 🖌️</Link>
-              
+              Try our{" "}
+              <Link href="https://ai.songcards.io/" target="#">
+                <u>Free Music Artwork Generator</u> 🖌️
+              </Link>
             </Text>
             {/* <br></br> */}
             {/* <Center>

@@ -1,8 +1,9 @@
-import { Box, Divider, Image, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Divider, Text, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiFillHeart, AiFillInfoCircle, AiOutlineSearch } from "react-icons/ai";
 import MyMenu from "./MyMenu";
+import Image from "next/image";
 
 export default function Footer() {
   const { colorMode, toggleColorMode } = useColorMode();

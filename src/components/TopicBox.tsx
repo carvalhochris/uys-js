@@ -1,31 +1,24 @@
-import { useState, useEffect } from "react";
+import { Center, Divider, Heading } from "@chakra-ui/react";
 import axios from "axios";
-import styles from "@/styles/Home.module.css";
-import { Center, Container, Divider, Heading } from "@chakra-ui/react";
 import Link from "next/link";
-import { Link as ChakraLink } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 // import Nav from "@/components/Nav";
-import { Input } from "@chakra-ui/react";
-import { Button, Select, Text } from "@chakra-ui/react";
-import { Spinner } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/react";
+import { Button, Select, Spinner, Text, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
-import { ExternalLinkIcon, EmailIcon } from "@chakra-ui/icons";
-import React from "react";
 // import Image from "next/image";
 
 interface ResultProps {
-  id: number,
-  title: string,
-  slug: string,
+  id: number;
+  title: string;
+  slug: string;
   seo: {
-    metaDesc: string,
-  }
+    metaDesc: string;
+  };
   featuredImage: {
     node: {
-      sourceUrl: string,
-    }
-  }
+      sourceUrl: string;
+    };
+  };
 }
 
 export default function TopicBox() {
@@ -44,7 +37,7 @@ export default function TopicBox() {
     { value: "logic pro x", label: "Logic Pro X" },
   ]);
 
-  const handleSearch = async (event: { preventDefault: () => void; }) => {
+  const handleSearch = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     try {
       setLoading(true);
