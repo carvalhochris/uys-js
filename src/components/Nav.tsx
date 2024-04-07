@@ -44,12 +44,16 @@ export default function Nav() {
               <Image
                 src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
                 alt="Unlock Your Sound light logo"
+                width={70}
+                height={70}
                 // maxWidth={70}
               />
             ) : (
               <Image
                 src="https://unlockyoursound.io/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
                 alt="Unlock Your Sound dark logo"
+                width={70}
+                height={70}
                 // maxWidth={70}
               />
             )}

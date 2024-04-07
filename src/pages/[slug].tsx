@@ -58,8 +58,8 @@ const GET_POST_BY_SLUG = `
 
 export default function Post({
   post,
-  thebody,
-  result,
+  // thebody,
+  // result,
 }: // jbody,
 // clean,
 // thestring,
@@ -72,26 +72,26 @@ PostProps) {
   const [showButton, setShowButton] = useState(true);
   // const body = sanitizeHTML(post.content)
 
-  const handleSummarise = async () => {
-    setDoingMagic(true);
-    if (result.length > 7000) {
-      alert("blog is too large to summarise");
-      setDoingMagic(false);
-      setShowButton(false);
-    } else {
-      const res = await fetch(
-        `https://service.songcards.io/chatai?prompt=please summarise the following into a single sentence: ${result}`,
-        {
-          method: "POST", // *GET, POST, PUT, DELETE, etc.
-        }
-      );
-      const string = await res.json();
-      console.log(string);
-      setSummary(string);
-      setDoingMagic(false);
-      setShowButton(false);
-    }
-  };
+  // const handleSummarise = async () => {
+  //   setDoingMagic(true);
+  //   if (result.length > 7000) {
+  //     alert("blog is too large to summarise");
+  //     setDoingMagic(false);
+  //     setShowButton(false);
+  //   } else {
+  //     const res = await fetch(
+  //       `https://service.songcards.io/chatai?prompt=please summarise the following into a single sentence: ${result}`,
+  //       {
+  //         method: "POST", // *GET, POST, PUT, DELETE, etc.
+  //       }
+  //     );
+  //     const string = await res.json();
+  //     console.log(string);
+  //     setSummary(string);
+  //     setDoingMagic(false);
+  //     setShowButton(false);
+  //   }
+  // };
 
   // console.log(post.content);
 
@@ -178,7 +178,7 @@ PostProps) {
           {/* <div dangerouslySetInnerHTML={body} /> */}
           <div
             className={styles.main}
-            dangerouslySetInnerHTML={{ __html: `${thebody}` }}
+            dangerouslySetInnerHTML={{ __html: `${post.content}` }}
           />
 
           <br></br>
@@ -223,10 +223,10 @@ export async function getStaticProps({ params }: ParamProps) {
     // variables: { slug },
   });
 
-  async function delayRender() {
-    await setTimeout(1000);
-    console.log("The page will be rendered in 1 seconds");
-  }
+  // async function delayRender() {
+  //   await setTimeout(1000);
+  //   console.log("The page will be rendered in 1 seconds");
+  // }
 
   // await delayRender();
 
@@ -236,11 +236,11 @@ export async function getStaticProps({ params }: ParamProps) {
 
   const post = await jay.data.postBy;
 
-  const thebody = await post.content;
+  // const thebody = await post.content;
 
-  const stripped = stripHtml(thebody);
+  // const stripped = stripHtml(thebody);
 
-  const result = stripped.result;
+  // const result = stripped.result;
 
   // console.log(stripped.result);
 
@@ -252,8 +252,8 @@ export async function getStaticProps({ params }: ParamProps) {
   return {
     props: {
       post,
-      thebody,
-      result,
+      // thebody,
+      // result,
       // clean,
       // thestring,
       // jbody,
@@ -284,10 +284,10 @@ export async function getStaticPaths() {
   //   console.log("Paths delayed for 200 seconds.");
   // }, "200000");
 
-  async function delayPath() {
-    await setTimeout(1000);
-    console.log("The path will be rendered in 1 second");
-  }
+  // async function delayPath() {
+  //   await setTimeout(1000);
+  //   console.log("The path will be rendered in 1 second");
+  // }
 
   // await delayPath();
 
