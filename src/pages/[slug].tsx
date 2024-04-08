@@ -4,10 +4,7 @@ import { Box, Heading, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import { setTimeout } from "timers/promises";
 import ShareButton from "../components/WhatsAppButton";
-
-import { stripHtml } from "string-strip-html";
 
 interface ParamProps {
   params: {
@@ -58,9 +55,9 @@ const GET_POST_BY_SLUG = `
 
 export default function Post({
   post,
-  // thebody,
-  // result,
-}: // jbody,
+}: // thebody,
+// result,
+// jbody,
 // clean,
 // thestring,
 PostProps) {
