@@ -52,20 +52,9 @@ export default function FreeResources() {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-
-      <div
-      // className={styles.main}
-      >
-        {/* <Container maxW="xl"> */}
-        {/* <Nav /> */}
+      <div>
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
-          {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient"> */}
-          {/* </div> */}
           Free resources to help you create and release your music
-          {/* <div className="mr-4 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
-
-            create and release
-          </div> */}
         </Heading>
         <Text mt={10} mb={5} fontSize="xl">
           Join Labs and unlock your free bundle
@@ -97,12 +86,7 @@ export default function FreeResources() {
           We also offer a Free Mix Feedback Service where you can have your mix
           reviewed by working audio engineers.
         </Text>
-        <Link
-          href="/free-mix-feedback"
-          // legacyBehavior
-          // style={{ position: "relative" }}
-        >
-          {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
+        <Link href="/free-mix-feedback">
           <Button
             mt={10}
             mb={50}
@@ -114,11 +98,8 @@ export default function FreeResources() {
           >
             Get Feedback
           </Button>
-          {/* </a> */}
         </Link>
         <Divider mt={5} mb={5} />
-        {/* <Footer /> */}
-        {/* </Container> */}
       </div>
     </>
   );

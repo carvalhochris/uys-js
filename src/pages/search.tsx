@@ -1,6 +1,6 @@
 import Search from "@/components/SearchBox";
-import Head from "next/head";
 import { Box } from "@chakra-ui/react";
+import Head from "next/head";
 
 export default function SearchPage() {
   return (
@@ -35,9 +35,7 @@ export default function SearchPage() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div
-      // className={styles.main}
-      >
+      <div>
         <Box mb={300}>
           <Search />
         </Box>

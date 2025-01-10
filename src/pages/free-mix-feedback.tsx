@@ -12,7 +12,6 @@ export default function MixFeedback() {
           name="description"
           content="Get a constructive mix review from a working audio engineer"
         />
-
         <meta itemProp="name" content="Free Mix Feedback" />
         <meta
           itemProp="description"
@@ -22,12 +21,10 @@ export default function MixFeedback() {
           rel="canonical"
           href={`https://unlockyoursound.com/free-mix-feedback`}
         />
-
         <meta
           itemProp="image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
         <meta
           property="og:url"
           content="https://unlockyoursound.com/free-mix-feedback"
@@ -42,7 +39,6 @@ export default function MixFeedback() {
           property="og:image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Mix Feedback" />
         <meta
@@ -54,11 +50,7 @@ export default function MixFeedback() {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-      <div
-      // className={styles.main}
-      >
-        {/* <Container maxW="xl"> */}
-        {/* <Nav /> */}
+      <div>
         <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>
           Free Mix Feedback
         </Heading>
@@ -91,15 +83,6 @@ export default function MixFeedback() {
             <u>Learn more</u>
           </Text>
         </Link>
-        {/* <<Heading>Free resources</Heading>
-                    <iframe
-            src="https://unlockyoursound.substack.com/embed"
-            height={350}
-            width="100%"
-            style={{ border: "solid" }}
-          ></iframe>> */}
-        {/* <Footer /> */}
-        {/* </Container> */}
       </div>
     </>
   );
