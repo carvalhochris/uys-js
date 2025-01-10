@@ -24,8 +24,6 @@ export default function About({ pageContent }: AboutPageProps) {
           name="description"
           content="Hi, I’m Christopher. I run Unlock Your Sound — an online resource for artists, producers, and industry professionals"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemProp="name" content="Christopher Carvalho" />
         <meta
           itemProp="description"
@@ -39,7 +37,6 @@ export default function About({ pageContent }: AboutPageProps) {
           rel="canonical"
           href={`https://unlockyoursound.com/christopher-carvalho`}
         />
-        {/* <!-- Facebook Meta Tags --> */}
         <meta
           property="og:url"
           content="https://unlockyoursound.com/christopher-carvalho"
@@ -58,7 +55,6 @@ export default function About({ pageContent }: AboutPageProps) {
           content="https://unlockyoursound.com/wp-content/uploads/2022/05/DSC00198-edit-2048x1365.jpeg"
         />
 
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -74,11 +70,7 @@ export default function About({ pageContent }: AboutPageProps) {
         />
       </Head>
 
-      <div
-      // className={styles.main}
-      >
-        {/* <Container maxW="xl"> */}
-        {/* <Nav /> */}
+      <div>
         <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
           Christopher Carvalho — Founder of Unlock Your Sound
         </Heading>
@@ -89,9 +81,6 @@ export default function About({ pageContent }: AboutPageProps) {
         ></div>
 
         <HStack spacing={7} mt={5} mb={10}>
-          {/* The default icon size is 1em (16px) */}
-          {/* <Icon as={MdSettings} /> */}
-
           <ChakraLink href="mailto:enquires@unlockyoursound.com" isExternal>
             <EmailIcon boxSize={30} />
           </ChakraLink>
@@ -101,11 +90,6 @@ export default function About({ pageContent }: AboutPageProps) {
           <ChakraLink href="https://github.com/carvalhochris" isExternal>
             <AiFillLinkedin size={30} />
           </ChakraLink>
-          {/* Use the `boxSize` prop to change the icon size */}
-          {/* <Icon as={MdReceipt} boxSize={6} /> */}
-
-          {/* Use the `color` prop to change the icon color */}
-          {/* <Icon as={MdGroupWork} w={8} h={8} color="red.500" /> */}
         </HStack>
         <Divider />
         <iframe
@@ -114,8 +98,6 @@ export default function About({ pageContent }: AboutPageProps) {
           width="100%"
           style={{ border: "solid" }}
         ></iframe>
-        {/* <Footer /> */}
-        {/* </Container> */}
       </div>
     </>
   );

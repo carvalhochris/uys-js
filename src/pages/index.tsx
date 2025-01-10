@@ -1,16 +1,8 @@
-import { Heading, Text } from "@chakra-ui/react";
-import Link from "next/link";
-// import styles from "@/styles/Home.module.css";
-// import Nav from "@/components/Nav";
-import { Divider } from "@chakra-ui/react";
-// import Footer from "@/components/Footer";
-
-import { Button, useColorMode } from "@chakra-ui/react";
+import { Button, Divider, Heading, Text, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
-// import TopicBox from "@/components/TopicBox";
+import Link from "next/link";
 import TopicBox from "../components/TopicBox";
-// import Example from "@/components/Command";
 
 interface PostProp {
   title: string;
@@ -32,19 +24,16 @@ interface HomeProps {
 export default function Home({ posts }: HomeProps) {
   const { colorMode } = useColorMode();
   const textColor = colorMode === "dark" ? "gray.300" : "gray.800";
-  const headingColor = colorMode === "dark" ? "gray.300" : "gray.900";
 
   return (
     <>
       <Head>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Unlock Your Sound</title>
         <meta
           name="description"
           content="The artist self-development platform"
         />
 
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemProp="name" content="Unlock Your Sound" />
         <meta
           itemProp="description"
@@ -55,7 +44,6 @@ export default function Home({ posts }: HomeProps) {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
         <link rel="canonical" href={`https://unlockyoursound.com/`} />
-        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://unlockyoursound.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Unlock Your Sound" />
@@ -68,7 +56,6 @@ export default function Home({ posts }: HomeProps) {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
 
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta
@@ -79,18 +66,9 @@ export default function Home({ posts }: HomeProps) {
           name="twitter:image"
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
-
-        {/* <!-- Meta Tags Generated via http://heymeta.com --> */}
       </Head>
-      <div
-      // className={styles.main}
-      >
-        {/* <Container maxW="xl"> */}
-        {/* <Nav /> */}
+      <div>
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
-          {/* <div className="bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
-            self-development
-          </div> */}
           Unlock Your Sound is an artist self-development platform
         </Heading>
         <Divider mt={5} mb={5} />
@@ -99,13 +77,8 @@ export default function Home({ posts }: HomeProps) {
           music
         </Text>
 
-        <Link
-          href="/free"
-          // legacyBehavior style={{ position: "relative" }}
-        >
-          {/* <a className="no-js" style={{ textDecoration: "none" }}> */}
+        <Link href="/free">
           <Button
-            // type="submit"
             mt={6}
             mb={0}
             size="lg"
@@ -114,29 +87,12 @@ export default function Home({ posts }: HomeProps) {
             backgroundColor="#7756E3"
             color="white"
           >
-            {/* Unlock Resources{" "} */}
-            {/* <div className="mr-2 ml-2 bg-[linear-gradient(to_right,theme(colors.violet.900),theme(colors.violet.500),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.700),theme(colors.violet.800),theme(colors.violet.900))] inline-block text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient"> */}
             Unlock Resources
-            {/* </div> */}
           </Button>
-          {/* </a> */}
         </Link>
         <Divider mt={10} mb={10} />
-        {/* <Example /> */}
-        {/* <Link href="/" legacyBehavior style={{ position: "relative" }}>
-          <GrHomeOption
-            style={{ position: "fixed", bottom: "20px", right: "20px" }}
-            size={30}
-          />
-          </Link> */}
-        {/* </Container> */}
-        <div
-        // className={styles.main}
-        >
-          {/* <Container maxW="xl"> */}
-          {/* <Search /> */}
+        <div>
           <TopicBox />
-          {/* <Nav /> */}
           <Divider mt={10} mb={5} />
           <Heading mt={10} mb={5}>
             Featured Content
@@ -148,21 +104,17 @@ export default function Home({ posts }: HomeProps) {
             {posts.map((post) => (
               <div key={post.slug}>
                 <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
-                  {/* <Box bg="#RRGGBB" w={500} p={0} h={350} color="white"> */}
                   {post.featuredImage && (
                     <Image
                       src={post.featuredImage.node.sourceUrl}
                       alt={post.title}
                       width={1000}
                       height={1000}
-                      // mt={10}
                     />
                   )}
                   <Heading as="h3" mb={5} mt={5}>
                     {post.title}
                   </Heading>
-                  {/* <Divider mt={10} mb={5} /> */}
-                  {/* </Box> */}
                 </Link>
                 <Text fontSize="lg" color={textColor}>
                   {post.seo.metaDesc}
@@ -170,7 +122,6 @@ export default function Home({ posts }: HomeProps) {
                 <Link href={`/${post.slug}`} style={{ textDecoration: "none" }}>
                   <Text fontSize="lg">
                     <Button
-                      // type="submit"
                       mt={6}
                       mb={5}
                       size="md"
@@ -193,8 +144,6 @@ export default function Home({ posts }: HomeProps) {
             width="100%"
             style={{ border: "solid" }}
           ></iframe>
-          {/* <Footer /> */}
-          {/* </Container> */}
         </div>
       </div>
     </>
@@ -229,7 +178,6 @@ export async function getStaticProps() {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
   });
   const jay = await response.json();
@@ -241,5 +189,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-// redeploy

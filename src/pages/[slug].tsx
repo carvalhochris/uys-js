@@ -1,9 +1,7 @@
-// import axios from "axios";
 import styles from "@/styles/Home.module.css";
-import { Box, Heading, useColorMode } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
 import ShareButton from "../components/WhatsAppButton";
 
 interface ParamProps {
@@ -53,49 +51,10 @@ const GET_POST_BY_SLUG = `
   }
 `;
 
-export default function Post({
-  post,
-}: // thebody,
-// result,
-// jbody,
-// clean,
-// thestring,
-PostProps) {
-  const { colorMode } = useColorMode();
-  const textColor = colorMode === "dark" ? "gray.100" : "gray.900";
-  const headingColor = colorMode === "dark" ? "white" : "gray.900";
-  const [summary, setSummary] = useState("");
-  const [doingMagic, setDoingMagic] = useState(false);
-  const [showButton, setShowButton] = useState(true);
-  // const body = sanitizeHTML(post.content)
-
-  // const handleSummarise = async () => {
-  //   setDoingMagic(true);
-  //   if (result.length > 7000) {
-  //     alert("blog is too large to summarise");
-  //     setDoingMagic(false);
-  //     setShowButton(false);
-  //   } else {
-  //     const res = await fetch(
-  //       `https://service.songcards.io/chatai?prompt=please summarise the following into a single sentence: ${result}`,
-  //       {
-  //         method: "POST", // *GET, POST, PUT, DELETE, etc.
-  //       }
-  //     );
-  //     const string = await res.json();
-  //     console.log(string);
-  //     setSummary(string);
-  //     setDoingMagic(false);
-  //     setShowButton(false);
-  //   }
-  // };
-
-  // console.log(post.content);
-
+export default function Post({ post }: PostProps) {
   return (
     <>
       <Head>
-        {/* Facebook Meta Tags */}
         <title>{post.title}</title>
         <meta name="description" content={post.seo?.metaDesc ?? ""} />
         <meta itemProp="name" content={post.title ?? ""} />
@@ -123,10 +82,7 @@ PostProps) {
           />
         )}
         {post.title && <meta property="og:image:alt" content={post.title} />}
-
-        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-
         {post.title && <meta name="twitter:title" content={post.title} />}
         {post.seo.metaDesc && (
           <meta name="twitter:description" content={post.seo.metaDesc} />
@@ -143,12 +99,7 @@ PostProps) {
           content={`https://unlockyoursound.com/${post.slug}`}
         />
       </Head>
-
-      <div
-      // className={styles.main}
-      >
-        {/* <Container maxW="xl"> */}
-        {/* <Nav /> */}
+      <div>
         <Box>
           {post.featuredImage && (
             <Image
@@ -161,23 +112,10 @@ PostProps) {
           <Heading as="h1" size="2xl" lineHeight={1.3} mt={10} mb={10}>
             {post.title ?? ""}
           </Heading>
-          {/* {!doingMagic && showButton && (
-              <Container mb={5} ml={-2}>
-                <FaMagic onClick={() => handleSummarise()} />
-              </Container>
-            )}
-            {doingMagic && <Spinner />}
-            {summary && (
-              <Text mt={5} mb={5} color="purple">
-                {summary}
-              </Text>
-            )} */}
-          {/* <div dangerouslySetInnerHTML={body} /> */}
           <div
             className={styles.main}
             dangerouslySetInnerHTML={{ __html: `${post.content}` }}
           />
-
           <br></br>
           <ShareButton postSlug={post.slug} />
           <br />
@@ -191,13 +129,9 @@ PostProps) {
               background: "#f1f1f1",
               color: "white",
             }}
-            // frameBorder="0"
-            // scrolling="no"
           ></iframe>
           <br></br>
         </Box>
-        {/* <Footer /> */}
-        {/* </Container> */}
       </div>
     </>
   );
@@ -214,46 +148,16 @@ export async function getStaticProps({ params }: ParamProps) {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-    // body: JSON.stringify({ query: `${GET_POST_BY_SLUG}`, variables: { slug } }),
-    // variables: { slug },
   });
-
-  // async function delayRender() {
-  //   await setTimeout(1000);
-  //   console.log("The page will be rendered in 1 seconds");
-  // }
-
-  // await delayRender();
-
-  // console.log(response)
 
   const jay = await response.json();
 
   const post = await jay.data.postBy;
 
-  // const thebody = await post.content;
-
-  // const stripped = stripHtml(thebody);
-
-  // const result = stripped.result;
-
-  // console.log(stripped.result);
-
-  // assert.equal(
-  //   stripHtml("Some text <b>and</b> text.").result,
-  //   "Some text and text."
-  // );
-
   return {
     props: {
       post,
-      // thebody,
-      // result,
-      // clean,
-      // thestring,
-      // jbody,
     },
     revalidate: 604800,
   };
@@ -273,20 +177,8 @@ export async function getStaticPaths() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
   });
-
-  // setTimeout(() => {
-  //   console.log("Paths delayed for 200 seconds.");
-  // }, "200000");
-
-  // async function delayPath() {
-  //   await setTimeout(1000);
-  //   console.log("The path will be rendered in 1 second");
-  // }
-
-  // await delayPath();
 
   const jay = await response.json();
 
@@ -296,10 +188,5 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  // console.log(paths);
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: 'blocking' } will server-render pages
-  // on-demand if the path doesn't exist.
   return { paths, fallback: "blocking" };
 }

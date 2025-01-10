@@ -1,17 +1,15 @@
-import { ChangeEvent, useEffect, useState } from "react";
-import axios from "axios";
 import {
-  Spinner,
   Button,
-  Input,
   FormControl,
   FormLabel,
+  Input,
+  Spinner,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import { ChangeEvent, useEffect, useState } from "react";
 
 function SubmitMix() {
-  //   const [inputs, setInputs] = useState({});
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [linkValue, setLinkValue] = useState("");
@@ -30,7 +28,6 @@ function SubmitMix() {
     handleError();
     const eventname = event.target.value;
     setNameValue(eventname);
-    // setNameValue = event.target.name;
     console.log(nameValue);
   };
 
@@ -38,7 +35,6 @@ function SubmitMix() {
     handleError();
     const eventemail = event.target.value;
     setEmailValue(eventemail);
-    // setNameValue = event.target.name;
     console.log(emailValue);
   };
 
@@ -75,8 +71,6 @@ function SubmitMix() {
 
   const handleSubmit = () => {
     setIsPosting(true);
-    // event.preventDefault();
-    // console.log(isPosting);
     const formData = new FormData();
     formData.append("name", nameValue);
     formData.append("email", emailValue);
@@ -87,7 +81,6 @@ function SubmitMix() {
     console.log(formData);
 
     setTimeout(() => {
-      // console.log("Delayed for 1 second.");
       setIsPosting(true);
       axios
         .post("https://service.songcards.io/submit-mix", formData)
@@ -98,86 +91,59 @@ function SubmitMix() {
         })
         .catch(function (error) {
           console.log(error);
-          // setIsUploading(false);
           setShowSuccess(false);
           alert("There was an error, please check all required fields");
           setIsPosting(false);
         });
     });
-
-    // alert('sent!')
-    // alert(inputs);
   };
-
-  // const isError =
 
   return (
     <>
       <br />
       <br />
-      <form
-      // onSubmit={handleSubmit}
-      >
+      <form>
         <label>
           <FormControl isRequired>
             <FormLabel>Enter your name:</FormLabel>
             <Input
               type="text"
-              // value={nameValue}
-              // name="name"
-              // value={inputs.username || ""}
               onChange={handleName}
             />
           </FormControl>
         </label>
         <br />
-        {/* <label> */}
         <FormControl isRequired>
           <FormLabel>Enter your email:</FormLabel>
           <Input
             type="text"
-            // isRequired
-            // name="email"
-            // value={inputs.age || ""}
             onChange={handleEmail}
           />
         </FormControl>
-
         <br />
-
         <FormControl isRequired>
           <FormLabel>Tell us a bit about you and the project</FormLabel>
           <Input
             type="text"
-            // name="age"
-            // value={inputs.age || ""}
             onChange={handleDesc}
           />
         </FormControl>
-
         <br />
-
         <FormControl isRequired>
           <FormLabel>Please provide a link to your track here</FormLabel>
           <Input
             type="text"
-            // name="age"
-            // value={inputs.age || ""}
             onChange={handleLink}
           />
         </FormControl>
         <br />
-
         <FormControl isRequired>
           <FormLabel>How did you discover Unlock Your Sound?</FormLabel>
           <Input
             type="text"
-            // name="age"
-            // value={inputs.age || ""}
             onChange={handleDiscover}
           />
         </FormControl>
-
         <br />
       </form>
       {isPosting && <Spinner />}
@@ -191,11 +157,8 @@ function SubmitMix() {
           </Text>
         </>
       )}
-      {/* {isError && ( */}
       <Button
         onClick={handleSubmit}
-        // mt={10}
-        // mt={6}
         mb={5}
         size="lg"
         borderColor="grey"
@@ -205,12 +168,8 @@ function SubmitMix() {
       >
         Submit Mix
       </Button>
-      {/* )} */}
     </>
   );
 }
 
 export default SubmitMix;
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<MyForm />);

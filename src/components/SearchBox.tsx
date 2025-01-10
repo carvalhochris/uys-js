@@ -12,7 +12,6 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import Image from "next/image";
 
 interface SearchProps {
   id: number;
@@ -33,13 +32,6 @@ export default function SearchPage() {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const { colorMode } = useColorMode();
-  // const [options, setOptions] = useState([
-  //   { value: "royalties", label: "Royalties" },
-  //   { value: "publishing", label: "Publishing" },
-  //   { value: "distribution", label: "Distribution" },
-  //   { value: "marketing", label: "Marketing" },
-  //   { value: "production", label: "Production" },
-  // ]);
 
   const handleSearch = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -81,17 +73,11 @@ export default function SearchPage() {
 
   return (
     <div>
-      {/* <Container maxW="xl" maxH={20}> */}
-      {/* <Nav /> */}
-      {/* <h1>Search Page</h1> */}
       <form onSubmit={handleSearch}>
-        {/* <label>
-            Input */}
         <Heading size="2xl" as="h1" mt={10} mb={5}>
           Search
         </Heading>
         <Text mb={5}>Find what you are looking for</Text>
-        {/* <br></br> */}
         {colorMode === "light" ? (
           <Input
             type="text"
@@ -100,7 +86,6 @@ export default function SearchPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
             _placeholder={{ color: "grey" }}
             placeholder="Search..."
-            // size={100}
             size="lg"
             borderColor="#white"
           />
@@ -112,43 +97,22 @@ export default function SearchPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
             _placeholder={{ color: "grey" }}
             placeholder="Search..."
-            // size={100}
             size="lg"
             borderColor="#white"
           />
         )}
-        {/* <Select
-          placeholder="Select a keyword or enter your own..."
-          size="lg"
-          mt={3}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        >
-          <option value="royalties">royalties</option>
-         
-          <option value="publishing">publishing</option>
-          <option value="distribution">distribution</option>
-          <option value="marketing">marketing</option>
-         
-        </Select> */}
-
-        {/* </label> */}
-        {/* <br></br> */}
-        {/* <br></br> */}
         <Button
           type="submit"
           mt={10}
           size="lg"
           borderColor="grey"
           variant="outline"
-          // backgroundColor="#7756E3"
           color="#white"
         >
           Search
         </Button>
         <br></br>
         <br></br>
-
-        {/* <Divider /> */}
       </form>
       {loading ? (
         <Center>
@@ -179,7 +143,6 @@ export default function SearchPage() {
             <Text fontSize="lg">{result.seo.metaDesc}</Text>
             <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
               <Button
-                // type="submit"
                 mt={6}
                 mb={5}
                 size="md"
@@ -192,21 +155,11 @@ export default function SearchPage() {
               </Button>
             </Link>
             <Divider mt={10} mb={5} />
-            {/* <Divider /> */}
           </div>
         ))
       ) : (
         <p>{/* ... */}</p>
       )}
-      {/* </Container> */}
-
-      {/* <Text fontSize="md">
-        The source code for the frontend of this website is available{" "}
-        <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
-          on GitHub.
-          <ExternalLinkIcon mx="2px" />
-        </ChakraLink>
-      </Text> */}
     </div>
   );
 }

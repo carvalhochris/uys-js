@@ -36,7 +36,6 @@ export default function PrivacyPage() {
       </Head>
       <div className={styles.main}>
         <Container maxW="xl">
-          {/* <Nav /> */}
           <Heading as="h1">Privacy</Heading>
           <Text>
             This policy explains how we collect, use, and share your personal
@@ -67,7 +66,6 @@ export default function PrivacyPage() {
             <br></br>If you have any questions or concerns about this privacy
             policy, please contact us at enquries@unlockyoursound.com
           </Text>
-          {/* <Footer /> */}
         </Container>
       </div>
     </>

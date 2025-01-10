@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { ChakraProvider, Container } from "@chakra-ui/react";
-// import theme from '@/theme'
 import Command from "@/components/Command";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";

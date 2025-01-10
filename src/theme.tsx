@@ -1,5 +1,3 @@
-// theme.js
-
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
@@ -9,14 +7,14 @@ const theme = extendTheme({
   },
   colors: {
     dark: {
-      900: "#010101", // set the background color for dark mode
+      900: "#010101",
     },
   },
   styles: {
-    global: (props: { colorMode: string; }) => ({
+    global: (props: { colorMode: string }) => ({
       body: {
-        bg: props.colorMode === "dark" ? "dark.900" : "white", // use the custom background color for dark mode
-        color: props.colorMode === "dark" ? "white" : "black", // use the custom text color for dark mode
+        bg: props.colorMode === "dark" ? "dark.900" : "white",
+        color: props.colorMode === "dark" ? "white" : "black",
       },
     }),
   },

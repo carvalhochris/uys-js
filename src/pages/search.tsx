@@ -1,11 +1,8 @@
 import Search from "@/components/SearchBox";
 import Head from "next/head";
-
-import { Box, useColorMode } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function SearchPage() {
-  const { colorMode } = useColorMode();
-
   return (
     <>
       <Head>
