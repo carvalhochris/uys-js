@@ -25,11 +25,6 @@ This plugin helped me include Yoast REST objects in GraphQL query: https://githu
 
 The Wordpress GraphQP Plugin for serving my content to the frontend
 
-## Roadmap
-
-- AI Content Summariser
-- Open source content
-
 ## Issues
 
 Please submit via the issue tracker
@@ -63,6 +58,10 @@ query GetPosts {
 }
 
 ```
+
+## Build and Deploy
+
+```vercel build && vercel deploy --prebuilt```
 
 ## GraphQL Query to get single post by slug
 
