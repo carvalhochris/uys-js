@@ -24,7 +24,6 @@ const Command = () => {
   const handleSearch = async () => {
     console.log("searching..." + searchTerm);
     setLoading(true);
-    // event.preventDefault();
     try {
       setLoading(true);
       const response = await axios.post("https://unlockyoursound.io/graphql", {
@@ -52,8 +51,6 @@ const Command = () => {
       setSearchResults(response.data.data.posts.nodes);
       const length = searchResults.length;
       setTheLength(length);
-      console.log("the length is  " + length);
-      console.log(searchResults);
     } catch (error) {
       console.error(error);
     } finally {
@@ -61,10 +58,7 @@ const Command = () => {
     }
   };
 
-  // console.log(searchTerm);
-
   useEffect(() => {
-    // handleSearch();
     function handleKeyDown(e: KeyboardEvent) {
       if (e.metaKey && e.key === "k") {
         e.preventDefault();
@@ -115,32 +109,6 @@ const Command = () => {
           },
         ],
       },
-      // {
-      //   heading: "Other",
-      //   id: "advanced",
-      //   items: [
-      //     {
-      //       id: "developer-settings",
-      //       children: "Developer settings",
-      //       icon: "CodeBracketIcon",
-      //       href: "#",
-      //     },
-      //     {
-      //       id: "privacy-policy",
-      //       children: "Privacy policy",
-      //       icon: "LifebuoyIcon",
-      //       href: "#",
-      //     },
-      //     {
-      //       id: "log-out",
-      //       children: "Log out",
-      //       icon: "ArrowRightOnRectangleIcon",
-      //       onClick: () => {
-      //         alert("Logging out...");
-      //       },
-      //     },
-      //   ],
-      // },
     ],
     searchTerm
   );
@@ -168,7 +136,6 @@ const Command = () => {
           ))
         ) : (
           <>
-            {/* <p>hello</p> */}
             <CommandPalette.FreeSearchAction onClick={handleSearch} />
             {loading && <Spinner color="white" />}
             <CommandPalette.List>
@@ -178,7 +145,6 @@ const Command = () => {
                     <CommandPalette.ListItem
                       key={data.id}
                       index={index + 1}
-                      // {...rest}
                       onClick={() => handleClick(data.slug)}
                     >
                       <Link href={`/${data.slug}`}>
@@ -191,7 +157,6 @@ const Command = () => {
                 )
               )}
             </CommandPalette.List>
-            {/* <>Hello page</> */}
           </>
         )}
       </CommandPalette.Page>
@@ -199,10 +164,6 @@ const Command = () => {
         <>new page child</>
         <>Hello page</>
       </CommandPalette.Page>
-
-      {/* <CommandPalette.Page id="projects"> */}
-      {/* Projects page */}
-      {/* </CommandPalette.Page> */}
     </CommandPalette>
   );
 };
