@@ -2,7 +2,12 @@ import { Box, Divider, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { AiFillHeart, AiFillInfoCircle, AiOutlineSearch } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillHeart,
+  AiFillInfoCircle,
+  AiOutlineSearch,
+} from "react-icons/ai";
 import MyMenu from "./MyMenu";
 
 export default function Nav() {
@@ -74,6 +79,9 @@ export default function Nav() {
             />
           </Box>
         </Link>
+        <a target="_blank" href="https://github.com/carvalhochris/uys-js">
+          <AiFillGithub size={20} />
+        </a>
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
