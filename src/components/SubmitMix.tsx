@@ -28,43 +28,36 @@ function SubmitMix() {
     handleError();
     const eventname = event.target.value;
     setNameValue(eventname);
-    console.log(nameValue);
   };
 
   const handleEmail = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventemail = event.target.value;
     setEmailValue(eventemail);
-    console.log(emailValue);
   };
 
   const handleLink = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventlink = event.target.value;
     setLinkValue(eventlink);
-    console.log(linkValue);
   };
 
   const handleDesc = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventdesc = event.target.value;
     setDescValue(eventdesc);
-    console.log(descValue);
   };
 
   const handleDiscover = (event: ChangeEvent<HTMLInputElement>) => {
     handleError();
     const eventdisc = event.target.value;
     setDiscoverValue(eventdisc);
-    console.log(discValue);
   };
 
   const handleError = () => {
     if (nameValue && emailValue && linkValue && descValue && discValue) {
-      console.log("good");
       setIsError(true);
     } else {
-      console.log("bad");
       setIsError(false);
     }
   };
@@ -77,15 +70,12 @@ function SubmitMix() {
     formData.append("link", linkValue);
     formData.append("desc", descValue);
     formData.append("disc", discValue);
-    console.log("formData is...");
-    console.log(formData);
 
     setTimeout(() => {
       setIsPosting(true);
       axios
         .post("https://service.songcards.io/submit-mix", formData)
         .then(function (response) {
-          console.log(response);
           setShowSuccess(true);
           setIsPosting(false);
         })
