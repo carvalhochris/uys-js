@@ -8,7 +8,6 @@ import MyMenu from "./MyMenu";
 
 export default function Footer() {
   const { colorMode, toggleColorMode } = useColorMode();
-  //   const textSize = 17;
 
   const router = useRouter();
   const activeColor = "#7756E3";
@@ -19,7 +18,6 @@ export default function Footer() {
 
   return (
     <>
-      {/* <Container maxW="xl"> */}
       <footer
         style={{
           display: "flex",
@@ -28,11 +26,7 @@ export default function Footer() {
           marginTop: "30px",
         }}
       >
-        <Link
-          href="/"
-          // legacyBehavior style={{ position: "relative" }}
-        >
-          {/* <a className="no-js"> */}
+        <Link href="/">
           <Box
             boxSize="80px"
             mr={5}
@@ -46,7 +40,6 @@ export default function Footer() {
                 alt="Unlock Your Sound light logo"
                 width={70}
                 height={70}
-                // maxWidth={70}
               />
             ) : (
               <Image
@@ -54,73 +47,34 @@ export default function Footer() {
                 alt="Unlock Your Sound dark logo"
                 width={70}
                 height={70}
-                // maxWidth={70}
               />
             )}
           </Box>
-          {/* </a> */}
         </Link>
-        <Link
-          href="/free"
-          // legacyBehavior style={{ position: "relative" }}
-        >
-          {/* <a className="no-js"> */}
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
+        <Link href="/free">
+          <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
             <AiFillHeart
               color={isCurrentPage("/free") ? activeColor : ""}
               size={20}
             />
           </Box>
-          {/* </a> */}
         </Link>
 
-        <Link
-          href="/christopher-carvalho"
-          // legacyBehavior
-          // style={{ position: "relative" }}
-        >
-          {/* <a className="no-js"> */}
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
+        <Link href="/christopher-carvalho">
+          <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
             <AiFillInfoCircle
               color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
               size={20}
             />
           </Box>
-          {/* </a> */}
         </Link>
-        <Link
-          href="/search"
-          // legacyBehavior style={{ position: "relative" }}
-        >
-          {/* <a className="no-js"> */}
-          <Box
-            // boxSize="80px"
-            // mr={10}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-            ml={0}
-          >
+        <Link href="/search">
+          <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
             <AiOutlineSearch
               color={isCurrentPage("/search") ? activeColor : ""}
               size={20}
             />
           </Box>
-          {/* </a> */}
         </Link>
         <MyMenu />
       </footer>
@@ -140,16 +94,8 @@ export default function Footer() {
       </Text>
       <Text fontSize="md" mb={10}>
         © 2023 Unlock Your Sound Ltd |{" "}
-        <Link
-          href="/privacy"
-          // legacyBehavior style={{ position: "relative" }}
-        >
-          {/* <a className="no-js"> */}
-          Privacy Policy
-          {/* </a> */}
-        </Link>
+        <Link href="/privacy">Privacy Policy</Link>
       </Text>
-      {/* </Container> */}
     </>
   );
 }
