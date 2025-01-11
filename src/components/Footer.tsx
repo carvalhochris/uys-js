@@ -1,9 +1,10 @@
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Box, Divider, Text, useColorMode } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiFillHeart, AiFillInfoCircle, AiOutlineSearch } from "react-icons/ai";
 import MyMenu from "./MyMenu";
-import Image from "next/image";
 
 export default function Footer() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -124,13 +125,13 @@ export default function Footer() {
         <MyMenu />
       </footer>
       <Divider mt={5} mb={5} />
-      {/* <Text fontSize="md" mb={5}>
-          The source code of this website is available{" "}
-          <ChakraLink isExternal href="https://github.com/carvalhochris/uys-js">
-            on GitHub.
-            <ExternalLinkIcon mx="2px" />
-          </ChakraLink>
-        </Text> */}
+      <Text fontSize="md" mb={5}>
+        The source code of this website is available{" "}
+        <a href="https://github.com/carvalhochris/uys-js" target="_blank">
+          on GitHub.
+          <ExternalLinkIcon mx="2px" />
+        </a>
+      </Text>
       <Text mb={5}>
         This website was brought to you by{" "}
         <Link href={"https://beta.songcards.io"} target="#">
