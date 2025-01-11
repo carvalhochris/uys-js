@@ -79,9 +79,9 @@ export default function Nav() {
             />
           </Box>
         </Link>
-        <a target="_blank" href="https://github.com/carvalhochris/uys-js">
+        {/* <a target="_blank" href="https://github.com/carvalhochris/uys-js">
           <AiFillGithub size={20} />
-        </a>
+        </a> */}
         <MyMenu />
       </nav>
       <Divider mt={5} mb={5} />
