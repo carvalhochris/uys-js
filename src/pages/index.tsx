@@ -171,21 +171,25 @@ const GET_FEATURED_POSTS = `
 `;
 
 export async function getStaticProps() {
-  const response = await fetch("https://unlockyoursound.io/graphql", {
-    body: JSON.stringify({
-      query: GET_FEATURED_POSTS,
-    }),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-  });
-  const jay = await response.json();
-  const posts = await jay.data.posts.nodes;
+  const wpURL = process.env.WORDPRESS_ENDPOINT;
 
-  return {
-    props: {
-      posts,
-    },
-  };
+  if (wpURL) {
+    const response = await fetch(wpURL, {
+      body: JSON.stringify({
+        query: GET_FEATURED_POSTS,
+      }),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    });
+    const jay = await response.json();
+    const posts = await jay.data.posts.nodes;
+
+    return {
+      props: {
+        posts,
+      },
+    };
+  }
 }

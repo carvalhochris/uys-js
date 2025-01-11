@@ -140,53 +140,61 @@ export default function Post({ post }: PostProps) {
 export async function getStaticProps({ params }: ParamProps) {
   const { slug } = params;
 
-  const response = await fetch("https://unlockyoursound.io/graphql", {
-    body: JSON.stringify({
-      query: GET_POST_BY_SLUG,
-      variables: { slug },
-    }),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-  });
+  const wpURL = process.env.WORDPRESS_ENDPOINT;
 
-  const jay = await response.json();
+  if (wpURL) {
+    const response = await fetch(wpURL, {
+      body: JSON.stringify({
+        query: GET_POST_BY_SLUG,
+        variables: { slug },
+      }),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    });
 
-  const post = await jay.data.postBy;
+    const jay = await response.json();
 
-  return {
-    props: {
-      post,
-    },
-    revalidate: 604800,
-  };
+    const post = await jay.data.postBy;
+
+    return {
+      props: {
+        post,
+      },
+      revalidate: 604800,
+    };
+  }
 }
 
 export async function getStaticPaths() {
-  const response = await fetch("https://unlockyoursound.io/graphql", {
-    body: JSON.stringify({
-      query: `query GetAllPosts {
+  const wpURL = process.env.WORDPRESS_ENDPOINT;
+
+  if (wpURL) {
+    const response = await fetch(wpURL, {
+      body: JSON.stringify({
+        query: `query GetAllPosts {
         posts(first: 1000) {
           nodes {
             slug
           }
         }
       }`,
-    }),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+      }),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  const jay = await response.json();
+    const jay = await response.json();
 
-  const posts = await jay.data.posts.nodes;
+    const posts = await jay.data.posts.nodes;
 
-  const paths = await posts.map((post: PostProps) => ({
-    params: { slug: post.slug },
-  }));
+    const paths = await posts.map((post: PostProps) => ({
+      params: { slug: post.slug },
+    }));
 
-  return { paths, fallback: "blocking" };
+    return { paths, fallback: "blocking" };
+  }
 }
