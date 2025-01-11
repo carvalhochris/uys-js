@@ -1,19 +1,22 @@
-# Next.js frontend for Unlock Your Sound, leveraging GraphQL, Headless Wordpress, and Static Generation
+# Unlock Your Sound — The Repo
 
 [View site](https://unlockyoursound.com/)
 
-## Features
+Here you will find the frontend code as well as a /posts/ directory containing the content that's posted to the site.
 
-- Command Pallete
-- Search
-- Music submission form
+I am in the process of open-sourcing everything, so contributions to code and writing are very welcome!
 
-## Stack
+## Current Stack
 
 - Next js 14 (pages router)
 - Wordpress (headless)
 - GraphQL
 - Vercel
+
+## TODO
+
+- Have Next.js consume the posts from the /posts dir instead of Wordpress
+- Write up a contributors guide
 
 ## Resources used in this project
 
