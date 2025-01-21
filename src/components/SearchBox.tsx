@@ -155,7 +155,7 @@ export default function SearchPage() {
           <Divider mt={10} mb={5} />
         </div>
       ))}
-      {searchResults.length <= 1 && hasSearched && <p>No results</p>}
+      {searchResults.length < 1 && hasSearched && <p>No results</p>}
     </div>
   );
 }
