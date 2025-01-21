@@ -32,6 +32,7 @@ export default function SearchPage() {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const { colorMode } = useColorMode();
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearch = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -60,6 +61,7 @@ export default function SearchPage() {
         variables: { search: searchTerm },
       });
       setSearchResults(response.data.data.posts.nodes);
+      setHasSearched(true);
     } catch (error) {
       console.error(error);
     } finally {
@@ -114,52 +116,46 @@ export default function SearchPage() {
         <br></br>
         <br></br>
       </form>
-      {loading ? (
+      {loading && (
         <Center>
           <Spinner size="xl" mt={10} color="#7756E3" />
         </Center>
-      ) : searchResults.length > 0 ? (
-        searchResults.map((result: SearchProps) => (
-          <div key={result.id}>
-            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              {result.featuredImage &&
-              result.featuredImage.node &&
-              result.featuredImage.node.sourceUrl ? (
-                <Image
-                  src={result.featuredImage.node.sourceUrl}
-                  alt={result.title}
-                  width={1000}
-                  height={1000}
-                />
-              ) : (
-                <p>No image available</p>
-              )}
-            </Link>
-            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Heading as="h3" style={{ cursor: "pointer" }}>
-                {result.title}
-              </Heading>
-            </Link>
-            <Text fontSize="lg">{result.seo.metaDesc}</Text>
-            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-              <Button
-                mt={6}
-                mb={5}
-                size="md"
-                borderColor="grey"
-                variant="outline"
-                backgroundColor="#000000"
-                color="white"
-              >
-                Read on
-              </Button>
-            </Link>
-            <Divider mt={10} mb={5} />
-          </div>
-        ))
-      ) : (
-        <p>No results</p>
       )}
+      {searchResults.map((result: SearchProps) => (
+        <div key={result.id}>
+          <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+            <Image
+              src={result.featuredImage.node.sourceUrl ?? ""}
+              alt={result.title ?? ""}
+              width={1000}
+              height={1000}
+            />
+          </Link>
+          <br></br>
+          <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+            <Heading as="h3" style={{ cursor: "pointer" }}>
+              {result.title ?? ""}
+            </Heading>
+          </Link>
+          <br></br>
+          <Text fontSize="lg">{result.seo.metaDesc ?? ""}</Text>
+          <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+            <Button
+              mt={6}
+              mb={5}
+              size="md"
+              borderColor="grey"
+              variant="outline"
+              backgroundColor="#000000"
+              color="white"
+            >
+              Read on
+            </Button>
+          </Link>
+          <Divider mt={10} mb={5} />
+        </div>
+      ))}
+      {searchResults.length <= 1 && hasSearched && <p>No results</p>}
     </div>
   );
 }
