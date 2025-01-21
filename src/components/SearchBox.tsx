@@ -158,7 +158,7 @@ export default function SearchPage() {
           </div>
         ))
       ) : (
-        <p>{/* ... */}</p>
+        <p>No results</p>
       )}
     </div>
   );
