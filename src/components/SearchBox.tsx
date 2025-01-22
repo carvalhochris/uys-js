@@ -123,14 +123,16 @@ export default function SearchPage() {
       )}
       {searchResults.map((result: SearchProps) => (
         <div key={result.id}>
-          <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
-            <Image
-              src={result.featuredImage.node.sourceUrl ?? ""}
-              alt={result.title ?? ""}
-              width={1000}
-              height={1000}
-            />
-          </Link>
+          {result.featuredImage && (
+            <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
+              <Image
+                src={result.featuredImage.node.sourceUrl ?? ""}
+                alt={result.title ?? ""}
+                width={1000}
+                height={1000}
+              />
+            </Link>
+          )}
           <br></br>
           <Link href={`/${result.slug}`} style={{ textDecoration: "none" }}>
             <Heading as="h3" style={{ cursor: "pointer" }}>
