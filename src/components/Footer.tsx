@@ -1,4 +1,3 @@
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Box, Divider, Text, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,21 +78,8 @@ export default function Footer() {
         <MyMenu />
       </footer>
       <Divider mt={5} mb={5} />
-      <Text fontSize="md" mb={5}>
-        The source code of this website is available{" "}
-        <a href="https://github.com/carvalhochris/uys-js" target="_blank">
-          on GitHub.
-          <ExternalLinkIcon mx="2px" />
-        </a>
-      </Text>
-      <Text mb={5}>
-        This website was brought to you by{" "}
-        <Link href={"https://beta.songcards.io"} target="#">
-          <u>Songcards</u>
-        </Link>
-      </Text>
       <Text fontSize="md" mb={10}>
-        © 2023 Unlock Your Sound Ltd |{" "}
+        © 2025 Unlock Your Sound Ltd |{" "}
         <Link href="/privacy">Privacy Policy</Link>
       </Text>
     </>

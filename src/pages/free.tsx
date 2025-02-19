@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import {
   Button,
   Divider,
@@ -53,6 +55,8 @@ export default function FreeResources() {
         />
       </Head>
       <div>
+                <Nav />
+        
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
           Free resources to help you create and release your music
         </Heading>
@@ -100,6 +104,7 @@ export default function FreeResources() {
           </Button>
         </Link>
         <Divider mt={5} mb={5} />
+        <Footer />
       </div>
     </>
   );

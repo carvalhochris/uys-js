@@ -10,12 +10,11 @@ import theme from "../theme";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      {/* <HelloBar /> */}
-      <Container maxW="xl">
-        <Nav />
+      <Container maxW="2xl">
+        {/* <Nav /> */}
         <Component {...pageProps} />
         <Command />
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </ChakraProvider>
   );

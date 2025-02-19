@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import styles from "@/styles/Home.module.css";
 import { Box, Heading } from "@chakra-ui/react";
 import Head from "next/head";
@@ -100,6 +102,8 @@ export default function Post({ post }: PostProps) {
         />
       </Head>
       <div>
+        <Nav />
+
         <Box>
           {post.featuredImage && (
             <Image
@@ -132,6 +136,7 @@ export default function Post({ post }: PostProps) {
           ></iframe>
           <br></br>
         </Box>
+        <Footer />
       </div>
     </>
   );

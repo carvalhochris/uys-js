@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import SubmitMix from "@/components/SubmitMix";
 import { Divider, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
@@ -51,6 +53,7 @@ export default function MixFeedback() {
         />
       </Head>
       <div>
+        <Nav />
         <Heading as="h1" size="3xl" lineHeight={1.4} mt={10} mb={5}>
           Free Mix Feedback
         </Heading>
@@ -83,6 +86,7 @@ export default function MixFeedback() {
             <u>Learn more</u>
           </Text>
         </Link>
+        <Footer />
       </div>
     </>
   );

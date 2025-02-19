@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import Search from "@/components/SearchBox";
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
@@ -36,9 +38,11 @@ export default function SearchPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div>
+        <Nav />
         <Box mb={300}>
           <Search />
         </Box>
+        <Footer />
       </div>
     </>
   );

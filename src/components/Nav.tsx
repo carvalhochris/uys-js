@@ -1,14 +1,7 @@
-import { Box, Divider, useColorMode } from "@chakra-ui/react";
+import { Box, Divider, Spacer, Text, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {
-  AiFillGithub,
-  AiFillHeart,
-  AiFillInfoCircle,
-  AiOutlineSearch,
-} from "react-icons/ai";
-import MyMenu from "./MyMenu";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -19,7 +12,7 @@ export default function Nav() {
     return router.pathname === pathname;
   };
 
-  const navColor = colorMode == "dark" ? "black" : "white"
+  const navColor = colorMode == "dark" ? "black" : "white";
 
   return (
     <>
@@ -34,11 +27,11 @@ export default function Nav() {
           paddingTop: 6,
           zIndex: 99,
           backgroundColor: navColor,
-          minHeight: 100
+          minHeight: 100,
         }}
       >
         <Link href="/">
-          <Box mr={5} display="flex" alignItems="center" cursor="pointer">
+          <Box mr={0} display="flex" alignItems="center" cursor="pointer">
             {colorMode === "light" ? (
               <Image
                 src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
@@ -56,35 +49,12 @@ export default function Nav() {
             )}
           </Box>
         </Link>
+        <Spacer width={50} />
         <Link href="/free">
           <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
-            <AiFillHeart
-              color={isCurrentPage("/free") ? activeColor : ""}
-              size={20}
-            />
+            <Text style={{ fontWeight: 450 }}>FREE RESOURCES</Text>
           </Box>
         </Link>
-
-        <Link href="/christopher-carvalho">
-          <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
-            <AiFillInfoCircle
-              color={isCurrentPage("/christopher-carvalho") ? activeColor : ""}
-              size={20}
-            />
-          </Box>
-        </Link>
-        <Link href="/search">
-          <Box display="flex" alignItems="center" cursor="pointer" ml={0}>
-            <AiOutlineSearch
-              size={20}
-              color={isCurrentPage("/search") ? activeColor : ""}
-            />
-          </Box>
-        </Link>
-        {/* <a target="_blank" href="https://github.com/carvalhochris/uys-js">
-          <AiFillGithub size={20} />
-        </a> */}
-        <MyMenu />
       </nav>
       <Divider mt={0} mb={10} />
     </>
