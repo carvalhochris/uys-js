@@ -1,6 +1,8 @@
-import { Button, Center, Divider, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Center, Divider, Flex, Heading } from "@chakra-ui/react";
+import Link from "next/link";
+import { ImQuotesLeft } from "react-icons/im";
 
-export default function OnBoardingOne() {
+export default function OnBoardingTwo() {
   return (
     <>
       <Flex
@@ -10,12 +12,15 @@ export default function OnBoardingOne() {
         height="100vh" // Ensure full viewport height
         p={4} // Optional padding
       >
+        <ImQuotesLeft size={60} />
+
         <Heading
-          size="md"
+          size="sm"
           as="h1"
           lineHeight={1.4}
           textAlign="center"
           letterSpacing={2}
+          mt={10}
         >
           After I talked with Chris he immediately knew what to do and we set up
           a goal, suddenly I managed to produce 5 songs in just 8 weeks! So I

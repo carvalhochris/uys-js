@@ -1,6 +1,8 @@
-import { Button, Center, Divider, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Center, Divider, Flex, Heading } from "@chakra-ui/react";
+import Link from "next/link";
+import { ImQuotesLeft } from "react-icons/im";
 
-export default function OnBoardingOne() {
+export default function OnBoardingThree() {
   return (
     <>
       <Flex
@@ -10,12 +12,15 @@ export default function OnBoardingOne() {
         height="100vh" // Ensure full viewport height
         p={4} // Optional padding
       >
+                <ImQuotesLeft size={60} />
+        
         <Heading
           size="md"
           as="h1"
           lineHeight={1.4}
           textAlign="center"
           letterSpacing={2}
+          mt={10}
         >
           I have worked now with Chris since 6 years. He is my Mentor, my coach,
           my Source of key knowledge, my music Google, my mumber one motivator

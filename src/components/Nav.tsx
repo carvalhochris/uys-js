@@ -27,7 +27,7 @@ export default function Nav() {
           paddingTop: 6,
           zIndex: 99,
           backgroundColor: navColor,
-          minHeight: 100,
+          minHeight: 100
         }}
       >
         <Link href="/">

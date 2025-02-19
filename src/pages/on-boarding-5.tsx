@@ -1,6 +1,6 @@
 import { Button, Center, Divider, Flex, Heading, Link } from "@chakra-ui/react";
 
-export default function OnBoardingOne() {
+export default function OnBoardingFive() {
   return (
     <>
       <Flex

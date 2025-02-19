@@ -3,7 +3,6 @@ import {
   Button,
   Center,
   Divider,
-  Flex,
   Heading,
   useColorMode,
 } from "@chakra-ui/react";
@@ -69,35 +68,34 @@ export default function Home({ posts }: HomeProps) {
         />
       </Head>
       <Nav />
-      <Flex
-        justify="center"
-        align="center"
-      >
+      <Center mt={0}>
         <Heading
           size="3xl"
           as="h1"
           lineHeight={1.4}
           textAlign="center"
           letterSpacing={3}
+          width="100%"
         >
           UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
         </Heading>
-      </Flex>
+      </Center>
+
       <Divider mt={10} />
-        <Center mt={10}>
-          <Link href="/on-boarding-1">
-            <Button
-              mt={4}
-              mb={40}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-              color="white"
-            >
-              Learn more
-            </Button>
-          </Link>
-        </Center>
+      <Center mt={10}>
+        <Link href="/on-boarding-1">
+          <Button
+            mt={4}
+            mb={40}
+            size="lg"
+            borderColor="grey"
+            variant="outline"
+            color="white"
+          >
+            Learn more
+          </Button>
+        </Link>
+      </Center>
     </>
   );
 }
