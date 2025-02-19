@@ -31,13 +31,13 @@ export default function Home({ posts }: HomeProps) {
         <title>Unlock Your Sound</title>
         <meta
           name="description"
-          content="The artist self-development platform"
+          content="The Artist Services Platform"
         />
 
         <meta itemProp="name" content="Unlock Your Sound" />
         <meta
           itemProp="description"
-          content="The artist self-development platform"
+          content="The Artist Services Platform"
         />
         <meta
           itemProp="image"
@@ -49,7 +49,7 @@ export default function Home({ posts }: HomeProps) {
         <meta property="og:title" content="Unlock Your Sound" />
         <meta
           property="og:description"
-          content="The artist self-development platform"
+          content="The Artist Services Platform"
         />
         <meta
           property="og:image"
@@ -60,7 +60,7 @@ export default function Home({ posts }: HomeProps) {
         <meta name="twitter:title" content="Unlock Your Sound" />
         <meta
           name="twitter:description"
-          content="The artist self-development platform"
+          content="The Artist Services Platform"
         />
         <meta
           name="twitter:image"
@@ -69,7 +69,7 @@ export default function Home({ posts }: HomeProps) {
       </Head>
       <div>
         <Heading size="3xl" as="h1" lineHeight={1.4} mt={10}>
-          Unlock Your Sound is an artist self-development platform
+          Unlock Your Sound is an artist services platform{" "}
         </Heading>
         <Divider mt={5} mb={5} />
         <Text mt={10} mb={5} fontSize="xl">

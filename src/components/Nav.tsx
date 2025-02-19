@@ -19,6 +19,8 @@ export default function Nav() {
     return router.pathname === pathname;
   };
 
+  const navColor = colorMode == "dark" ? "black" : "white"
+
   return (
     <>
       <nav
@@ -26,30 +28,30 @@ export default function Nav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: 35,
+          marginTop: 10,
+          position: "sticky",
+          top: 0,
+          paddingTop: 6,
+          zIndex: 99,
+          backgroundColor: navColor,
+          minHeight: 100
         }}
       >
         <Link href="/">
-          <Box
-            boxSize="80px"
-            mr={5}
-            display="flex"
-            alignItems="center"
-            cursor="pointer"
-          >
+          <Box mr={5} display="flex" alignItems="center" cursor="pointer">
             {colorMode === "light" ? (
               <Image
                 src="https://unlockyoursound.io/wp-content/uploads/2019/05/Unlock-Your-Sound-01.png"
                 alt="Unlock Your Sound light logo"
                 width={70}
-                height={70}
+                height={10}
               />
             ) : (
               <Image
                 src="https://unlockyoursound.io/wp-content/uploads/2019/05/cropped-cropped-inverted-1-1.png"
                 alt="Unlock Your Sound dark logo"
                 width={70}
-                height={70}
+                height={10}
               />
             )}
           </Box>
@@ -84,7 +86,7 @@ export default function Nav() {
         </a> */}
         <MyMenu />
       </nav>
-      <Divider mt={5} mb={5} />
+      <Divider mt={0} mb={10} />
     </>
   );
 }
