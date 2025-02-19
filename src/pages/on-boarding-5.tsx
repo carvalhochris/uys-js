@@ -17,11 +17,16 @@ export default function OnBoardingOne() {
           textAlign="center"
           letterSpacing={2}
         >
-WE'VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND MANY OTHERS        </Heading>
+          WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND MANY
+          OTHERS
+        </Heading>
         <Divider mt={5} mb={5} />
 
         <Center>
-          <Link target="_blank" href="https://unlockyoursound.typeform.com/to/LuG8KG4y">
+          <Link
+            target="_blank"
+            href="https://unlockyoursound.typeform.com/to/LuG8KG4y"
+          >
             <Button
               mt={6}
               mb={0}
