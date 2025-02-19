@@ -12,8 +12,8 @@ export default function OnBoardingThree() {
         height="100vh" // Ensure full viewport height
         p={4} // Optional padding
       >
-                <ImQuotesLeft size={60} />
-        
+        <ImQuotesLeft size={60} />
+
         <Heading
           size="md"
           as="h1"
@@ -37,7 +37,6 @@ export default function OnBoardingThree() {
               size="lg"
               borderColor="grey"
               variant="outline"
-              color="white"
             >
               Learn more
             </Button>

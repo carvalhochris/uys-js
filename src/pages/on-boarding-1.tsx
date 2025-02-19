@@ -25,7 +25,6 @@ export default function OnBoardingOne() {
             size="lg"
             borderColor="grey"
             variant="outline"
-            color="white"
           >
             Sound like you?
           </Button>

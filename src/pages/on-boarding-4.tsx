@@ -36,7 +36,6 @@ export default function OnBoardingFour() {
               size="lg"
               borderColor="grey"
               variant="outline"
-              color="white"
             >
               Get Started
             </Button>

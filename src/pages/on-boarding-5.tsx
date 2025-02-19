@@ -17,8 +17,8 @@ export default function OnBoardingFive() {
           textAlign="center"
           letterSpacing={2}
         >
-          WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND MANY
-          OTHERS
+          WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND
+          MANY OTHERS
         </Heading>
         <Divider mt={5} mb={5} />
 
@@ -33,7 +33,6 @@ export default function OnBoardingFive() {
               size="lg"
               borderColor="grey"
               variant="outline"
-              color="white"
             >
               Work With Us
             </Button>

@@ -90,7 +90,6 @@ export default function Home({ posts }: HomeProps) {
             size="lg"
             borderColor="grey"
             variant="outline"
-            color="white"
           >
             Learn more
           </Button>

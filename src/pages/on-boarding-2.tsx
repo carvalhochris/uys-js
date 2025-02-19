@@ -42,7 +42,6 @@ export default function OnBoardingTwo() {
               size="lg"
               borderColor="grey"
               variant="outline"
-              color="white"
             >
               Learn more
             </Button>
