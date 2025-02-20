@@ -1,44 +1,23 @@
-import { Button, Center, Divider, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Center, Divider, Heading, VStack } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function OnBoardingFive() {
   return (
-    <>
-      <Flex
-        direction="column"
-        justify="center"
-        align="center"
-        height="100vh" // Ensure full viewport height
-        p={4} // Optional padding
-      >
-        <Heading
-          size="md"
-          as="h1"
-          lineHeight={1.4}
-          textAlign="center"
-          letterSpacing={2}
-        >
-          WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND
+    <Center minH="100vh">
+      <VStack spacing={6} textAlign="center">
+        <Heading size="md" as="h1" lineHeight={1.4} letterSpacing={2} px={6}>
+          WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS, AND
           MANY OTHERS
         </Heading>
-        <Divider mt={10} mb={10} width={300} />
 
-        <Center>
-          <Link
-            target="_blank"
-            href="https://unlockyoursound.typeform.com/to/LuG8KG4y"
-          >
-            <Button
-              mt={6}
-              mb={0}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-            >
-              Work With Us
-            </Button>
-          </Link>
-        </Center>
-      </Flex>
-    </>
+        <Divider width={300} />
+
+        <Link target="_blank" href="https://unlockyoursound.typeform.com/to/LuG8KG4y">
+          <Button size="lg" borderColor="grey" variant="outline">
+            Work With Us
+          </Button>
+        </Link>
+      </VStack>
+    </Center>
   );
 }

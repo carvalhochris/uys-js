@@ -1,26 +1,18 @@
-import { Button, Center, Divider, Flex, Heading } from "@chakra-ui/react";
+import { Button, Center, Divider, Heading, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { ImQuotesLeft } from "react-icons/im";
 
 export default function OnBoardingTwo() {
   return (
-    <>
-      <Flex
-        direction="column"
-        justify="center"
-        align="center"
-        height="100vh" // Ensure full viewport height
-        p={4} // Optional padding
-      >
+    <Center minH="100vh">
+      <VStack spacing={6} textAlign="center">
         <ImQuotesLeft size={60} />
-
         <Heading
           size="sm"
           as="h1"
           lineHeight={1.4}
-          textAlign="center"
           letterSpacing={2}
-          mt={10}
+          px={6}
         >
           After I talked with Chris he immediately knew what to do and we set up
           a goal, suddenly I managed to produce 5 songs in just 8 weeks! So I
@@ -32,22 +24,13 @@ export default function OnBoardingTwo() {
           energy with helping me, something I will never forget. He is a very
           genuine guy and very passionate about what he is doing ~ Labi
         </Heading>
-        <Divider mt={5} mb={5} />
-
-        <Center>
-          <Link href="/on-boarding-3">
-            <Button
-              mt={6}
-              mb={0}
-              size="lg"
-              borderColor="grey"
-              variant="outline"
-            >
-              Learn more
-            </Button>
-          </Link>
-        </Center>
-      </Flex>
-    </>
+        <Divider />
+        <Link href="/on-boarding-3">
+          <Button size="lg" borderColor="grey" variant="outline">
+            Learn more
+          </Button>
+        </Link>
+      </VStack>
+    </Center>
   );
 }
