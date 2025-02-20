@@ -20,7 +20,7 @@ export default function OnBoardingFive() {
           WE&apos;VE WORKED WITH TUNECORE, DISTROKID, LANDR, PIRATE STUDIOS AND
           MANY OTHERS
         </Heading>
-        <Divider mt={5} mb={5} />
+        <Divider mt={10} mb={10} width={300} />
 
         <Center>
           <Link

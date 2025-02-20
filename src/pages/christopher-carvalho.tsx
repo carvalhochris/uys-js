@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import styles from "@/styles/Home.module.css";
 import { EmailIcon } from "@chakra-ui/icons";
 import { Link as ChakraLink, Divider, HStack, Heading } from "@chakra-ui/react";
@@ -71,6 +73,7 @@ export default function About({ pageContent }: AboutPageProps) {
       </Head>
 
       <div>
+        <Nav />
         <Heading ml={0} size="3xl" as="h1" lineHeight={1.4}>
           Christopher Carvalho — Founder of Unlock Your Sound
         </Heading>
@@ -98,6 +101,7 @@ export default function About({ pageContent }: AboutPageProps) {
           width="100%"
           style={{ border: "solid" }}
         ></iframe>
+        <Footer />
       </div>
     </>
   );

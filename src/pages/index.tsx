@@ -70,18 +70,21 @@ export default function Home({ posts }: HomeProps) {
       <Nav />
       <Center mt={0}>
         <Heading
-          size="3xl"
+          size="2xl"
           as="h1"
           lineHeight={1.4}
           textAlign="center"
           letterSpacing={3}
-          width="100%"
+          maxW={500}
         >
           UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
         </Heading>
       </Center>
+      <Center mt={0}>
 
-      <Divider mt={10} />
+      <Divider mt={10} width={300} />
+      </Center>
+
       <Center mt={10}>
         <Link href="/on-boarding-1">
           <Button

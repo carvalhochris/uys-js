@@ -26,7 +26,7 @@ export default function OnBoardingFour() {
           with Chris in which he gave me great tips and guidance for the band ~
           Corrine
         </Heading>
-        <Divider mt={5} mb={5} />
+        <Divider mt={10} mb={5} />
 
         <Center>
           <Link href="/on-boarding-5">
