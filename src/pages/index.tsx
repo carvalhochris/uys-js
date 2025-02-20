@@ -1,4 +1,4 @@
-import Nav from "@/components/Nav";
+import LogoOnlyFooter from "@/components/LogoOnlyFooter";
 import {
   Button,
   Center,
@@ -67,8 +67,8 @@ export default function Home({ posts }: HomeProps) {
           content="http://unlockyoursound.io/wp-content/uploads/2021/04/unlock-your-sound-blog-scaled.jpeg"
         />
       </Head>
-      <Nav />
-      <Center mt={100}>
+      {/* <Nav /> */}
+      <Center mt={150}>
         <Heading
           size="2xl"
           as="h1"
@@ -81,23 +81,17 @@ export default function Home({ posts }: HomeProps) {
         </Heading>
       </Center>
       <Center mt={0}>
-
-      <Divider mt={10} width={300} />
+        <Divider mt={10} width={300} />
       </Center>
 
       <Center mt={10}>
         <Link href="/on-boarding-1">
-          <Button
-            mt={4}
-            mb={10}
-            size="lg"
-            borderColor="grey"
-            variant="outline"
-          >
+          <Button mt={4} mb={10} size="lg" borderColor="grey" variant="outline">
             Learn more
           </Button>
         </Link>
       </Center>
+      <LogoOnlyFooter />
     </>
   );
 }

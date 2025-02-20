@@ -1,3 +1,4 @@
+import LogoOnlyFooter from "@/components/LogoOnlyFooter";
 import { Button, Center, Divider, Heading, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { ImQuotesLeft } from "react-icons/im";
@@ -21,6 +22,7 @@ export default function OnBoardingFour() {
             Get Started
           </Button>
         </Link>
+        <LogoOnlyFooter />
       </VStack>
     </Center>
   );

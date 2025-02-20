@@ -1,3 +1,4 @@
+import LogoOnlyFooter from "@/components/LogoOnlyFooter";
 import { Button, Center, Divider, Heading, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -16,11 +17,12 @@ export default function OnBoardingOne() {
         </Heading>
         <Divider width={300} />
         <Link href="/on-boarding-2">
-          <Button size="lg" borderColor="grey" variant="outline">
+          <Button size="lg" borderColor="grey" variant="outline" mb={100}>
             Sound like you?
           </Button>
         </Link>
       </VStack>
+      <LogoOnlyFooter />
     </Center>
   );
 }
