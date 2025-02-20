@@ -18,7 +18,7 @@ export default function OnBoardingTwo() {
           a goal, suddenly I managed to produce 5 songs in just 8 weeks! So I
           made this EP called Pure which started my whole carer. Now 6 years
           later, I have over 9 million streams, signed a contract with the
-          world’s biggest Dance Label Spinnin Records, performed at the biggest
+          world&apos;s biggest Dance Label Spinnin Records, performed at the biggest
           festivals here in Norway and am about to warm up for Tiesto concert in
           December! This is all thanks to Chris who put in so much time and
           energy with helping me, something I will never forget. He is a very
