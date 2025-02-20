@@ -68,7 +68,7 @@ export default function Home({ posts }: HomeProps) {
         />
       </Head>
       <Nav />
-      <Center mt={0}>
+      <Center mt={100}>
         <Heading
           size="2xl"
           as="h1"
@@ -89,7 +89,7 @@ export default function Home({ posts }: HomeProps) {
         <Link href="/on-boarding-1">
           <Button
             mt={4}
-            mb={40}
+            mb={10}
             size="lg"
             borderColor="grey"
             variant="outline"

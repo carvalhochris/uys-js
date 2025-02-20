@@ -11,7 +11,7 @@ export default function OnBoardingThree() {
         <Heading size="md" as="h1" lineHeight={1.4} letterSpacing={2} px={6}>
           I have worked now with Chris since 6 years. He is my mentor, my coach,
           my source of key knowledge, my music Google, my number one motivator,
-          and also my biggest challenger. I wouldn't be where I am today in my
+          and also my biggest challenger. I wouldn&apos;t be where I am today in my
           career without his support ~ Cheri
         </Heading>
 
