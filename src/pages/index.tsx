@@ -86,7 +86,13 @@ export default function Home({ posts }: HomeProps) {
 
       <Center mt={10}>
         <Link href="/on-boarding-1">
-          <Button mt={4} mb={10} size="lg" borderColor="grey" variant="outline">
+          <Button
+            mt={4}
+            mb={150}
+            size="lg"
+            borderColor="grey"
+            variant="outline"
+          >
             Learn more
           </Button>
         </Link>

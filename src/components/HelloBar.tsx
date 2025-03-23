@@ -13,7 +13,7 @@ const HelloBar = () => {
           <Box>
             <Text mt={1} mb={2}>
               Sponsored by{" "}
-              <Link href="https://beta.songcards.io/" target="#">
+              <Link href="https://songcards.io/" target="_blank">
                 <u>Songcards</u> 🚀
               </Link>
             </Text>
