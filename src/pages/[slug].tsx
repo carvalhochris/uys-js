@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import { Box, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import ShareButton from "../components/WhatsAppButton";
 
 interface ParamProps {
@@ -135,6 +136,12 @@ export default function Post({ post }: PostProps) {
             }}
           ></iframe>
           <br></br>
+          <i>
+            This article was brought to you by{" "}
+            <Link target="_blank" href={"https://songcards.io"}>
+              <u>Songcards</u>
+            </Link>
+          </i>
         </Box>
         <Footer />
       </div>

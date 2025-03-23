@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import TopicBox from "@/components/TopicBox";
 import {
   Button,
   Divider,
@@ -104,6 +105,7 @@ export default function FreeResources() {
           </Button>
         </Link>
         <Divider mt={5} mb={5} />
+        <TopicBox />
         <Footer />
       </div>
     </>
