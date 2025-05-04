@@ -1,13 +1,10 @@
-import Nav from "@/components/Nav";
-import {
-  Button,
-  Center,
-  Divider,
-  Heading,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Center, Divider, Heading, useColorMode } from "@chakra-ui/react";
+
+import Footer from "@/components/Footer";
 import Head from "next/head";
-import Link from "next/link";
+import Nav from "@/components/Nav";
+import SearchBox from "@/components/SearchBox";
+import TopicBox from "@/components/TopicBox";
 
 interface PostProp {
   title: string;
@@ -68,23 +65,19 @@ export default function Home({ posts }: HomeProps) {
         />
       </Head>
       <Nav />
-      <Center mt={100}>
-        <Heading
-          size="2xl"
-          as="h1"
-          lineHeight={1.4}
-          textAlign="center"
-          letterSpacing={3}
-          maxW={500}
-        >
-          UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
-        </Heading>
-      </Center>
+      <Heading size="2xl" as="h1" lineHeight={1.4} letterSpacing={3}>
+        UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
+      </Heading>
+
       <Center mt={0}>
         <Divider mt={10} width={300} />
       </Center>
+      <TopicBox />
+      <Divider mt={10} width={300} />
+      <SearchBox />
+      <Footer />
 
-      <Center mt={10}>
+      {/* <Center mt={10}>
         <Link href="/on-boarding-1">
           <Button
             mt={4}
@@ -96,7 +89,7 @@ export default function Home({ posts }: HomeProps) {
             Learn more
           </Button>
         </Link>
-      </Center>
+      </Center> */}
       {/* <LogoOnlyFooter /> */}
     </>
   );

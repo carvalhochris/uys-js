@@ -7,10 +7,11 @@ import {
   Spinner,
   Text,
 } from "@chakra-ui/react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface ResultProps {
   id: number;
@@ -38,6 +39,8 @@ export default function TopicBox() {
     { value: "audio", label: "Audio" },
     { value: "songcards", label: "Songcards" },
     { value: "logic pro x", label: "Logic Pro X" },
+    { value: "bandcamp", label: "Bandcamp" },
+
   ]);
 
   const handleSearch = async (event: { preventDefault: () => void }) => {

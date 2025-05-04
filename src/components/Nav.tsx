@@ -1,4 +1,5 @@
 import { Box, Divider, Spacer, Text, useColorMode } from "@chakra-ui/react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
