@@ -1,7 +1,8 @@
-import { Center, Divider, Heading, useColorMode } from "@chakra-ui/react";
+import { Button, Center, Divider, Heading, Text, useColorMode } from "@chakra-ui/react";
 
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import SearchBox from "@/components/SearchBox";
 import TopicBox from "@/components/TopicBox";
@@ -68,7 +69,11 @@ export default function Home({ posts }: HomeProps) {
       <Heading size="2xl" as="h1" lineHeight={1.4} letterSpacing={3}>
         UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
       </Heading>
-
+      <Text mt={10} mb={10} fontSize="lg" color={textColor}>
+        Unlock a bundle of <b>free resources</b> to help you create and release your
+        music.
+      </Text>
+      <Link href="/free"><Button size={'lg'} variant={"outline"}>Free Resources</Button></Link>
       <Center mt={0}>
         <Divider mt={10} width={300} />
       </Center>
