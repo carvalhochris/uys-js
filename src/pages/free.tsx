@@ -1,6 +1,3 @@
-import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
-import TopicBox from "@/components/TopicBox";
 import {
   Button,
   Divider,
@@ -9,8 +6,12 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
+
+import Footer from "@/components/Footer";
 import Head from "next/head";
 import Link from "next/link";
+import Nav from "@/components/Nav";
+import TopicBox from "@/components/TopicBox";
 
 export default function FreeResources() {
   return (
@@ -82,7 +83,6 @@ export default function FreeResources() {
           <ListItem>Email Marketing for Musicians</ListItem>
           <ListItem>Bandcamp + Streaming Album Strategy</ListItem>
           <ListItem>The DIY Music Marketing Model</ListItem>
-          <ListItem>Blockchain Opportunities for Musicians</ListItem>
           <ListItem>..and much more!</ListItem>
         </UnorderedList>
         <Divider mt={10} mb={5} />
