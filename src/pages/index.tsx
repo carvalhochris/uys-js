@@ -26,7 +26,6 @@ interface HomeProps {
 
 export default function Home({ posts }: HomeProps) {
   const { colorMode } = useColorMode();
-  const textColor = colorMode === "dark" ? "gray.300" : "gray.800";
 
   return (
     <>
@@ -69,7 +68,7 @@ export default function Home({ posts }: HomeProps) {
       <Heading size="2xl" as="h1" lineHeight={1.4} letterSpacing={3}>
         UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
       </Heading>
-      <Text mt={10} mb={10} fontSize="lg" color={textColor}>
+      <Text mt={10} mb={10} fontSize="lg">
         Unlock a bundle of <b>free resources</b> to help you create and release your
         music.
       </Text>
