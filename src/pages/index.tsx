@@ -1,4 +1,11 @@
-import { Button, Center, Divider, Heading, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Button,
+  Center,
+  Divider,
+  Heading,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 
 import Footer from "@/components/Footer";
 import Head from "next/head";
@@ -69,10 +76,14 @@ export default function Home({ posts }: HomeProps) {
         UNLOCK YOUR SOUND IS AN ARTIST DEVELOPMENT PLATFORM
       </Heading>
       <Text mt={10} mb={10} fontSize="lg">
-        Unlock a bundle of <b>free resources</b> to help you create and release your
-        music.
+        Unlock a bundle of <b>free resources</b> to help you create and release
+        your music.
       </Text>
-      <Link href="/free"><Button size={'lg'} variant={"outline"}>Free Resources</Button></Link>
+      <Link href="/free">
+        <Button size={"lg"} variant={"outline"}>
+          Free Resources
+        </Button>
+      </Link>
       <Center mt={0}>
         <Divider mt={10} width={300} />
       </Center>
@@ -80,21 +91,6 @@ export default function Home({ posts }: HomeProps) {
       <Divider mt={10} width={300} />
       <SearchBox />
       <Footer />
-
-      {/* <Center mt={10}>
-        <Link href="/on-boarding-1">
-          <Button
-            mt={4}
-            mb={150}
-            size="lg"
-            borderColor="grey"
-            variant="outline"
-          >
-            Learn more
-          </Button>
-        </Link>
-      </Center> */}
-      {/* <LogoOnlyFooter /> */}
     </>
   );
 }
