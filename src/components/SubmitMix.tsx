@@ -143,17 +143,24 @@ function SubmitMix() {
           </Text>
         </>
       )}
-      <Button
-        onClick={handleSubmit}
-        mb={5}
-        size="lg"
-        borderColor="grey"
-        variant="outline"
-        backgroundColor="#7756E3"
-        color="white"
-      >
-        Submit Mix
-      </Button>
+      {nameValue &&
+        emailValue &&
+        linkValue &&
+        descValue &&
+        discValue &&
+        !showSuccess && (
+          <Button
+            onClick={handleSubmit}
+            mb={5}
+            size="lg"
+            borderColor="grey"
+            variant="outline"
+            backgroundColor="#7756E3"
+            color="white"
+          >
+            Submit Mix
+          </Button>
+        )}
     </>
   );
 }
