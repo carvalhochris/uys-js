@@ -6,8 +6,9 @@ import {
   Spinner,
   Text,
 } from "@chakra-ui/react";
-import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
+
+import axios from "axios";
 
 function SubmitMix() {
   const [nameValue, setNameValue] = useState("");
@@ -65,16 +66,26 @@ function SubmitMix() {
   const handleSubmit = () => {
     setIsPosting(true);
     const formData = new FormData();
-    formData.append("name", nameValue);
-    formData.append("email", emailValue);
-    formData.append("link", linkValue);
-    formData.append("desc", descValue);
-    formData.append("disc", discValue);
+
+    const emailContent = `Name: ${nameValue}. Email: ${emailValue}. Link: ${linkValue}. Description: ${descValue}. Found us via: ${discValue}`;
+
+    formData.append("message", emailContent);
+    formData.append(
+      "email_address",
+      "chris93903822+a84rqikudpturqgnmh4y@boards.trello.com"
+    );
+    formData.append("subject", "Mix Feedback Submission");
+
+    const body = {
+      message: emailContent,
+      email_address: "chris93903822+a84rqikudpturqgnmh4y@boards.trello.com",
+      subject: "Mix Feedback Submission",
+    };
 
     setTimeout(() => {
       setIsPosting(true);
       axios
-        .post("https://service.songcards.io/submit-mix", formData)
+        .post("https://api.songcards.io/ninja/send", body)
         .then(function (response) {
           setShowSuccess(true);
           setIsPosting(false);
@@ -96,43 +107,28 @@ function SubmitMix() {
         <label>
           <FormControl isRequired>
             <FormLabel>Enter your name:</FormLabel>
-            <Input
-              type="text"
-              onChange={handleName}
-            />
+            <Input type="text" onChange={handleName} />
           </FormControl>
         </label>
         <br />
         <FormControl isRequired>
           <FormLabel>Enter your email:</FormLabel>
-          <Input
-            type="text"
-            onChange={handleEmail}
-          />
+          <Input type="text" onChange={handleEmail} />
         </FormControl>
         <br />
         <FormControl isRequired>
           <FormLabel>Tell us a bit about you and the project</FormLabel>
-          <Input
-            type="text"
-            onChange={handleDesc}
-          />
+          <Input type="text" onChange={handleDesc} />
         </FormControl>
         <br />
         <FormControl isRequired>
           <FormLabel>Please provide a link to your track here</FormLabel>
-          <Input
-            type="text"
-            onChange={handleLink}
-          />
+          <Input type="text" onChange={handleLink} />
         </FormControl>
         <br />
         <FormControl isRequired>
           <FormLabel>How did you discover Unlock Your Sound?</FormLabel>
-          <Input
-            type="text"
-            onChange={handleDiscover}
-          />
+          <Input type="text" onChange={handleDiscover} />
         </FormControl>
         <br />
       </form>
